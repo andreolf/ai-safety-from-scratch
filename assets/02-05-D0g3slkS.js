@@ -1,0 +1,56 @@
+var e=`02-05`,t=7,n=`A model can know that A is B and still fail to say that B is A. The reversal curse shows that AI “knowledge” is stored very differently from ours.`,r=`reversal`,i=`neutral`,a=`<h2 id="the-hook">The hook</h2>
+<p>If you know that Tom Cruise’s mother is Mary Lee Pfeiffer, you also know that Mary Lee Pfeiffer’s son is Tom Cruise. It is the same fact, read backwards. For a person, that is trivial. For a language model, it can be surprisingly hard.</p>
+<h2 id="the-one-idea">The one idea</h2>
+<p><strong>The reversal curse: a model trained on “A is B” does not automatically learn “B is A”. Its knowledge is lopsided, which is one more reason not to treat it like a database or an encyclopedia.</strong></p>
+
+<figure class="fig" data-figure="reversal"><svg viewBox="0 0 400 230" role="img" aria-label="The reversal curse: a model knows Tom Cruise’s mother but not Mary Lee Pfeiffer’s son." focusable="false"><defs><marker id="ar-reversal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--muted-strong)"/></marker></defs><rect x="20" y="30" width="150" height="50" rx="10" class="svg-box" stroke-width="2"/><text x="95" y="61" class="svg-t" text-anchor="middle" style="font-size:15px;font-weight:700"><tspan x="95" dy="0">Tom Cruise</tspan></text><rect x="230" y="30" width="150" height="50" rx="10" class="svg-box" stroke-width="2"/><text x="305" y="52" class="svg-t" text-anchor="middle" style="font-size:15px;font-weight:700"><tspan x="305" dy="0">Mary Lee</tspan><tspan x="305" dy="18.75">Pfeiffer</tspan></text><path d="M170 48 L230 48" class="svg-acc" stroke-width="2.4" fill="none" marker-end="url(#ar-reversal)"/><text x="200" y="24" class="svg-m" text-anchor="middle" style="font-size:13px;font-weight:400"><tspan x="200" dy="0">mother is…</tspan></text>
+     <rect x="120" y="92" width="160" height="26" rx="13" class="svg-hl"/><text x="200" y="110" class="svg-on-hl" text-anchor="middle" style="font-size:13px;font-weight:800"><tspan x="200" dy="0">Answers correctly</tspan></text>
+     <path d="M230 150 L170 150" class="svg-line" stroke-width="2.4" fill="none" marker-end="url(#ar-reversal)"/><rect x="20" y="130" width="150" height="50" rx="10" class="svg-box" stroke-dasharray="6 5" stroke-width="2"/><text x="95" y="161" class="svg-t" text-anchor="middle" style="font-size:15px;font-weight:700"><tspan x="95" dy="0">???</tspan></text><rect x="230" y="130" width="150" height="50" rx="10" class="svg-box" stroke-width="2"/><text x="305" y="152" class="svg-t" text-anchor="middle" style="font-size:15px;font-weight:700"><tspan x="305" dy="0">Mary Lee</tspan><tspan x="305" dy="18.75">Pfeiffer</tspan></text><text x="200" y="200" class="svg-t" text-anchor="middle" style="font-size:15px;font-weight:800"><tspan x="200" dy="0">…son is? → “I don’t know”</tspan></text><text x="200" y="222" class="svg-m" text-anchor="middle" style="font-size:12px;font-weight:400"><tspan x="200" dy="0">Example from Karpathy’s talk (GPT-4)</tspan></text></svg><figcaption>Same fact, two directions, two very different results.</figcaption><details><summary>Text version of this picture</summary><p>Top: asked who Tom Cruise’s mother is, the model correctly answers Mary Lee Pfeiffer. Bottom: asked who Mary Lee Pfeiffer’s son is, it says it does not know. Knowledge stored one way round is not always available the other way round. Example from Andrej Karpathy’s talk, using GPT-4.</p></details></figure>
+<h2 id="karpathy-s-example">Karpathy’s example</h2>
+<p>In his introductory talk, Andrej Karpathy calls this knowledge “very strange and imperfect and weird”. He describes asking GPT-4 “who is Tom Cruise’s mother?”: it answers Mary Lee Pfeiffer, which is correct. But ask “who is Mary Lee Pfeiffer’s son?” and “it will tell you it doesn’t know.”</p>
+<h2 id="the-research-behind-it">The research behind it</h2>
+<p>The example comes from a 2023 paper titled <em>The Reversal Curse: LLMs trained on “A is B” fail to learn “B is A”</em>, by Lukas Berglund, Owain Evans and colleagues. They tested it two ways:</p>
+<ul>
+<li><strong>Made-up facts.</strong> They fine-tuned models on fictitious statements such as “Uriah Hawthorne is the composer of Abyssal Melodies”, then asked “Who composed Abyssal Melodies?”. The models failed. In the paper’s words, the likelihood of the correct name was not higher than for a random name.</li>
+<li><strong>Real celebrities.</strong> They asked GPT-4 about 1,000 popular celebrities and their parents. The paper reports that GPT-4 answered questions like “Who is Tom Cruise’s mother?” correctly 79% of the time, compared with 33% for the reverse question.</li>
+</ul>
+<p>There is one useful twist. The authors note that if “A is B” appears <em>in the context window</em> (Lesson 01.06), models can work out the reverse. The weakness is in what training stored, not in reasoning about text in front of it.</p>
+<h2 id="why-it-matters-to-you">Why it matters to you</h2>
+<ul>
+<li>A model may “know” something in one phrasing and seem ignorant in another. <strong>Rephrasing a question can change the answer.</strong></li>
+<li>Getting “I don’t know” once does not mean the information isn’t there, and getting an answer once does not mean the model knows it reliably.</li>
+<li><strong>Giving the model the facts</strong> (pasting the document) usually works better than hoping it remembers them.</li>
+</ul>
+
+<aside class="intern-scene" data-pose="neutral" aria-label="Story: the gullible intern"><div class="intern-svg"><span class="intern-tile"><svg role="img" aria-label="The gullible intern, a friendly cartoon robot with a lanyard badge, looking ready to help." focusable="false" class="intern intern-neutral" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><title>The gullible intern, a friendly cartoon robot with a lanyard badge, looking ready to help.</title>
+  <path d="M58 196 L66 140 Q68 128 80 128 L120 128 Q132 128 134 140 L142 196" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" style="fill:var(--ink);stroke:var(--white)"/>
+  <path d="M64 150 L50 190 M136 150 L150 190" stroke-width="10" stroke-linecap="round" fill="none" style="stroke:var(--white)"/>
+  <path d="M86 130 L100 150 L114 130" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--highlighter)"/>
+  <rect x="86" y="150" width="28" height="22" rx="4" style="fill:var(--highlighter)"/>
+  <rect x="93" y="158" width="14" height="5" rx="2" style="fill:var(--ink)"/>
+  <g transform="rotate(0 100 78)">
+    <line x1="100" y1="30" x2="100" y2="14" stroke-width="10" stroke-linecap="round" style="stroke:var(--white)"/>
+    <circle cx="100" cy="12" r="8" style="fill:var(--highlighter)"/>
+    <rect x="44" y="30" width="112" height="92" rx="26" style="fill:var(--white)"/>
+    
+    <circle cx="78" cy="72" r="9" style="fill:var(--ink)"/><circle cx="122" cy="72" r="9" style="fill:var(--ink)"/>
+    <path d="M84 98 Q100 108 116 98" fill="none" stroke-width="8" stroke-linecap="round" style="stroke:var(--ink)"/>
+  </g>
+</svg>
+</span></div><div><span class="who">The gullible intern</span><div class="bubble"><p>The intern asks a chatbot who wrote a famous Swiss novel and gets the right author. Then the intern asks which novels that author wrote, and the chatbot lists books by someone else.</p>
+</div><span class="lesson-learned"><span class="hl">Lesson:</span> AI knowledge can work in one direction and fail in the other. Check both ways, or give the AI the source text.</span></div></aside>
+
+<div class="exercise"><h3>Try it: Ask it both ways</h3><p>Pick a fact you know well, such as a local landmark and the town it is in. Write the question in both directions. Why might a chatbot answer one direction better than the other?</p>
+<details><summary>Show a worked answer</summary><p>Example: “Which town is the Chapel Bridge in?” (Lucerne) and “What is a famous wooden bridge in Lucerne?” The first phrasing may be more common in text, so the model may have learned it better. The paper explains the reversal curse in terms of training order: models learn facts in the direction they usually appear. Checking both directions, or giving the model the source, is safer.</p>
+</details></div>
+<h2 id="quick-check">Quick check</h2>
+
+<div class="quiz-mount" data-quiz></div>
+
+<nav class="xlink" aria-label="Related lessons"><a href="#/learn/01-04" data-xlink="lesson">01.04 · Training, part 1: reading the internet</a><a href="#/learn/01-06" data-xlink="lesson">01.06 · The context window and tools</a></nav>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>Andrej Karpathy, <a href="https://www.youtube.com/watch?v=zjkBMFhNj_g&amp;t=756s" rel="noopener" target="_blank">Intro to Large Language Models</a> (reversal curse example, about 12:36 to 13:05). Checked 26 Oct 2026.</li>
+<li>Berglund et al., <a href="https://arxiv.org/abs/2309.12288" rel="noopener" target="_blank">The Reversal Curse: LLMs trained on “A is B” fail to learn “B is A”</a>, arXiv 2309.12288, 2023. Checked 26 Oct 2026.</li>
+</ul>
+`,o=[{id:`the-hook`,t:`The hook`},{id:`the-one-idea`,t:`The one idea`},{id:`karpathy-s-example`,t:`Karpathy’s example`},{id:`the-research-behind-it`,t:`The research behind it`},{id:`why-it-matters-to-you`,t:`Why it matters to you`},{id:`quick-check`,t:`Quick check`},{id:`sources`,t:`Sources`}],s=[{id:`02-05-q1`,type:`mc`,q:`What is the reversal curse?`,options:[`A model trained on “A is B” does not automatically learn “B is A”`,`A model that writes text backwards`,`A bug that reverses your chat history`],answer:0,explain:`That is the definition in the paper by Berglund and colleagues, illustrated by the Tom Cruise example.`,why:null},{id:`02-05-q2`,type:`mc`,q:`In the paper’s celebrity test, how often did GPT-4 answer the parent and child questions correctly?`,options:[`79% for the parent question, 33% for the reverse`,`100% both ways`,`33% for the parent question, 79% for the reverse`],answer:0,explain:`Same facts, very different success depending on the direction of the question.`,why:null},{id:`02-05-q3`,type:`mc`,q:`What usually helps with this weakness?`,options:[`Putting the relevant facts in the context window, for example by pasting the source`,`Asking in capital letters`,`Using a higher temperature`],answer:0,explain:`The authors note that when “A is B” is in context, models can work out the reverse.`,why:null}],c={figures:[`reversal`],images:[],labs:[],interns:1,sources:0,exercises:1},l=[`https://www.youtube.com/watch?v=zjkBMFhNj_g&t=756s`,`https://arxiv.org/abs/2309.12288`],u=0,d=`Strange knowledge: the reversal curse`,f={id:e,minutes:7,summary:n,highlight:r,pose:i,html:a,toc:o,quiz:s,used:c,links:l,flags:0,title:d};export{f as default,u as flags,r as highlight,a as html,e as id,l as links,t as minutes,i as pose,s as quiz,n as summary,d as title,o as toc,c as used};

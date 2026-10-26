@@ -10,3 +10,5 @@ export const POINTS = { lesson: 50, question: 10, test: 250 };
 export const LAST_CHECKED = '2026-10-26';
 // Security from Scratch lesson link: #/learn/<id> on the sibling site.
 export const securityLesson = (id) => `${SECURITY_URL}#/learn/${id.replace('.', '-')}`;
+// Full disclosure note (curriculum §11). Shown in the footer, in full at the top of Phase 06, and next to any MetaMask mention.
+export const DISCLOSURE = 'AI Safety from Scratch is a personal, free project by Francesco Andreoli. Francesco works at MetaMask (Consensys) as Head of Developer Relations and works on agent wallets. This site is not an official MetaMask or Consensys product and is not endorsed by them, or by ETH Zurich, OWASP, any AI company or any government body. The agents-and-payments lessons (Phase 06) are written to be wallet-neutral. Where MetaMask is mentioned, it is one example among others, and the page says so.';

@@ -2,7 +2,7 @@
 import { phases, phaseById, isWritten, phaseWritten, phaseComplete, loadQuizBank, foundationPhases, builderPhases, course } from '../course.js';
 import { store } from '../store.js';
 import { esc, pad2, toast, download, fmtDate, rng, hash32, h } from '../util.js';
-import { PASS, TEST_N, SECURITY_URL, LAST_CHECKED } from '../config.js';
+import { PASS, TEST_N, SECURITY_URL, LAST_CHECKED, DISCLOSURE } from '../config.js';
 import { questionEl } from './quiz.js';
 import { CREDENTIALS, DISCLAIMER, certCode, drawCert, pdfFromCanvas, cleanCode, normName } from '../cert.js';
 import { phaseMap, xpBar } from './map.js';
@@ -19,6 +19,7 @@ export function renderPhase(root, pid) {
   const t = store.get().tests[pid]; const ready = phaseComplete(p); const w = phaseWritten(p);
   root.innerHTML = `<div class="page"><header><p class="kicker"><a href="#/">Course</a> · Phase ${pad2(p.number)} of ${pad2(phases.length - 1)}</p><h1>${esc(p.title)}</h1><p class="muted" style="font-size:1.1rem">After this phase you can: ${esc(p.tagline.charAt(0).toLowerCase() + p.tagline.slice(1))}</p>
     <div class="lesson-meta"><span class="chip">${p.lessons.length} lessons</span><span class="chip${w === p.lessons.length ? ' on' : ''}">${w} written</span>${p.track === 'builder' ? '<span class="chip">Optional Builder track</span>' : ''}</div></header>
+    ${pid === 'p06' ? `<aside class="panel disclosure" role="note" data-testid="phase-disclosure"><b>Disclosure.</b> ${esc(DISCLOSURE)}</aside>` : ''}
     <section class="panel" aria-labelledby="t-h"><h2 id="t-h">Phase test</h2>${ready ? `<p class="muted">${TEST_N} questions drawn from this phase’s lessons. Score 80% (8 of 10) to pass.${t ? ` Best so far: ${Math.round(t.best * 100)}%.` : ''}</p><div class="actions"><a class="btn btn-primary" href="#/test/${p.id}" data-testid="start-test">${t?.passed ? 'Retake the test' : 'Take the phase test'}</a></div>` : `<p class="muted">The test opens when every lesson in this phase is written (${w} of ${p.lessons.length} so far).</p>`}</section>
     <section aria-labelledby="l-h"><h2 id="l-h">Lessons</h2><ol class="lessons">${p.lessons.map((l) => `<li class="${store.isDone(l.id) ? 'done' : ''}"><a href="#/learn/${l.id}"><span class="n">${store.isDone(l.id) ? '✓' : pad2(l.n)}</span><span>${esc(l.title)}<small>${isWritten(l.id) ? 'Ready' : 'Coming soon'}</small></span><span aria-hidden="true">→</span></a></li>`).join('')}</ol></section></div>`;
   return p.title;

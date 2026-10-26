@@ -22,3 +22,10 @@ test('banner stays visible after scrolling', async ({ page }) => {
   await page.evaluate(() => window.scrollTo(0, 3000)); await page.waitForTimeout(200);
   await expect(page.getByTestId('draft-banner')).toBeInViewport();
 });
+
+test('Phase 06 shows the full disclosure note at the top', async ({ page }) => {
+  await page.goto('./#/phase/p06');
+  await expect(page.getByTestId('phase-disclosure')).toContainText('not an official MetaMask or Consensys product');
+  await page.goto('./#/learn/06-01');
+  await expect(page.locator('.prose blockquote, blockquote').first()).toContainText('Head of Developer Relations');
+});

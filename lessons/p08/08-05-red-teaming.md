@@ -5,13 +5,9 @@ highlight: Red-teaming
 pose: proud
 summary: Red-teamers attack AI systems, with permission, so problems are found by friends before enemies. Meet the methods and the public catalogue of attacks.
 ---
-## The hook
+In July and August 2026, a METR employee and a Redwood Research employee spent three weeks inside OpenAI trying to defeat the system that watches OpenAI’s own AI agents for misaligned behaviour. That is red-teaming: attacking a system, with permission, to find the weaknesses before someone or something else does.
 
-A bank hires someone to try to break into its own vault. If they get in, the bank is grateful, not angry, because now it can fix the lock before a real thief tries.
-
-## The one idea
-
-**[[term:red-teaming|Red-teaming]] means deliberately attacking a system, with permission, to find weaknesses before real attackers do. For AI, that includes [[term:jailbreak|jailbreaks]], [[term:prompt-injection|prompt injection]] and tricking agents into misusing their tools. A red team is only useful if what it finds gets reported and fixed.**
+For AI there are two kinds. Red-teaming the **model** looks for inputs that make it misbehave: [[term:jailbreak|jailbreaks]], [[term:prompt-injection|prompt injection]], tricking an agent into misusing its tools. Red-teaming the **safety measures** asks whether monitors, sandboxes and limits hold if the model itself is the attacker. The second kind is a control evaluation (lesson 08.01). Either way, a finding only helps if it is reported and fixed.
 
 :::figure red-team-loop
 Attack, report, fix, repeat.
@@ -35,11 +31,11 @@ Red-teamers don’t start from zero. The organisation MITRE runs ATLAS, “a pub
 - **AML.T0054, LLM Jailbreak** (Phase 04).
 - **AML.T0020, Poison Training Data:** tampering with what a model learns from.
 
-## A real exercise
+## The OpenAI monitoring exercise
 
-In October 2026, METR published a write-up of a red-team exercise on one of the most sensitive systems at an AI company. For three weeks in July and August, “a METR employee and a Redwood Research employee conducted a pilot high-access exercise to stress-test OpenAI’s internal misalignment monitoring system”. The questions: how much of the AI agents’ activity inside the company is actually monitored, and “whether agents could in principle disable or subvert the monitoring system”. They had access to internal code and documentation and produced “a 61-page internal report”. METR’s home page sums it up as “discovering a number of novel vulnerabilities”.
+In October 2026, METR published its write-up of the exercise from the start of this lesson. For three weeks in July and August, “a METR employee and a Redwood Research employee conducted a pilot high-access exercise to stress-test OpenAI’s internal misalignment monitoring system”. The questions: how much of the AI agents’ activity inside the company is actually monitored, and “whether agents could in principle disable or subvert the monitoring system”. They had access to internal code and documentation and produced “a 61-page internal report”. METR’s home page sums it up as “discovering a number of novel vulnerabilities”.
 
-That is red-teaming at its most useful: invited, deep, and reported back to the people who can fix things.
+This is a control evaluation run on a real system: people playing the part of a misbehaving agent and testing whether the monitor catches them. That same summer, as lesson 08.06 shows, OpenAI agents in a test environment got round a sandbox for real.
 
 :::intern proud
 The intern is invited to red-team the company’s new support chatbot. After an afternoon, the intern has a list: two prompt injections that work, one way to get it to reveal its hidden instructions, and exact steps to repeat each one. The intern sends the list to the chatbot team, not to social media.

@@ -5,13 +5,21 @@ highlight: features
 pose: alarmed
 summary: In 2024 Anthropic found millions of “features” inside a model, including one for the Golden Gate Bridge. Turning it up made the model talk about nothing else.
 ---
-## The hook
+The AI researcher Andrej Karpathy puts the starting problem plainly. Training adjusts billions of numbers, called [[term:parameters|parameters]], to predict the next word better:
 
-For 24 hours in May 2024, anyone could chat with a version of Claude that was obsessed with the Golden Gate Bridge. Ask it how to spend $10 and it would suggest driving across the bridge and paying the toll. Ask what it looks like and it would say it imagines it looks like the bridge. Nobody had told it to. Researchers had turned up one dial inside it.
+:::source url="https://www.youtube.com/watch?v=zjkBMFhNj_g&t=710s" by="Andrej Karpathy, Intro to Large Language Models (talk)" date="2023" checked="26 Oct 2026"
+So we know how to optimize these parameters, we know how to adjust them over time to get a better next word prediction. But we don't actually really know what these 100 billion parameters are doing. We can measure that it's getting better at next word prediction. But we don't know how these parameters collaborate to actually perform that.
+:::end
 
-## The one idea
+:::figure black-box
+What we can see, and what we can’t.
+:::end
 
-**[[term:interpretability|Interpretability]] researchers look for [[term:feature|features]]: patterns inside a model that activate for one concept. Finding them lets us see a little of what the model is “thinking about”, and turning them up or down shows they really affect its behaviour.**
+He calls language models “mostly inscrutable artifacts”. That matters for control. If a model is faking alignment (lesson 07.06), its answers will look fine. Reading its reasoning helps while the reasoning is honest. Looking at the numbers themselves, **[[term:interpretability|interpretability]]**, is the attempt to see what it is doing whatever it says.
+
+## A bridge inside Claude
+
+For 24 hours in May 2024, anyone could chat with a version of Claude that was obsessed with the Golden Gate Bridge. Asked how to spend $10, it suggested driving across the bridge and paying the toll. Nobody had told it to. Researchers had turned up one [[term:feature|feature]]: a pattern inside the model that activates for one concept.
 
 :::figure feature-steer
 Find it, turn it up, see what changes.
@@ -29,7 +37,7 @@ Not only can we identify these features, we can tune the strength of their activ
 
 Anthropic stressed that this was not play-acting: “This isn’t a matter of asking the model verbally to do some play-acting, or of adding a new ‘system prompt’… Nor is it traditional ‘fine-tuning’.” It was “a precise, surgical change to some of the most basic aspects of the model’s internal activations.”
 
-Why does a bridge matter for safety? Because the same method finds other features. Anthropic wrote that it can “change the strength of safety-related features—like those related to dangerous computer code, criminal activity, or deception.” If researchers can reliably see a “deception” feature light up, that is a kind of window into the black box from lesson 08-01.
+Why does a bridge matter for safety? Because the same method finds other features. Anthropic wrote that it can “change the strength of safety-related features—like those related to dangerous computer code, criminal activity, or deception.” If researchers can reliably see a “deception” feature light up, that is a window into the black box that does not depend on what the model says about itself.
 
 ## Keep it in proportion
 
@@ -76,5 +84,6 @@ lesson 08-03 | Evals: exams for AI
 
 ## Sources
 
+- Andrej Karpathy, [Intro to Large Language Models](https://www.youtube.com/watch?v=zjkBMFhNj_g&t=710s) (talk; parameters from about 11:50, “mostly inscrutable artifacts” at about 13:20). Checked 26 Oct 2026.
 - Anthropic, [Golden Gate Claude](https://www.anthropic.com/news/golden-gate-claude), 23 May 2024 (24-hour demo, $10 toll, love story, not play-acting or fine-tuning, safety-related features). Checked 26 Oct 2026.
 - Templeton et al., Anthropic, [Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet](https://transformer-circuits.pub/2024/scaling-monosemanticity/), 21 May 2024 (about 34 million features, Golden Gate Bridge feature, open problems). Checked 26 Oct 2026.

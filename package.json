@@ -1,0 +1,28 @@
+{
+  "name": "ai-safety-from-scratch",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node scripts/build-lessons.mjs && vite",
+    "lessons": "node scripts/build-lessons.mjs",
+    "check": "node scripts/check-lessons.mjs",
+    "build": "node scripts/build-lessons.mjs && node scripts/check-lessons.mjs && vite build",
+    "preview": "vite preview --port 4792 --strictPort",
+    "test:unit": "node --test tests-unit/",
+    "test:e2e": "playwright test --workers=1",
+    "test": "npm run build && npm run test:unit && playwright test --workers=1",
+    "shots": "SHOTS=1 playwright test tests/screenshots.spec.js --workers=1"
+  },
+  "dependencies": {
+    "@fontsource-variable/archivo": "^5.3.0",
+    "@fontsource-variable/jetbrains-mono": "^5.3.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "js-yaml": "^5.5.0",
+    "marked": "^18.1.1",
+    "vite": "^8.3.5"
+  }
+}

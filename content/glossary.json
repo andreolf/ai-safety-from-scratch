@@ -1,0 +1,205 @@
+{
+ "version": 1,
+ "note": "Shared glossary for AI Safety from Scratch and Security from Scratch. Each term has a stable id; `sites` lists which sites use it.",
+ "terms": [
+  {
+   "id": "ai",
+   "term": "AI (artificial intelligence)",
+   "short": "Computer systems that do tasks we usually call “smart”, such as recognising speech or writing text.",
+   "sites": [
+    "ai-safety",
+    "security"
+   ]
+  },
+  {
+   "id": "machine-learning",
+   "term": "Machine learning",
+   "short": "A way of building AI where the computer learns patterns from examples instead of following hand-written rules.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "llm",
+   "term": "Large language model (LLM)",
+   "short": "An AI model trained on huge amounts of text to predict the next piece of text. Chatbots are built on LLMs.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "token",
+   "term": "Token",
+   "short": "A small piece of text (a word, part of a word or a symbol) that a language model reads and writes.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "parameters",
+   "term": "Parameters",
+   "short": "The billions of numbers inside a model that are adjusted during training. Also called weights.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "pretraining",
+   "term": "Pretraining",
+   "short": "The first, most expensive training stage: the model learns to predict the next token on a huge amount of text.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "fine-tuning",
+   "term": "Fine-tuning",
+   "short": "Extra training on a smaller, chosen set of examples, for example ideal assistant conversations.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "rlhf",
+   "term": "RLHF (reinforcement learning from human feedback)",
+   "short": "Training a model towards answers that people rate or rank higher.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "context-window",
+   "term": "Context window",
+   "short": "All the text a model can see at once: instructions, the conversation, documents and tool results.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "temperature",
+   "term": "Temperature",
+   "short": "A setting that makes a model’s choice of next token more predictable (low) or more random (high).",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "open-weights",
+   "term": "Open-weight model",
+   "short": "A model whose parameters file is published so anyone can download and run it.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "hallucination",
+   "term": "Hallucination",
+   "short": "A plausible but false statement made by a language model, often stated confidently.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "sycophancy",
+   "term": "Sycophancy",
+   "short": "When an AI tells people what they want to hear instead of what is true.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "bias",
+   "term": "Bias (in AI)",
+   "short": "When an AI system works worse, or unfairly, for some groups of people, often because of its training data.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "generative-ai",
+   "term": "Generative AI",
+   "short": "AI that creates new text, images, audio or video.",
+   "sites": [
+    "ai-safety",
+    "security"
+   ]
+  },
+  {
+   "id": "deepfake",
+   "term": "Deepfake",
+   "short": "Realistic fake video, image or audio of a real person, made with AI.",
+   "sites": [
+    "ai-safety",
+    "security"
+   ]
+  },
+  {
+   "id": "voice-clone",
+   "term": "Voice clone",
+   "short": "An AI copy of a person’s voice, made from a short recording.",
+   "sites": [
+    "ai-safety",
+    "security"
+   ]
+  },
+  {
+   "id": "phishing",
+   "term": "Phishing",
+   "short": "A message that pretends to come from someone trusted to trick you into clicking, paying or giving away details.",
+   "sites": [
+    "ai-safety",
+    "security"
+   ]
+  },
+  {
+   "id": "code-word",
+   "term": "Family code word",
+   "short": "A secret word or phrase agreed in advance so family members can prove who they are on the phone.",
+   "sites": [
+    "ai-safety",
+    "security"
+   ]
+  },
+  {
+   "id": "call-back",
+   "term": "Call-back",
+   "short": "Hanging up and calling the person or company back on a number you already know is real.",
+   "sites": [
+    "ai-safety",
+    "security"
+   ]
+  },
+  {
+   "id": "prompt-injection",
+   "term": "Prompt injection",
+   "short": "Text hidden in data (an email, web page or file) that tries to give an AI new instructions.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "agent",
+   "term": "AI agent",
+   "short": "An AI system that can take actions with tools, such as sending email, browsing or paying.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "frontier-ai",
+   "term": "Frontier AI",
+   "short": "The most capable general-purpose AI systems at a given time.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "alignment",
+   "term": "Alignment",
+   "short": "Making AI systems pursue the goals their designers and users actually intend.",
+   "sites": [
+    "ai-safety"
+   ]
+  }
+ ]
+}

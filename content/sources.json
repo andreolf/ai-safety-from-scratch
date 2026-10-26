@@ -1,0 +1,188 @@
+{
+ "checked": "2026-10-26",
+ "note": "Every external link used in a lesson must be listed here after being opened and read on the checked date. scripts/check-lessons.mjs enforces this.",
+ "sources": [
+  {
+   "url": "https://www.youtube.com/watch?v=zjkBMFhNj_g",
+   "title": "Andrej Karpathy, “[1hr Talk] Intro to Large Language Models” (YouTube)",
+   "publisher": "Andrej Karpathy",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://arxiv.org/abs/1706.03762",
+   "title": "Vaswani et al., “Attention Is All You Need”",
+   "publisher": "arXiv",
+   "date": "2017-06-12",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://arxiv.org/abs/2203.02155",
+   "title": "Ouyang et al., “Training language models to follow instructions with human feedback” (InstructGPT)",
+   "publisher": "arXiv",
+   "date": "2022-03-04",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://ethz.ch/en/news-and-events/eth-news/news/2025/09/press-release-apertus-a-fully-open-transparent-multilingual-language-model.html",
+   "title": "Apertus: a fully open, transparent, multilingual language model",
+   "publisher": "ETH Zurich",
+   "date": "2025-09-02",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://www.3blue1brown.com/topics/neural-networks",
+   "title": "Neural networks (video series)",
+   "publisher": "3Blue1Brown",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://openai.com/index/why-language-models-hallucinate/",
+   "title": "Why language models hallucinate",
+   "publisher": "OpenAI",
+   "date": "2025-09-05",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://openai.com/index/sycophancy-in-gpt-4o/",
+   "title": "Sycophancy in GPT-4o: what happened and what we’re doing about it",
+   "publisher": "OpenAI",
+   "date": "2025-04-29",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://arxiv.org/abs/2310.13548",
+   "title": "Sharma et al., “Towards Understanding Sycophancy in Language Models”",
+   "publisher": "arXiv",
+   "date": "2023-10-20",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://proceedings.mlr.press/v81/buolamwini18a.html",
+   "title": "Buolamwini & Gebru, “Gender Shades”",
+   "publisher": "PMLR 81",
+   "date": "2018",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://decisions.civilresolutionbc.ca/crt/crtd/en/525448/1/document.do",
+   "title": "Moffatt v. Air Canada, 2024 BCCRT 149",
+   "publisher": "Civil Resolution Tribunal (British Columbia)",
+   "date": "2024-02-14",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://www.ic3.gov/PSA/2024/PSA241203",
+   "title": "Criminals Use Generative Artificial Intelligence to Facilitate Financial Fraud (I-120324-PSA)",
+   "publisher": "FBI Internet Crime Complaint Center",
+   "date": "2024-12-03",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes",
+   "title": "Scammers use AI to enhance their family emergency schemes",
+   "publisher": "US Federal Trade Commission",
+   "date": "2023-03-20",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://www.cnn.com/2024/05/16/tech/arup-deepfake-scam-loss-hong-kong-intl-hnk",
+   "title": "Arup revealed as victim of $25 million deepfake scam involving Hong Kong employee",
+   "publisher": "CNN",
+   "date": "2024-05-16",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://internationalaisafetyreport.org/",
+   "title": "International AI Safety Report",
+   "publisher": "International AI Safety Report",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://internationalaisafetyreport.org/publication/2026-report-executive-summary",
+   "title": "International AI Safety Report 2026: Executive Summary",
+   "publisher": "International AI Safety Report",
+   "date": "2026-02-03",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://openai.com/index/hardening-atlas-against-prompt-injection/",
+   "title": "Continuously hardening ChatGPT Atlas against prompt injection attacks",
+   "publisher": "OpenAI",
+   "date": "2025-12-22",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://genai.owasp.org/llmrisk/llm01-prompt-injection/",
+   "title": "LLM01:2025 Prompt Injection",
+   "publisher": "OWASP GenAI Security Project",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/",
+   "title": "The lethal trifecta for AI agents",
+   "publisher": "Simon Willison",
+   "date": "2025-06-16",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://incidentdatabase.ai/",
+   "title": "AI Incident Database",
+   "publisher": "Responsible AI Collaborative",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+   "title": "AI Risk Management Framework",
+   "publisher": "NIST",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://80000hours.org/problem-profiles/artificial-intelligence/",
+   "title": "Artificial intelligence (problem profile)",
+   "publisher": "80,000 Hours",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-enhanced.html",
+   "title": "Understanding SC 1.4.6 Contrast (Enhanced)",
+   "publisher": "W3C",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html",
+   "title": "Understanding SC 2.5.5 Target Size (Enhanced)",
+   "publisher": "W3C",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://rm.coe.int/1680afae3c",
+   "title": "Council of Europe Framework Convention on Artificial Intelligence (CETS No. 225), official text PDF",
+   "publisher": "Council of Europe",
+   "date": "2024-09-05",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act-explorer",
+   "title": "AI Act Explorer (Regulation (EU) 2024/1689)",
+   "publisher": "European Commission AI Act Service Desk",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://openai.com/index/faulty-reward-functions/",
+   "title": "Faulty reward functions in the wild",
+   "publisher": "OpenAI",
+   "date": "2016-12-21",
+   "checked": "2026-10-26"
+  }
+ ]
+}

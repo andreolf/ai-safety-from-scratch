@@ -3,9 +3,9 @@
 Last updated 26 Oct 2026 (Asia/Makassar).
 
 ## Done
-- Scaffold, Signal design system (kit tokens 1.0.0, locked), engine, 9 of 15 labs (all labs for Phases 00–06, including the flagships Fake Inbox and Agent Permission Simulator, plus Trifecta Switchboard).
-- **Lessons 43 of 72**: Phases 00 (4), 01 (7), 02 (7), 03 (6), 04 (7), 05 (6), 06 (6). Every lesson has at least one visual, a mascot scene, an exercise with a worked solution, 3 quiz questions and a sources list.
-- Phase tests (10 questions, pass at 80%, deterministic draw) open for Phases 00–06.
+- Scaffold, Signal design system (kit tokens 1.0.0, locked), engine, 13 of 15 labs (all labs for Phases 00–09, including the flagships Fake Inbox, Agent Permission Simulator and Reward Designer, plus Feature Dial, Build-an-Eval and AI Act Risk Sorter).
+- **Lessons 60 of 72**: Phases 00 (4), 01 (7), 02 (7), 03 (6), 04 (7), 05 (6), 06 (6), 07 (5), 08 (6), 09 (6). Every lesson has at least one visual, a mascot scene, an exercise with a worked solution, 3 quiz questions and a sources list.
+- Phase tests (10 questions, pass at 80%, deterministic draw) open for Phases 00–09.
 - Certificates (PNG and PDF, not accredited) and the verify page.
 - Labs page (`#/labs`): every lab is playable inline in its own section, mounted lazily with IntersectionObserver, paused when off-screen, with a sticky number mini-nav and `#/labs#lab-NN` anchors. Labs inside lessons link to their section (“All labs →”). Unbuilt labs show a compact locked teaser. Security from Scratch should use the same pattern.
 - “Points”, never “XP”, in all user-facing text; a unit test fails if “XP” appears in built HTML, JSON, JS strings, lessons, content or the README.
@@ -32,7 +32,10 @@ All 72 lesson IDs and titles match the curriculum draft exactly; a unit test enf
 
 ## Source re-checks (26 Oct 2026)
 - **Council of Europe:** coe.int still returns 403 to scripted fetches. Official mirror: https://rm.coe.int/1680afae3c, CETS No. 225, opened 200 and read.
-- **EUR-Lex:** still serves a bot challenge (HTTP 202). The official Commission AI Act Explorer (ai-act-service-desk.ec.europa.eu) returns 200 for Regulation (EU) 2024/1689 and mentions a consolidated version dated 27 July 2026 and the "Digital Omnibus on AI". Re-read both before writing Phase 09.
+- **EUR-Lex:** still serves a JavaScript bot challenge, so it is not cited. Phase 09 uses the Commission's AI Act Service Desk instead (timeline, Explorer with the consolidated text as at 27 July 2026, Articles 5, 6, 50 and 113, Annex III, Digital Omnibus FAQ), all opened with HTTP 200, plus the Commission's AI Act page on digital-strategy.ec.europa.eu (curl gets 403; read with a browser-style fetch). The Explorer itself says the legally authentic text is the Official Journal version.
+- **Council of Europe page:** coe.int's Framework Convention page loads with a browser-style fetch (curl 403) and is cited in 09.04 alongside the rm.coe.int treaty text.
+- **Swiss sources:** admin.ch/en/nsb returns 403; the same Federal Council releases are cited from uvek.admin.ch (12 Feb 2025, 26 Mar 2025). The SME Portal (kmu.admin.ch, 23 Sep 2026) supersedes OFCOM's earlier 'end of 2026' plan with 'spring 2027'.
+- **MITRE ATLAS:** atlas.mitre.org is a JavaScript app with no readable text; technique IDs were read from the official mitre-atlas/atlas-data repository (ATLAS 2026.09).
 - **consilium.europa.eu:** not re-tried this session (earlier attempts gave 403 or timed out).
 - **OpenAI, Atlas prompt-injection post (22 Dec 2025):** read, and quoted in lesson 01.06.
 - **FTC:** the 2023 alert was replaced by "Scammers Use Fake Emergencies To Steal Your Money". That page was verified with a browser-style fetch; curl gets 404 because the site blocks bots.
@@ -43,13 +46,19 @@ All 72 lesson IDs and titles match the curriculum draft exactly; a unit test enf
 - OWASP Agentic Top 10 2026 (9 Dec 2025) read in the PDF; Lakera Agent Breaker rules read; x402.org, ERC-7715 (Draft), MCP security best practices and Willison (2022, 2025) read.
 - Not cited: x402 usage statistics; Tenderly, MCP Inspector and Snyk agent-scan (left for the Builder track, not re-read); MetaMask Smart Accounts Kit (not mentioned).
 
+## Verified 26 Oct 2026 (Phases 07–09)
+- Lesson 02.04's high-risk claim checked against Annex III: recruitment and filtering applications 4(a), creditworthiness and credit scoring 5(b) (fraud detection excluded), admission to education 3(a). Wording sharpened and Annex III added to its sources.
+- Phase 07: DeepMind (2020), OpenAI faulty reward functions (2016) and sycophancy (2025) re-read; every quote found word for word.
+- Phase 08: Anthropic Golden Gate Claude and Scaling Monosemanticity, Inspect, UK AISI, METR (home page and 22 Oct 2026 red-team post), OWASP GenAI Red Teaming Manual, AI Incident Database read.
+
 ## Needs verification before use
 - Lesson 03.05: the 5-step investment-scam flow is general background. It is attributed to Security from Scratch 08.03–08.05, whose sources need to be carried over.
-- Lesson 02.04: "the EU AI Act treats hiring, loans and school places as high-risk". Confirm against Annex III when writing Phase 09.
-- Links to Security from Scratch point to the planned sister site, which is not built yet, so they will 404 until it is.
+- Security from Scratch cross-links: only the 22 Security lessons written and checked live on 26 Oct 2026 are links; the rest show “Coming soon” (snapshot in `content/security-lessons.json`). Refresh the snapshot when Security publishes more lessons.
+- Lesson 08.01: Karpathy's talk is dated only “2023” (no exact date on the transcript used).
+- AI Act content (09.02, 09.03) and Swiss timing (09.05): re-check quarterly; next review by end of January 2027.
 
 ## Remaining
-Phases 07 (5 lessons), 08 (6), 09 (6), 10 (5) and 11 (7): 29 lessons and 6 labs.
+Phases 10 (5 lessons) and 11 (7): 12 lessons and 2 labs (Plan Builder, Builder: real tools).
 
 ## Notes
 - The build was done locally on the box, because no CloudAgent was available.

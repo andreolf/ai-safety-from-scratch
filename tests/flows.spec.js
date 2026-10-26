@@ -7,7 +7,7 @@ test('home shows phase map, points bar, mascot and counts', async ({ page }) => 
   await expect(page.getByTestId('phase-map')).toBeVisible();
   await expect(page.getByTestId('xp-bar').getByRole('progressbar')).toBeVisible();
   await expect(page.locator('.intern-tile svg').first()).toBeVisible();
-  await expect(page.getByTestId('written-count')).toContainText('54');
+  await expect(page.getByTestId('written-count')).toContainText('60');
   expect(errs).toEqual([]);
 });
 
@@ -162,7 +162,7 @@ test('Agent Permission Simulator in lesson 06-05: poisoned invoice paid without 
   expect(errs).toEqual([]);
 });
 
-for (const p of ['p04', 'p05', 'p06', 'p07', 'p08']) test(`phase test ${p}: 10 questions drawn and passable`, async ({ page }) => {
+for (const p of ['p04', 'p05', 'p06', 'p07', 'p08', 'p09']) test(`phase test ${p}: 10 questions drawn and passable`, async ({ page }) => {
   await go(page, `#/test/${p}`);
   const qs = page.getByTestId('question'); await expect(qs).toHaveCount(10);
   for (let i = 0; i < 10; i++) await qs.nth(i).locator('[data-correct=true]').first().click();
@@ -223,5 +223,17 @@ test('Build-an-Eval in lesson 08-03: the test design decides the winner', async 
   await lab.getByTestId('ev-wrong').selectOption('-1');
   await expect(out).toHaveAttribute('data-winner', 'careful');
   await expect(lab.getByTestId('ev-row-careful')).toContainText('5');
+  expect(errs).toEqual([]);
+});
+
+test('AI Act Risk Sorter in lesson 09-02: every card sorted correctly cites its article', async ({ page }) => {
+  const errs = watchErrors(page); await go(page, '#/learn/09-02');
+  const lab = page.getByTestId('lab-ai-act-sorter');
+  await expect(lab).toHaveAttribute('data-lab-ready', '1');
+  const items = lab.locator('.sort-item'); const n = await items.count(); expect(n).toBe(11);
+  for (let i = 0; i < n; i++) { const k = await items.nth(i).getAttribute('data-answer'); await lab.getByTestId(`act-${i}-${k}`).click(); await expect(lab.getByTestId(`act-why-${i}`)).toContainText('Yes.'); }
+  await expect(lab.getByTestId('act-why-4')).toContainText('Annex III');
+  await expect(lab.getByTestId('act-why-0')).toContainText('Article 5');
+  await expect(lab.getByTestId('lab-ai-act-sorter-score')).toHaveText('11/11');
   expect(errs).toEqual([]);
 });

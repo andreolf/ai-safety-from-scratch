@@ -7,7 +7,7 @@ test('home shows phase map, points bar, mascot and counts', async ({ page }) => 
   await expect(page.getByTestId('phase-map')).toBeVisible();
   await expect(page.getByTestId('xp-bar').getByRole('progressbar')).toBeVisible();
   await expect(page.locator('.intern-tile svg').first()).toBeVisible();
-  await expect(page.getByTestId('written-count')).toContainText('60');
+  await expect(page.getByTestId('written-count')).toContainText('65');
   expect(errs).toEqual([]);
 });
 
@@ -162,7 +162,7 @@ test('Agent Permission Simulator in lesson 06-05: poisoned invoice paid without 
   expect(errs).toEqual([]);
 });
 
-for (const p of ['p04', 'p05', 'p06', 'p07', 'p08', 'p09']) test(`phase test ${p}: 10 questions drawn and passable`, async ({ page }) => {
+for (const p of ['p04', 'p05', 'p06', 'p07', 'p08', 'p09', 'p10']) test(`phase test ${p}: 10 questions drawn and passable`, async ({ page }) => {
   await go(page, `#/test/${p}`);
   const qs = page.getByTestId('question'); await expect(qs).toHaveCount(10);
   for (let i = 0; i < 10; i++) await qs.nth(i).locator('[data-correct=true]').first().click();
@@ -235,5 +235,59 @@ test('AI Act Risk Sorter in lesson 09-02: every card sorted correctly cites its 
   await expect(lab.getByTestId('act-why-4')).toContainText('Annex III');
   await expect(lab.getByTestId('act-why-0')).toContainText('Article 5');
   await expect(lab.getByTestId('lab-ai-act-sorter-score')).toHaveText('11/11');
+  expect(errs).toEqual([]);
+});
+
+test('Plan Builder in lesson 10-04: a habit in every group completes a printable plan', async ({ page }) => {
+  const errs = watchErrors(page); await go(page, '#/learn/10-04');
+  const lab = page.getByTestId('lab-plan-builder');
+  await expect(lab).toHaveAttribute('data-lab-ready', '1');
+  await expect(lab.getByTestId('plan-print')).toBeDisabled();
+  await lab.getByTestId('plan-name').fill('Ada');
+  for (const k of ['second', 'codeword', 'callback', 'ask']) await lab.getByTestId(`plan-${k}`).check();
+  await expect(lab.getByTestId('plan-status')).toHaveAttribute('data-complete', 'false');
+  await lab.getByTestId('plan-review').check();
+  await expect(lab.getByTestId('plan-status')).toHaveAttribute('data-complete', 'true');
+  const sheet = lab.getByTestId('plan-sheet');
+  await expect(sheet).toContainText('Ada’s AI safety plan');
+  await expect(sheet).toContainText('Hang up and call back on a number I already know');
+  await expect(sheet.locator('li')).toHaveCount(5);
+  const [dl] = await Promise.all([page.waitForEvent('download'), lab.getByTestId('plan-text').click()]);
+  expect(dl.suggestedFilename()).toBe('my-ai-safety-plan.txt');
+  await page.evaluate(() => { window.print = () => { window.__printed = document.body.classList.contains('print-plan'); }; });
+  await lab.getByTestId('plan-print').click();
+  expect(await page.evaluate(() => window.__printed)).toBe(true);
+  expect(errs).toEqual([]);
+});
+
+test('Foundations certificate end to end: pass the Phase 10 test for real, get the certificate, verify its code', async ({ page }) => {
+  const errs = watchErrors(page);
+  await page.addInitScript(() => {
+    if (sessionStorage.getItem('seeded')) return; sessionStorage.setItem('seeded', '1');
+    const tests = {}; for (let i = 0; i <= 9; i++) tests['p' + String(i).padStart(2, '0')] = { best: 1, passed: true, date: '2026-10-20', attempts: 1 };
+    localStorage.setItem('aisfs-v1', JSON.stringify({ v: 1, xp: 0, lessons: {}, quiz: {}, tests, days: [], name: '', certs: {}, labs: {}, last: null }));
+  });
+  await go(page, '#/certificate/foundations');
+  await expect(page.getByTestId('cert-locked')).toContainText('10 passed');
+  await go(page, '#/test/p10');
+  const qs = page.getByTestId('question'); await expect(qs).toHaveCount(10);
+  for (let i = 0; i < 10; i++) await qs.nth(i).locator('[data-correct=true]').first().click();
+  await page.getByTestId('submit-test').click();
+  await expect(page.getByTestId('test-result')).toHaveAttribute('data-pass', 'true');
+  await page.getByRole('link', { name: 'Get your certificate' }).click();
+  await expect(page).toHaveURL(/#\/certificate\/foundations$/);
+  await page.getByTestId('cert-name').fill('Grace Hopper');
+  await expect(page.getByTestId('cert-canvas')).toHaveAttribute('data-ready', '1');
+  const code = (await page.getByTestId('cert-code').textContent()).trim();
+  const today = await page.evaluate(() => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; });
+  await go(page, '#/verify');
+  await page.getByTestId('v-name').fill('Grace Hopper');
+  await page.getByTestId('v-key').selectOption('foundations');
+  await page.getByTestId('v-date').fill(today);
+  await page.getByTestId('v-code').fill(code);
+  await page.getByTestId('v-submit').click();
+  await expect(page.getByTestId('v-out')).toHaveAttribute('data-ok', 'true');
+  await page.getByTestId('v-key').selectOption('builder'); await page.getByTestId('v-submit').click();
+  await expect(page.getByTestId('v-out')).toHaveAttribute('data-ok', 'false');
   expect(errs).toEqual([]);
 });

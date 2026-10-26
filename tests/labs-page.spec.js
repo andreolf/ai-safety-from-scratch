@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { watchErrors, go, noOverflow, tapTargets } from './helpers.js';
 import { labs } from '../src/labs/meta.js';
 const READY = Object.values(labs).filter((l) => l.ready).length;
-const FIRST_LOCKED = Object.entries(labs).find(([, l]) => !l.ready)[0];
+const FIRST_LOCKED = Object.entries(labs).find(([, l]) => !l.ready)?.[0];
 // Labs page: every lab playable inline, lazy-mounted, with a mini-nav and #/labs#lab-NN anchors.
 
 test('labs page: inline sections, mini-nav, locked teasers, lazy mount, no overflow', async ({ page }) => {
@@ -11,7 +11,8 @@ test('labs page: inline sections, mini-nav, locked teasers, lazy mount, no overf
   await expect(nav.locator('a')).toHaveCount(15);
   await expect(page.locator('.lab-section:not(.is-locked)')).toHaveCount(READY);
   await expect(page.locator('.lab-section.is-locked')).toHaveCount(15 - READY);
-  await expect(page.getByTestId(`labsec-${FIRST_LOCKED}`)).toContainText('Coming with');
+  if (FIRST_LOCKED) await expect(page.getByTestId(`labsec-${FIRST_LOCKED}`)).toContainText('Coming with');
+  else await expect(page.locator('main')).not.toContainText('Coming with');
   // The first lab is live in place; a far-away lab has not been loaded yet.
   await expect(page.getByTestId('lab-risk-sorter')).toHaveAttribute('data-lab-ready', '1');
   await expect(page.locator('[data-slot="agent-permissions"]')).toHaveAttribute('data-mounted', '0');

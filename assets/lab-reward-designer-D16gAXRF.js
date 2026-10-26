@@ -1,4 +1,4 @@
-import{a as e,r as t}from"./index-T9QpygqL.js";var n={loop:{label:`Circle lagoon`,targets:40,crashes:6,finish:!1},race:{label:`Finish race`,targets:6,crashes:0,finish:!0},idle:{label:`Sit still`,targets:0,crashes:0,finish:!1}},r=(e,t)=>e.targets*t.t-e.crashes*t.p+(e.finish?t.f:0),i=`<svg viewBox="0 0 400 220" role="img" aria-label="Race track with a lagoon on the right" focusable="false">
+import{a as e,r as t}from"./index-BQSPLBVw.js";var n={loop:{label:`Circle lagoon`,targets:40,crashes:6,finish:!1},race:{label:`Finish race`,targets:6,crashes:0,finish:!0},idle:{label:`Sit still`,targets:0,crashes:0,finish:!1}},r=(e,t)=>e.targets*t.t-e.crashes*t.p+(e.finish?t.f:0),i=`<svg viewBox="0 0 400 220" role="img" aria-label="Race track with a lagoon on the right" focusable="false">
   <rect x="20" y="30" width="270" height="160" rx="80" class="svg-box" stroke-width="2"/>
   <rect x="60" y="70" width="190" height="80" rx="40" class="svg-box" stroke-width="2"/>
   <circle cx="335" cy="110" r="48" class="svg-box" stroke-width="2" stroke-dasharray="6 5"/>

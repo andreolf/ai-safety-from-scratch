@@ -3,15 +3,9 @@ id: 04-06
 minutes: 9
 highlight: Practice
 pose: proud
-summary: The best way to understand prompt injection is to try it, on a game built for exactly that. Rules for practising safely and legally, and what to look for.
+summary: Two free places to attack real models legally, Agent Breaker and Jailbroken, plus a plan for a first session and the rules for practising safely.
 ---
-## The hook
-
-Reading about lock-picking is one thing. Picking a practice lock on your kitchen table is how it finally makes sense. Prompt injection is the same: one evening with a game built for it teaches more than a week of articles.
-
-## The one idea
-
-**Practise prompt attacks only on systems built for practice, such as Lakera’s Agent Breaker game or this course’s labs. Never on real chatbots, agents or accounts that belong to someone else.**
+The labs in this course are simulations: scripted toys that show how an attack works. To feel how real models resist and give way, you need real targets that are built to be attacked. Two free ones are worth your time. Use them, and only them, or apps you built yourself.
 
 :::figure practice-rules
 Where it is fine to practise, and where it is not.
@@ -33,12 +27,23 @@ How it works, from the game’s own rules:
 
 There is a leaderboard. You may want to make an account or play anonymously; read the game’s own terms first, and don’t enter real personal data into practice prompts.
 
-## A good first session (20 minutes)
+## Jailbroken
+
+Jailbroken describes itself like this:
+
+:::source url="https://jailbroken.gg/" by="Jailbroken, home page" date="" checked="27 Oct 2026"
+Jailbroken is a playable academy for AI security. Learn red-team techniques, attack live model-backed targets, and compete on a shared Daily Challenge.
+:::end
+
+The difference from this course is the point. Here you get structured lessons and simulated labs that explain why an attack works and what stops it. Jailbroken gives you live targets and a daily puzzle shared by every player, with a leaderboard. Use this phase for the why, and Jailbroken for practice.
+
+## A good first session (30 minutes)
 
 1. **Play one easy level by typing directly.** Notice how the app “defends” itself: polite refusals, filters, rules in its instructions.
-2. **Try a level where you hide your attack in a document or web page.** Notice that you never talk to the victim. You just leave words where their AI will read them.
+2. **Try a level in Agent Breaker where you hide your attack in a document or web page.** Notice that you never talk to the victim. You just leave words where their AI will read them.
 3. **Watch the score.** An attack that works once may fail the next time. These systems are not predictable, which is exactly why defenders can’t rely on filters alone.
-4. **Write down one defence** that would have stopped your best attack even if the model was fooled. (Hint: lesson 04-07.)
+4. **Try that day’s Jailbroken challenge,** and compare what worked on a live model with what worked in this course’s labs.
+5. **Write down one defence** that would have stopped your best attack even if the model was fooled. (Hint: lesson 04.07.)
 
 ## The rules, in plain words
 
@@ -54,7 +59,7 @@ A practice range is for practice. Real systems need permission, in writing.
 :::end
 
 :::exercise Plan your practice
-You have 20 minutes and want to understand indirect injection. Write a three-step plan using only the practice game and this course’s Fake Inbox lab.
+You have 20 minutes and want to understand indirect injection. Write a three-step plan using only practice targets and this course’s Fake Inbox lab.
 :::solution
 Example: (1) In the Fake Inbox, run level 1 and level 2 and read what the assistant did. (2) In Agent Breaker, pick a level whose attack vector is content “like a document or webpage”, and try to hide an instruction there. (3) Back in the Fake Inbox, open level 3 and find which defence stops the attack even though the assistant is still fooled. Never test on real services.
 :::end
@@ -63,7 +68,7 @@ Example: (1) In the Fake Inbox, run level 1 and level 2 and read what the assist
 
 :::quiz
 - q: Where is it fine to practise prompt attacks?
-  options: ["On games built for it, such as Agent Breaker, this course’s labs, or your own apps", "On any chatbot that is free to use", "On your bank’s chatbot, as long as you don’t steal anything"]
+  options: ["On targets built for it, such as Agent Breaker, Jailbroken, this course’s labs, or your own apps", "On any chatbot that is free to use", "On your bank’s chatbot, as long as you don’t steal anything"]
   answer: 0
   explain: Real services never agreed to be tested. Practice systems did.
 - q: In Agent Breaker, what score unlocks the next level of an app?
@@ -84,3 +89,4 @@ lesson 04-07 | Defences that help
 ## Sources
 
 - Lakera, [Agent Breaker](https://play.lakera.ai/agent-breaker), “How to Play”, “Attack Objective” and “Attack Vector” sections. Opened 26 Oct 2026; gandalf.lakera.ai redirected to this page on that date. Checked 26 Oct 2026.
+- Jailbroken, [home page](https://jailbroken.gg/) (description, Daily Challenge, leaderboard). Checked 27 Oct 2026.

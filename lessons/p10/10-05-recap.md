@@ -5,13 +5,7 @@ highlight: recap
 pose: proud
 summary: The ten ideas from this course worth remembering, each with the lesson it came from, and how the final phase tests and the Foundations certificate work.
 ---
-## The hook
-
-Ten phases, sixty-odd lessons, a dozen labs and one very gullible intern. If you remembered only ten ideas, which should they be? And how do you turn all this into a certificate?
-
-## The one idea
-
-**Most of this course fits in ten ideas. If you can explain each one to a friend in a sentence, you are ready for the phase tests, and passing all of them from 00 to 10 unlocks the free Foundations certificate of completion.**
+Most of this course fits in ten ideas. If you can explain each one to a friend in a sentence, you are ready for the phase tests. Passing all of them from 00 to 10 unlocks the free Foundations certificate of completion.
 
 :::figure ten-ideas
 The ten ideas to remember from Phases 00 to 10.
@@ -19,15 +13,15 @@ The ten ideas to remember from Phases 00 to 10.
 
 ## The ten ideas
 
-1. **Three kinds of risk.** AI can go wrong by mistake, by misuse, or through loss of control, when a system pursues something nobody wanted (Phase 00).
+1. **Three risks, one problem.** Misuse, misalignment and loss of control. A truly aligned AI could not be turned against us and would not try to escape, which is why many see them as one problem (Phase 00).
 2. **It predicts the next word.** A chatbot continues text by predicting likely next pieces, which is why it can sound sure and still be wrong (Phase 01).
 3. **Confident is not correct.** Hallucinations, sycophancy and bias mean you check important answers in a second source (Phase 02).
 4. **Verify, don’t spot.** You cannot reliably tell a cloned voice or a deepfake by ear or eye. Hang up and call back on a number you know, and use a family code word (Phase 03).
 5. **Text can give orders.** Prompt injection hides instructions in emails, web pages and files, and there is no simple fix (Phase 04).
 6. **Watch the trifecta.** Private data plus untrusted content plus a way out is the dangerous mix for agents. Remove one (Phase 05).
 7. **Limits before money.** An agent that can pay needs caps, allowlists, expiry and a preview, and never your keys (Phase 06).
-8. **We get what we measure.** Systems find loopholes in the goals we write, like the boat that circled for points (Phase 07).
-9. **Test, look inside, learn from incidents.** Evals, interpretability, red-teaming and incident databases are how we find problems before and after release (Phase 08).
+8. **Said is not meant.** Systems game the score, learn the wrong goal, and sometimes hide it, from the circling boat to o3 rewriting its timer (Phase 07).
+9. **Plan for misbehaviour.** Control protocols, sandboxes, monitors and evals are meant to hold even if the model works against you. In July 2026 one sandbox did not (Phase 08).
 10. **Rules are arriving.** The EU AI Act sorts uses by risk, Switzerland is preparing its own approach, and much elsewhere is still voluntary (Phases 09 and 10).
 
 Two of these ideas come straight from sources you met earlier. The International AI Safety Report warns that “performance on pre-deployment tests does not reliably predict real-world utility or risk”. OWASP lists prompt injection as the first risk for apps built on language models.
@@ -56,6 +50,10 @@ Choose three of the ten ideas and explain each to an imaginary friend in one sen
 :::solution
 Examples: “A chatbot guesses the next word, so it can sound sure and still be wrong: check anything important.” “If a call or video asks for money urgently, hang up and call back on a number you already have, even if the voice sounds exactly right.” “Before an AI app can spend money, give it a small limit and an end date, and never give it your passwords or keys.”
 :::end
+
+## After the course
+
+When you finish, the [Where to go next](#/next) page lists the places I would go to learn more: BlueDot Impact’s free courses, ARENA’s research curriculum and Jailbroken’s live targets. Lesson 10.02 explains which to pick first.
 
 ## Quick check
 

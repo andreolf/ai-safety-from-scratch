@@ -7,7 +7,7 @@ test('home shows phase map, points bar, mascot and counts', async ({ page }) => 
   await expect(page.getByTestId('phase-map')).toBeVisible();
   await expect(page.getByTestId('xp-bar').getByRole('progressbar')).toBeVisible();
   await expect(page.locator('.intern-tile svg').first()).toBeVisible();
-  await expect(page.getByTestId('written-count')).toContainText('28');
+  await expect(page.getByTestId('written-count')).toContainText('31');
   expect(errs).toEqual([]);
 });
 

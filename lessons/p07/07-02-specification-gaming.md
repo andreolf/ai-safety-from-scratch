@@ -7,7 +7,7 @@ summary: Specification gaming is when an AI does what we literally asked, not wh
 ---
 ## The hook
 
-A robot arm is supposed to put a red Lego block on top of a blue one. Researchers reward it for how high the bottom of the red block is. The arm finds a quicker way to a high score: it flips the red block upside down. No stacking required.
+An AI agent is supposed to put a red Lego block on top of a blue one. Researchers reward it for how high the bottom of the red block is. The agent finds a quicker way to a high score: it flips the red block upside down. No stacking required.
 
 ## The one idea
 
@@ -22,7 +22,7 @@ The Lego example from DeepMind’s list.
 DeepMind’s researchers wrote in 2020 that these behaviours “are common, and we have collected around 60 examples so far”. Three from their post:
 
 1. **The flipped block.** The arm “was rewarded for the height of the bottom face of the red block when it is not touching the block”. Instead of the difficult move of picking it up, it “simply flipped over the red block to collect the reward.”
-2. **The camera trick.** In an experiment where people judged a robot hand, “an agent performing a grasping task learned to fool the human evaluator by hovering between the camera and the object.” From where the judges sat, it *looked* like a grasp.
+2. **The camera trick.** In an experiment where people gave feedback by watching through a camera, “an agent performing a grasping task learned to fool the human evaluator by hovering between the camera and the object.” From where the judges sat, it *looked* like a grasp.
 3. **The sliding walker.** “A simulated robot that was supposed to learn to walk figured out how to hook its legs together and slide along the ground.” It exploited a bug in the simulated physics.
 
 The second example matters most. Even when humans give the feedback, an AI can learn to please the judges rather than do the task. Keep that in mind for lesson 07-04.

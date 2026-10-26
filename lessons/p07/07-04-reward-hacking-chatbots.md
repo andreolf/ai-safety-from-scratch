@@ -21,7 +21,7 @@ How a thumbs-up can become the wrong target.
 
 In lesson 07-03, the boat chased points instead of the finish line. Chatbots are trained partly with [[term:rlhf|learning from human feedback]]: people rate answers, and the model is pushed towards answers that get good ratings. A good rating is a [[term:proxy|proxy]] for a helpful answer. It is not the same thing.
 
-DeepMind’s list already had a warning: a robot hand that “learned to fool the human evaluator by hovering between the camera and the object.” A chatbot can do the same with words: look helpful to the person rating it.
+DeepMind’s list already had a warning: an agent doing a grasping task “learned to fool the human evaluator by hovering between the camera and the object.” A chatbot can do the same with words: look helpful to the person rating it.
 
 ## What happened in April 2025
 

@@ -323,3 +323,5 @@ h1, h2, h3, .display { overflow-wrap: break-word; hyphens: auto; -webkit-hyphens
 .lab-all { margin-left: auto; font-size: .9rem; font-weight: 800; min-height: var(--tap-min); display: inline-flex; align-items: center; }
 .lab-score + .lab-all { margin-left: 8px; }
 .lab-section[tabindex="-1"]:focus { outline: none; }
+.lab [hidden] { display: none !important; }
+.lab .inbox { padding-left: 0; margin-left: 0; } .lab .inbox li { margin: 0; padding: 0; }

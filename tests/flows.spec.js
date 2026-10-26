@@ -7,7 +7,7 @@ test('home shows phase map, points bar, mascot and counts', async ({ page }) => 
   await expect(page.getByTestId('phase-map')).toBeVisible();
   await expect(page.getByTestId('xp-bar').getByRole('progressbar')).toBeVisible();
   await expect(page.locator('.intern-tile svg').first()).toBeVisible();
-  await expect(page.getByTestId('written-count')).toContainText('31');
+  await expect(page.getByTestId('written-count')).toContainText('43');
   expect(errs).toEqual([]);
 });
 
@@ -129,4 +129,43 @@ test('Fake Inbox in lesson 04-07: fooled without defences, safe with the send to
   await expect(lab.getByTestId('inbox-out')).toHaveAttribute('data-verdict', 'good');
   await expect(lab.getByTestId('lab-fake-inbox-score')).toHaveText('3/3');
   expect(errs).toEqual([]);
+});
+
+test('Trifecta Switchboard in lesson 05-03: stolen with all three, blocked with one off', async ({ page }) => {
+  const errs = watchErrors(page); await go(page, '#/learn/05-03');
+  const lab = page.getByTestId('lab-trifecta-switchboard');
+  await expect(lab).toHaveAttribute('data-lab-ready', '1');
+  await lab.getByTestId('sw-run').click();
+  await expect(lab.getByTestId('sw-out')).toHaveAttribute('data-result', 'stolen');
+  for (const k of ['data', 'untrusted', 'out']) {
+    await lab.getByTestId(`sw-switch-${k}`).click();
+    await lab.getByTestId('sw-run').click();
+    await expect(lab.getByTestId('sw-out')).toHaveAttribute('data-result', 'blocked');
+    await lab.getByTestId(`sw-switch-${k}`).click();
+  }
+  await expect(lab.getByTestId('lab-trifecta-switchboard-score')).toHaveText('3/3 blocks found');
+  expect(errs).toEqual([]);
+});
+
+test('Agent Permission Simulator in lesson 06-05: poisoned invoice paid without limits, stopped by an allowlist', async ({ page }) => {
+  const errs = watchErrors(page); await go(page, '#/learn/06-05');
+  const lab = page.getByTestId('lab-agent-permissions');
+  await expect(lab).toHaveAttribute('data-lab-ready', '1');
+  await lab.getByTestId('perm-run').click();
+  await expect(lab.getByTestId('perm-out')).not.toHaveAttribute('data-lost', '0');
+  await lab.getByTestId('perm-anyone').uncheck();
+  await lab.getByTestId('perm-ask').fill('50');
+  await lab.getByTestId('perm-run').click();
+  await expect(lab.getByTestId('perm-out')).toHaveAttribute('data-lost', '0');
+  await expect(lab.getByTestId('perm-out')).toHaveAttribute('data-legit', '5');
+  await expect(lab.locator('tr[data-res="declined"]')).toHaveCount(1);
+  expect(errs).toEqual([]);
+});
+
+for (const p of ['p04', 'p05', 'p06']) test(`phase test ${p}: 10 questions drawn and passable`, async ({ page }) => {
+  await go(page, `#/test/${p}`);
+  const qs = page.getByTestId('question'); await expect(qs).toHaveCount(10);
+  for (let i = 0; i < 10; i++) await qs.nth(i).locator('[data-correct=true]').first().click();
+  await page.getByTestId('submit-test').click();
+  await expect(page.getByTestId('test-result')).toHaveAttribute('data-pass', 'true');
 });

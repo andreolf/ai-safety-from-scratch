@@ -5,7 +5,7 @@ highlight: Switzerland's
 pose: neutral
 summary: Switzerland has no AI law yet. It signed the Council of Europe Convention, chose sector-by-sector changes over an EU-style act, and plans a draft for consultation in spring 2027.
 ---
-A Swiss start-up builds an AI hiring tool. Which rules apply: Swiss law, the EU AI Act, both, or none? The answer depends on where its customers are, and Switzerland’s own rules are still being written.
+Switzerland signed the Council of Europe’s AI Convention on 26 March 2025. It is not copying the EU AI Act, and its own draft law is not due until early 2027. So which rules apply to a Swiss company building an AI hiring tool? It depends on where the customers are.
 
 Switzerland is not copying the EU AI Act. It will bring the Council of Europe AI Convention into Swiss law, changing existing laws sector by sector where possible, with general rules only for key areas such as data protection. Meanwhile, existing Swiss law applies, and Swiss companies selling AI into the EU must follow the EU AI Act.
 

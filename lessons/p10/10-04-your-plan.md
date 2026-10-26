@@ -5,7 +5,7 @@ highlight: plan
 pose: proud
 summary: Turn the course into a one-page plan of habits for answers, scams, agents and learning. Build it in the lab, print it, and put it where you will see it.
 ---
-You have learned a lot in ten phases. In a month, what will you actually do differently? Most good intentions fade unless they are written down, specific and somewhere you will see them.
+You have finished ten phases. This lesson turns them into one page: a few specific habits, such as the secret family word the FBI suggests, and a date to look at the page again.
 
 Pick a few specific habits, write them on one page, and review the page every three months. A short plan you follow beats a long one you forget.
 

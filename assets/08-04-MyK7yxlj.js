@@ -1,0 +1,58 @@
+var e=`08-04`,t=8,n=`Frontier AI is tested by the companies that build it, by government institutes such as the UK AI Security Institute, and by independent groups such as METR.`,r=`tests`,i=`neutral`,a=`<h2 id="the-hook">The hook</h2>
+<p>Would you trust a new medicine that had only been tested by the company selling it? For frontier AI, independent testing is newer than it is for medicine, but it is growing.</p>
+<h2 id="the-one-idea">The one idea</h2>
+<p><strong>Three kinds of organisation test the most capable AI models: the developers themselves, government institutes, and independent nonprofits. Each sees different things, and outside testers usually depend on the developers giving them access.</strong></p>
+
+<figure class="fig" data-figure="who-tests"><svg viewBox="0 0 400 200" role="img" aria-label="Three kinds of organisation that test frontier AI." focusable="false"><defs><marker id="ar-who-tests" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--muted-strong)"/></marker></defs><rect x="8" y="10" width="124" height="180" rx="10" class="svg-box" stroke-width="2"/><text x="18" y="36" class="svg-t" text-anchor="start" style="font-size:12px;font-weight:900"><tspan x="18" dy="0">DEVELOPER</tspan></text><text x="18" y="62" class="svg-t" text-anchor="start" style="font-size:12.5px;font-weight:400"><tspan x="18" dy="0">Tests its own</tspan><tspan x="18" dy="15.625">models before</tspan><tspan x="18" dy="15.625">release, often</tspan><tspan x="18" dy="15.625">under a published</tspan><tspan x="18" dy="15.625">safety framework.</tspan></text><rect x="138" y="10" width="124" height="180" rx="10" class="svg-hl"/><text x="148" y="36" class="svg-on-hl" text-anchor="start" style="font-size:12px;font-weight:900"><tspan x="148" dy="0">GOVERNMENT</tspan></text><text x="148" y="62" class="svg-on-hl" text-anchor="start" style="font-size:12.5px;font-weight:400"><tspan x="148" dy="0">For example the</tspan><tspan x="148" dy="15.625">UK AI Security</tspan><tspan x="148" dy="15.625">Institute, which</tspan><tspan x="148" dy="15.625">built the open</tspan><tspan x="148" dy="15.625">Inspect tool.</tspan></text><rect x="268" y="10" width="124" height="180" rx="10" class="svg-box" stroke-width="2"/><text x="278" y="36" class="svg-t" text-anchor="start" style="font-size:12px;font-weight:900"><tspan x="278" dy="0">INDEPENDENT</tspan></text><text x="278" y="62" class="svg-t" text-anchor="start" style="font-size:12.5px;font-weight:400"><tspan x="278" dy="0">For example METR,</tspan><tspan x="278" dy="15.625">a research</tspan><tspan x="278" dy="15.625">nonprofit that</tspan><tspan x="278" dy="15.625">measures risks</tspan><tspan x="278" dy="15.625">from AI.</tspan></text></svg><figcaption>Three kinds of testers.</figcaption><details><summary>Text version of this picture</summary><p>Three columns. The developer tests its own models before release, often under a published safety framework. Government institutes, for example the UK AI Security Institute, which built the open-source Inspect evaluation tool. Independent organisations, for example METR, a research nonprofit that measures risks from AI.</p></details></figure>
+<h2 id="1-the-developers">1. The developers</h2>
+<p>Companies test their own models before release. The International AI Safety Report 2026 notes that “in 2025, 12 companies published or updated their Frontier AI Safety Frameworks – documents that describe how they plan to manage risks as they build more capable models.” It also notes that such initiatives “remain largely voluntary”. The developer has the most access, and also the strongest incentive to ship.</p>
+<h2 id="2-government-institutes">2. Government institutes</h2>
+<p>The UK set up an institute specifically for this:</p>
+
+<blockquote class="source"><q>The AI Security Institute is the first state-backed organisation dedicated to advancing this goal. We are conducting research and building infrastructure to understand the capabilities and impacts of advanced AI and to develop and test risk mitigations.</q><cite>UK AI Security Institute, home page. <a href="https://www.aisi.gov.uk/" rel="noopener" target="_blank">Read the source</a> · checked 26 Oct 2026</cite></blockquote>
+<p>Its stated mission is “to equip governments with a scientific understanding of the risks posed by advanced AI.” Its work includes “evaluating the risks AI poses to national security and public safety”. For example, it compared the cyber capabilities of open and closed models and reported that recent open models performed similarly to frontier closed models released 4 to 7 months before them.</p>
+<p>The institute also released a tool anyone can use. Inspect “is a framework for frontier AI evaluations developed by the UK AI Security Institute and Meridian Labs”, open-source and free.</p>
+<h2 id="3-independent-nonprofits">3. Independent nonprofits</h2>
+<p>METR (pronounced “meter”) “is a research nonprofit that scientifically measures whether and when AI systems might threaten catastrophic harm to society.” Its risk work includes a Frontier Risk Report, “independent reviews of AI developers&#39; risk assessments, and capability evaluations of frontier models”, and it says it “does not accept compensation for this work.”</p>
+<p>Notice the catch in its own disclosure: “Companies such as Anthropic, OpenAI, and xAI have provided access and tokens for our evaluations.” Outside testers can only test what they are allowed to see.</p>
+<h2 id="why-more-than-one-tester">Why more than one tester?</h2>
+<ul>
+<li><strong>Different incentives:</strong> an outsider has no product to launch.</li>
+<li><strong>Different access:</strong> the developer sees everything; outsiders often see less.</li>
+<li><strong>Shared tools:</strong> open tools like Inspect let more people run the same tests and compare results.</li>
+</ul>
+
+<aside class="intern-scene" data-pose="neutral" aria-label="Story: the gullible intern"><div class="intern-svg"><span class="intern-tile"><svg role="img" aria-label="The gullible intern, a friendly cartoon robot with a lanyard badge, looking ready to help." focusable="false" class="intern intern-neutral" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><title>The gullible intern, a friendly cartoon robot with a lanyard badge, looking ready to help.</title>
+  <path d="M58 196 L66 140 Q68 128 80 128 L120 128 Q132 128 134 140 L142 196" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" style="fill:var(--ink);stroke:var(--white)"/>
+  <path d="M64 150 L50 190 M136 150 L150 190" stroke-width="10" stroke-linecap="round" fill="none" style="stroke:var(--white)"/>
+  <path d="M86 130 L100 150 L114 130" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--highlighter)"/>
+  <rect x="86" y="150" width="28" height="22" rx="4" style="fill:var(--highlighter)"/>
+  <rect x="93" y="158" width="14" height="5" rx="2" style="fill:var(--ink)"/>
+  <g transform="rotate(0 100 78)">
+    <line x1="100" y1="30" x2="100" y2="14" stroke-width="10" stroke-linecap="round" style="stroke:var(--white)"/>
+    <circle cx="100" cy="12" r="8" style="fill:var(--highlighter)"/>
+    <rect x="44" y="30" width="112" height="92" rx="26" style="fill:var(--white)"/>
+    
+    <circle cx="78" cy="72" r="9" style="fill:var(--ink)"/><circle cx="122" cy="72" r="9" style="fill:var(--ink)"/>
+    <path d="M84 98 Q100 108 116 98" fill="none" stroke-width="8" stroke-linecap="round" style="stroke:var(--ink)"/>
+  </g>
+</svg>
+</span></div><div><span class="who">The gullible intern</span><div class="bubble"><p>The intern reads a company’s announcement: “Our new model passed all our safety tests!” and forwards it to the team as proof the model is safe.</p>
+</div><span class="lesson-learned"><span class="hl">Lesson:</span> Ask who ran the tests, what they tested, and whether anyone outside the company could check. “Passed our own tests” is a start, not the end.</span></div></aside>
+
+<div class="exercise"><h3>Try it: Read the claim</h3><p>A news headline says: “New AI model is safe, say testers.” Write three questions you would ask before believing it.</p>
+<details><summary>Show a worked answer</summary><p>For example: (1) Who were the testers: the company, a government institute, or an independent group? (2) What exactly did they test, for example dangerous knowledge, cyber skills or behaviour as an agent? (3) Did they have full access to the model, and is there a public report? You could also ask when it was tested, since models change after updates.</p>
+</details></div>
+<h2 id="quick-check">Quick check</h2>
+
+<div class="quiz-mount" data-quiz></div>
+
+<nav class="xlink" aria-label="Related lessons"><a href="#/learn/08-03" data-xlink="lesson">08.03 · Evals: exams for AI</a><a href="#/learn/08-05" data-xlink="lesson">08.05 · Red-teaming: attacking to protect</a></nav>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>UK AI Security Institute, <a href="https://www.aisi.gov.uk/" rel="noopener" target="_blank">home page</a> (mission, first state-backed organisation, cyber comparison of open and closed models). Checked 26 Oct 2026.</li>
+<li>UK AI Security Institute and Meridian Labs, <a href="https://inspect.aisi.org.uk/" rel="noopener" target="_blank">Inspect</a>. Checked 26 Oct 2026.</li>
+<li>METR, <a href="https://metr.org/" rel="noopener" target="_blank">home page</a> (mission, risk assessment work, access disclosure). Checked 26 Oct 2026.</li>
+<li>International AI Safety Report, <a href="https://internationalaisafetyreport.org/publication/2026-report-executive-summary" rel="noopener" target="_blank">2026 Report: Executive Summary</a>, 3 Feb 2026 (12 companies, voluntary frameworks). Checked 26 Oct 2026.</li>
+</ul>
+`,o=[{id:`the-hook`,t:`The hook`},{id:`the-one-idea`,t:`The one idea`},{id:`1-the-developers`,t:`1. The developers`},{id:`2-government-institutes`,t:`2. Government institutes`},{id:`3-independent-nonprofits`,t:`3. Independent nonprofits`},{id:`why-more-than-one-tester`,t:`Why more than one tester?`},{id:`quick-check`,t:`Quick check`},{id:`sources`,t:`Sources`}],s=[{id:`08-04-q1`,type:`mc`,q:`Which UK organisation describes itself as the first state-backed organisation dedicated to advanced AI safety and security?`,options:[`The UK AI Security Institute`,`The BBC`,`The Bank of England`],answer:0,explain:`It also developed the open-source Inspect evaluation tool with Meridian Labs.`,why:null},{id:`08-04-q2`,type:`mc`,q:`What is METR?`,options:[`A research nonprofit that measures whether and when AI systems might threaten catastrophic harm`,`An AI company selling chatbots`,`A government ministry`],answer:0,explain:`It reviews developers’ risk assessments and evaluates frontier models.`,why:null},{id:`08-04-q3`,type:`mc`,q:`What limits independent testers, according to METR’s own disclosure?`,options:[`They depend on companies providing access to the models`,`They are not allowed to publish anything`,`They only test phones`],answer:0,explain:`Outside testers can only test what they can access.`,why:null}],c={figures:[`who-tests`],images:[],labs:[],interns:1,sources:1,exercises:1},l=[`https://www.aisi.gov.uk/`,`https://inspect.aisi.org.uk/`,`https://metr.org/`,`https://internationalaisafetyreport.org/publication/2026-report-executive-summary`],u=0,d=`Who tests frontier AI?`,f={id:e,minutes:8,summary:n,highlight:r,pose:i,html:a,toc:o,quiz:s,used:c,links:l,flags:0,title:d};export{f as default,u as flags,r as highlight,a as html,e as id,l as links,t as minutes,i as pose,s as quiz,n as summary,d as title,o as toc,c as used};

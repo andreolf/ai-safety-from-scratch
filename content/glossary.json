@@ -200,6 +200,87 @@
    "sites": [
     "ai-safety"
    ]
+  },
+  {
+   "id": "jailbreak",
+   "term": "Jailbreak",
+   "short": "A trick that talks an AI out of its safety rules, for example through role-play or a disguised request.",
+   "sites": [
+    "ai-safety",
+    "security"
+   ]
+  },
+  {
+   "id": "indirect-injection",
+   "term": "Indirect prompt injection",
+   "short": "Instructions hidden in something the AI reads for you, such as a web page, file or email, rather than typed by you.",
+   "sites": [
+    "ai-safety",
+    "security"
+   ]
+  },
+  {
+   "id": "least-privilege",
+   "term": "Least privilege",
+   "short": "Giving a person or program only the access it needs, for only as long as it needs it.",
+   "sites": [
+    "ai-safety",
+    "security"
+   ]
+  },
+  {
+   "id": "lethal-trifecta",
+   "term": "Lethal trifecta",
+   "short": "Simon Willison’s name for an AI agent that has private data, reads untrusted content and can send data out: together they let an attacker steal data.",
+   "sites": [
+    "ai-safety",
+    "security"
+   ]
+  },
+  {
+   "id": "mcp",
+   "term": "MCP (Model Context Protocol)",
+   "short": "An open standard for connecting AI apps to tools and data, through small programs called MCP servers.",
+   "sites": [
+    "ai-safety",
+    "security"
+   ]
+  },
+  {
+   "id": "human-in-the-loop",
+   "term": "Human in the loop",
+   "short": "A design where a person must approve certain actions before the AI or agent carries them out.",
+   "sites": [
+    "ai-safety",
+    "security"
+   ]
+  },
+  {
+   "id": "allowlist",
+   "term": "Allowlist",
+   "short": "A list of the only people, shops or addresses something is allowed to deal with. Everything else is blocked.",
+   "sites": [
+    "ai-safety",
+    "security"
+   ]
+  },
+  {
+   "id": "spending-cap",
+   "term": "Spending cap",
+   "short": "A hard limit on how much can be spent, per payment or per day, that the agent cannot raise itself.",
+   "sites": [
+    "ai-safety",
+    "security"
+   ]
+  },
+  {
+   "id": "revoke",
+   "term": "Revoke",
+   "short": "To take back a permission you gave earlier, so it stops working.",
+   "sites": [
+    "ai-safety",
+    "security"
+   ]
   }
  ]
 }

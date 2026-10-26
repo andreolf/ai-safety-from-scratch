@@ -1,6 +1,6 @@
-// Progress visuals: the phase map (a ring per phase) and the XP bar.
+// Progress visuals: the phase map (a ring per phase) and the points bar (internally still "xp").
 import { phases, phaseWritten, phaseComplete } from '../course.js';
-import { store, LEVEL_XP } from '../store.js';
+import { store, LEVEL_POINTS } from '../store.js';
 import { esc, pad2 } from '../util.js';
 const C = 2 * Math.PI * 26;
 export function phaseMap() {
@@ -15,7 +15,7 @@ export function phaseMap() {
   }).join('')}</ol>`;
 }
 export function xpBar() {
-  const s = store.get(); const into = s.xp % LEVEL_XP;
-  return `<div class="xpbar" data-testid="xp-bar"><div class="track" role="progressbar" aria-label="Experience towards the next level" aria-valuemin="0" aria-valuemax="${LEVEL_XP}" aria-valuenow="${into}"><div class="fill" style="width:${(100 * into) / LEVEL_XP}%"></div></div>
-    <div class="lbl"><span>Level ${store.level()} · ${s.xp} XP</span><span>${LEVEL_XP - into} XP to level ${store.level() + 1}</span></div></div>`;
+  const s = store.get(); const into = s.xp % LEVEL_POINTS;
+  return `<div class="xpbar" data-testid="xp-bar"><div class="track" role="progressbar" aria-label="Points towards the next level" aria-valuemin="0" aria-valuemax="${LEVEL_POINTS}" aria-valuenow="${into}"><div class="fill" style="width:${(100 * into) / LEVEL_POINTS}%"></div></div>
+    <div class="lbl"><span>Level ${store.level()} · ${s.xp} points</span><span>${LEVEL_POINTS - into} points to level ${store.level() + 1}</span></div></div>`;
 }

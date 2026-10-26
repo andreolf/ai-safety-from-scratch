@@ -33,6 +33,7 @@ export default function (body, ctx) {
   }
   slider.addEventListener('input', () => { T = +slider.value; tval.textContent = T.toFixed(1); draw(); if (T > 1.8) ctx.pose('fooled', 'High temperature: wild picks! So creative!'); else if (T < .5) ctx.pose('neutral', 'Low temperature: always the top choice. Boring but predictable.'); });
   let timer;
+  ctx.el?.addEventListener('lab:visibility', (e) => { if (!e.detail.visible) clearInterval(timer); }); // pause when scrolled away on the Labs page
   const auto = h('button', { class: 'btn btn-quiet btn-small', type: 'button', onclick: () => { if (reducedMotion()) { for (let i = 0; i < 4; i++) gen(); return; } let n = 0; clearInterval(timer); timer = setInterval(() => { gen(); if (++n >= 4) clearInterval(timer); }, 700); } }, 'Write 4 tokens');
   body.append(h('div', { class: 'lab-row' }, ...chips), out, bars,
     h('label', { class: 'field', style: 'margin-top:12px' }, h('span', {}, 'Temperature ', tval), slider),

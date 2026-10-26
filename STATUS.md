@@ -17,7 +17,7 @@ All 72 lesson IDs and titles match the curriculum draft exactly; a unit test enf
 - Dark Signal theme by default, with a Daylight toggle.
 - Simulated labs only.
 - One balanced lesson on frontier risk (00.03).
-- XP and streaks.
+- Points and streaks (shown as “points”, never “XP”; the storage key stays `xp` so progress is kept).
 - Sources re-checked every quarter.
 - Expert review and the vault project folder are deferred.
 

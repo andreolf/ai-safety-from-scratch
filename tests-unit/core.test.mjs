@@ -70,3 +70,15 @@ test('robots: noindex,nofollow meta and Disallow: / are present', () => {
   assert.match(read('public/robots.txt'), /User-agent: \*\s+Disallow: \//);
   assert.match(read('index.html'), /data-testid="draft-banner"/);
 });
+
+// "XP" reads like a crypto token: user-facing text says "points". Internal keys (store.xp, data-xp-*) may stay.
+test('no "XP" in user-facing text (built HTML/JSON/JS strings, lessons, content, README)', () => {
+  const hits = [];
+  const walk = (dir, exts) => { if (!fs.existsSync(path.join(ROOT, dir))) return [];
+    return fs.readdirSync(path.join(ROOT, dir), { recursive: true }).map(String).filter((f) => exts.some((x) => f.endsWith(x))).map((f) => path.join(dir, f)); };
+  const plain = [...walk('dist', ['.html', '.json', '.txt', '.webmanifest']), ...walk('src/generated', ['.json', '.html']), ...walk('content', ['.json']), ...walk('lessons', ['.md']), 'README.md', 'index.html'];
+  for (const f of plain) if (fs.existsSync(path.join(ROOT, f))) { const m = read(f).match(/\bXP\b/); if (m) hits.push(`${f}: …${read(f).slice(Math.max(0, m.index - 30), m.index + 10)}…`); }
+  // In bundled JS, "XP" as visible text appears next to a space, a tag edge or a quote, unlike an identifier.
+  for (const f of walk('dist', ['.js'])) { const m = read(f).match(/[\s>]XP(?=[\s<`'"])/); if (m) hits.push(`${f}: …${read(f).slice(Math.max(0, m.index - 30), m.index + 10)}…`); }
+  assert.deepEqual(hits, [], 'say "points", not "XP"');
+});

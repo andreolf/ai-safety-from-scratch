@@ -51,9 +51,9 @@ export async function renderTest(root, pid) {
     const gained = store.testResult(pid, score, qs.length);
     const allF = foundationPhases.every((x) => store.get().tests[x.id]?.passed);
     const out = root.querySelector('[data-out]');
-    out.innerHTML = `<div class="complete-card" data-testid="test-result" data-pass="${pass}"><h2 style="margin-top:0">${pass ? 'Passed' : 'Not passed yet'}: ${score} of ${qs.length}</h2><p>${pass ? `Phase ${pad2(p.number)} passed.${gained ? ` +${gained} XP.` : ''} ${allF ? 'All Foundations phases passed: your certificate is ready.' : 'Pass every phase from 00 to 10 for the Foundations certificate.'}` : 'You need 80%. Read the explanations above, revisit the linked lessons, then retake: you will get a new set of questions.'}</p>
+    out.innerHTML = `<div class="complete-card" data-testid="test-result" data-pass="${pass}"><h2 style="margin-top:0">${pass ? 'Passed' : 'Not passed yet'}: ${score} of ${qs.length}</h2><p>${pass ? `Phase ${pad2(p.number)} passed.${gained ? ` +${gained} points.` : ''} ${allF ? 'All Foundations phases passed: your certificate is ready.' : 'Pass every phase from 00 to 10 for the Foundations certificate.'}` : 'You need 80%. Read the explanations above, revisit the linked lessons, then retake: you will get a new set of questions.'}</p>
       <div class="actions">${pass && allF ? '<a class="btn btn-primary" href="#/certificate/foundations">Get your certificate</a>' : ''}<a class="btn btn-quiet" href="#/test/${p.id}?a=${attempts + 1}" data-testid="retake">Retake with new questions</a><a class="btn btn-quiet" href="#/progress">See progress</a></div></div>`;
-    if (gained) toast(`+${gained} XP · phase test passed`);
+    if (gained) toast(`+${gained} points · phase test passed`);
     out.scrollIntoView({ block: 'center' });
   });
   return `Phase ${pad2(p.number)} test`;
@@ -67,7 +67,7 @@ export function renderProgress(root) {
   root.innerHTML = `<div class="page"><header><h1>Your progress</h1><p class="muted">Everything here lives in this browser. No account, nothing sent anywhere. Export a backup below.</p></header>
     ${xpBar()}
     <dl class="stat-grid" data-testid="dashboard" style="margin-top:16px">
-      <div class="stat"><dt>Experience</dt><dd data-testid="xp">${s.xp} <small>XP</small></dd></div>
+      <div class="stat"><dt>Points</dt><dd data-testid="xp">${s.xp} <small>points</small></dd></div>
       <div class="stat"><dt>Streak</dt><dd data-testid="streak">${store.streak()} <small>days · best ${store.bestStreak()}</small></dd><div class="week" role="img" aria-label="Days with activity in the last two weeks: ${grid.filter((g) => g.includes('on')).length}">${grid.join('')}</div></div>
       <div class="stat"><dt>Lessons done</dt><dd>${done} <small>of ${total}</small></dd></div>
       <div class="stat"><dt>Phase tests</dt><dd>${passedF} <small>of ${foundationPhases.length} passed</small></dd></div>
@@ -131,11 +131,6 @@ export function renderAbout(root) {
     <h2>Sister course</h2><p><a href="${esc(SECURITY_URL)}" target="_blank" rel="noopener">Security from Scratch</a> teaches everyday digital safety for older adults and their families.</p>
     <h2>Source list</h2><ol class="sources-list">${sources.sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>, ${esc(s.publisher)}${s.date ? `, ${esc(s.date)}` : ''}. Checked ${esc(s.checked)}.</li>`).join('')}</ol></div></div>`;
   return 'About and sources';
-}
-
-export function renderLabs(root) {
-  root.innerHTML = `<div class="page"><h1>The labs</h1><p class="muted">Fifteen playful simulations, one or more per phase. They run in your browser and send nothing anywhere.</p><ol class="lessons">${Object.entries(labs).map(([k, l]) => `<li><a href="${l.ready ? `#/lab/${k}` : `#/phase/${l.phase}`}"><span class="n">${pad2(l.n)}</span><span>${esc(l.title)}${l.flagship ? ' ★' : ''}<small>${esc(l.ready ? l.blurb : 'Coming with ' + l.phase.replace('p', 'Phase '))}</small></span><span aria-hidden="true">→</span></a></li>`).join('')}</ol></div>`;
-  return 'Labs';
 }
 
 // Lab clip contract: #/lab/<name>?state=<preset>&layout=9x16, accent from --accent.

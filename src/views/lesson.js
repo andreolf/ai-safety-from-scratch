@@ -21,18 +21,18 @@ export async function renderLesson(root, id) {
       <div class="lesson-meta"><span class="chip">Lesson ${id.replace('-', '.')}</span><span class="chip">${L.minutes} min</span>${store.isDone(id) ? '<span class="chip on">Done</span>' : ''}<button class="chip" type="button" data-read style="min-height:44px;background:none;cursor:pointer;font:inherit;font-size:.82rem;font-weight:700;color:var(--muted-strong)">Read aloud</button></div>
     </header>
     <div class="prose">${L.html}</div>
-    <section class="complete-card" aria-labelledby="done-h"><h2 id="done-h" style="margin-top:0">Finished reading?</h2><p>Mark the lesson done for +50 XP. Your progress stays in this browser.</p>
+    <section class="complete-card" aria-labelledby="done-h"><h2 id="done-h" style="margin-top:0">Finished reading?</h2><p>Mark the lesson done for +50 points. Your progress stays in this browser.</p>
       <div class="actions"><button class="btn btn-primary" type="button" data-complete data-testid="complete">${store.isDone(id) ? 'Done ✓' : 'Mark lesson done'}</button>${next ? `<a class="btn btn-quiet" href="#/learn/${next.id}">Next: ${esc(next.title)}</a>` : ''}</div></section>
   </article>${nav}`;
   // quiz
   const mount = root.querySelector('[data-quiz]');
   if (mount) {
     const form = document.createElement('form'); form.className = 'quiz'; form.dataset.testid = 'lesson-quiz'; form.addEventListener('submit', (e) => e.preventDefault());
-    L.quiz.forEach((q, i) => form.append(questionEl(q, i + 1, { onAnswer: (qq, ok) => { const g = store.answer(qq.id, ok); if (g) toast(`+${g} XP`); } })));
+    L.quiz.forEach((q, i) => form.append(questionEl(q, i + 1, { onAnswer: (qq, ok) => { const g = store.answer(qq.id, ok); if (g) toast(`+${g} points`); } })));
     mount.replaceWith(form);
   }
   const btn = root.querySelector('[data-complete]');
-  btn.addEventListener('click', () => { const g = store.complete(id); btn.textContent = 'Done ✓'; if (g) toast(`+${g} XP · lesson done`); });
+  btn.addEventListener('click', () => { const g = store.complete(id); btn.textContent = 'Done ✓'; if (g) toast(`+${g} points · lesson done`); });
   hydrateSteps(root); hydrateLabs(root);
   // read aloud (browser speech; nothing leaves the device)
   const rb = root.querySelector('[data-read]');

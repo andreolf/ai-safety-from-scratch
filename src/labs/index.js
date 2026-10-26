@@ -1,7 +1,7 @@
 // Lab loader. Lessons contain <section class="lab-mount" data-lab="name"> with a text fallback;
 // this replaces it with the live lab. Each lab module exports default (body, ctx).
 import { labs } from './meta.js';
-import { h } from '../util.js';
+import { h, pad2 } from '../util.js';
 import { internSVG } from '../visuals/intern.js';
 import { store } from '../store.js';
 const modules = import.meta.glob('./lab-*.js');
@@ -12,11 +12,13 @@ export function labShell(name) {
   const score = h('span', { class: 'lab-score', 'data-testid': `lab-${name}-score`, 'aria-live': 'polite' });
   const say = h('p', { class: 'lab-say', 'aria-live': 'polite', style: 'margin:0;font-weight:700' });
   const head = h('div', { class: 'lab-head' }, h('span', { class: 'pill' }, `Lab ${String(m.n).padStart(2, '0')}${m.flagship ? ' ★' : ''}`), h('h3', {}, m.title), score, h('p', {}, m.blurb));
+  // Deep link to this lab's section on the Labs page (not shown when already there).
+  if (!/^#\/labs/.test(location.hash)) head.append(h('a', { class: 'lab-all', href: `#/labs#lab-${pad2(m.n)}`, 'data-testid': `lab-${name}-all` }, 'All labs →'));
   const body = h('div', { class: 'lab-body' });
   const foot = h('div', { class: 'lab-body', style: 'display:flex;gap:12px;align-items:center;border-top:1px solid var(--line);padding-top:12px' }, intern, h('div', {}, h('span', { class: 'kicker', style: 'margin:0' }, 'The intern says'), say));
   const el = h('section', { class: 'lab', 'data-testid': `lab-${name}`, 'data-lab-ready': '0' }, head, body, foot);
   const ctx = {
-    body, score,
+    body, score, el,
     pose(p, text) { intern.innerHTML = internSVG(p, { title: false }); if (text != null) say.textContent = text; },
     win() { if (store.labDone(name)) ctx.pose('proud'); },
   };

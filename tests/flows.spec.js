@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { createHash } from 'node:crypto';
 import { watchErrors, go, seedPassedFoundations } from './helpers.js';
 
-test('home shows phase map, XP bar, mascot and counts', async ({ page }) => {
+test('home shows phase map, points bar, mascot and counts', async ({ page }) => {
   const errs = watchErrors(page); await go(page, '#/');
   await expect(page.getByTestId('phase-map')).toBeVisible();
   await expect(page.getByTestId('xp-bar').getByRole('progressbar')).toBeVisible();
@@ -11,14 +11,14 @@ test('home shows phase map, XP bar, mascot and counts', async ({ page }) => {
   expect(errs).toEqual([]);
 });
 
-test('lesson: quiz feedback, complete for XP, lab and kit image', async ({ page }) => {
+test('lesson: quiz feedback, complete for points, lab and kit image', async ({ page }) => {
   const errs = watchErrors(page); await go(page, '#/learn/01-03');
   await expect(page.locator('img.kit-img, .kit-img img').first()).toHaveAttribute('alt', /.+/);
   const q = page.getByTestId('question').first();
   await q.locator('[data-correct=true]').click();
   await expect(q.locator('.q-explain')).toContainText('Right.');
   await page.getByTestId('complete').click();
-  await expect(page.getByTestId('xp-mini')).toContainText(/[1-9]\d* XP/);
+  await expect(page.getByTestId('xp-mini')).toContainText(/[1-9]\d* points/);
   // token predictor lab
   const text = page.getByTestId('tp-text'); const before = await text.textContent();
   await page.getByTestId('tp-gen').first().click();

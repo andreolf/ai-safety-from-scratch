@@ -1,5 +1,5 @@
 import './styles/base.css';
-import { store, LEVEL_XP } from './store.js';
+import { store, LEVEL_POINTS } from './store.js';
 import { SECURITY_URL, SITE_NAME } from './config.js';
 import { tokens } from './util.js';
 
@@ -14,7 +14,7 @@ const routes = [
   [/^#\/verify$/, () => import('./views/pages.js').then((m) => m.renderVerify(main))],
   [/^#\/glossary(?:#.*)?$/, () => import('./views/pages.js').then((m) => m.renderGlossary(main))],
   [/^#\/about$/, () => import('./views/pages.js').then((m) => m.renderAbout(main))],
-  [/^#\/labs$/, () => import('./views/pages.js').then((m) => m.renderLabs(main))],
+  [/^#\/labs(?:#[a-z0-9-]*)?$/, () => import('./views/labs-page.js').then((m) => m.renderLabs(main))],
   [/^#\/lab\/([a-z-]+)(?:\?.*)?$/, (n) => import('./views/pages.js').then((m) => m.renderLabClip(main, n))],
 ];
 async function route() {
@@ -32,9 +32,9 @@ async function route() {
   }
   main.innerHTML = `<div class="page"><h1>Not found</h1><p><a href="#/">Go to the course home</a></p></div>`;
 }
-function paintXP() {
-  const s = store.get(); const frac = (s.xp % LEVEL_XP) / LEVEL_XP;
-  document.querySelector('[data-xp-label]').textContent = `${s.xp} XP`;
+function paintPoints() {
+  const s = store.get(); const frac = (s.xp % LEVEL_POINTS) / LEVEL_POINTS;
+  document.querySelector('[data-xp-label]').textContent = `${s.xp} points`;
   document.querySelector('[data-xp-fill]').style.width = `${Math.round(frac * 100)}%`;
 }
 // theme-color and the favicon can't use CSS variables, so they are painted from tokens.css at runtime.
@@ -52,6 +52,9 @@ function theme() {
   b.addEventListener('click', () => { const t = document.documentElement.dataset.theme === 'dark' ? 'daylight' : 'dark'; try { localStorage.setItem('aisfs-theme', t); } catch {} set(t); });
 }
 document.querySelectorAll('[data-security-link]').forEach((a) => { a.href = SECURITY_URL; a.target = '_blank'; a.rel = 'noopener'; });
-theme(); paintXP(); addEventListener('progress', paintXP);
+theme(); paintPoints(); addEventListener('progress', paintPoints);
 addEventListener('hashchange', route); route();
 window.__aisfs = { store };
+// Sticky offsets (Labs mini-nav, anchor scrolling) follow the real header height, which wraps on phones.
+{ const top = document.querySelector('header.top'); const set = () => document.documentElement.style.setProperty('--header-h', `${top.offsetHeight}px`);
+  set(); if (typeof ResizeObserver === 'function') new ResizeObserver(set).observe(top); }

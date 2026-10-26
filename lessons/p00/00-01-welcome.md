@@ -30,7 +30,7 @@ Tap **Next step** to walk through it. With JavaScript off, all five steps are li
 
 - **A short story** with one idea. Six to ten minutes.
 - **A lab** in many lessons: a small, playful simulation that runs in your browser. Labs never send anything anywhere, and they never ask you to attack a real service.
-- **Three quick questions** with instant explanations. Get one right on the first try for +10 XP.
+- **Three quick questions** with instant explanations. Get one right on the first try for +10 points.
 - **A phase test** of 10 questions at the end of each phase. 8 out of 10 passes.
 - **A free certificate** when you pass phases 00 to 10. It is a certificate of completion, not an accredited qualification.
 
@@ -38,9 +38,9 @@ There is also an optional **Builder track** (Phase 11) for people who build soft
 
 ## Your progress stays with you
 
-There are no accounts. Your progress, XP and streak are saved only in this browser, on this device. Nothing is sent to a server. If you clear your browser data, progress resets, so the progress page has an **Export** button for a backup file.
+There are no accounts. Your progress, points and streak are saved only in this browser, on this device. Nothing is sent to a server. If you clear your browser data, progress resets, so the progress page has an **Export** button for a backup file.
 
-Two buttons at the top help: **Light/Dark** switches the colour theme, and the **XP bar** opens your progress page with the phase map. Lessons also have a **Read aloud** button that uses your device’s own speech, so nothing leaves your device.
+Two buttons at the top help: **Light/Dark** switches the colour theme, and the **points bar** opens your progress page with the phase map. Lessons also have a **Read aloud** button that uses your device’s own speech, so nothing leaves your device.
 
 ## Why every fact has a link
 

@@ -197,6 +197,76 @@
    "publisher": "arXiv",
    "date": "2023-09-21",
    "checked": "2026-10-26"
+  },
+  {
+   "url": "https://simonwillison.net/2022/Sep/12/prompt-injection/",
+   "title": "Simon Willison, “Prompt injection attacks against GPT-3”",
+   "publisher": "Simon Willison",
+   "date": "2022-09-12",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://arxiv.org/abs/2302.12173",
+   "title": "Greshake et al., “Not what you’ve signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection”",
+   "publisher": "arXiv",
+   "date": "2023-02-23",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://genai.owasp.org/llmrisk/llm062025-excessive-agency/",
+   "title": "OWASP GenAI Security Project, “LLM06:2025 Excessive Agency”",
+   "publisher": "OWASP",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
+   "title": "OWASP GenAI Security Project, “OWASP Top 10 for Agentic Applications for 2026” (PDF read)",
+   "publisher": "OWASP",
+   "date": "2025-12-09",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://play.lakera.ai/agent-breaker",
+   "title": "Lakera, “Agent Breaker” (public prompt-attack game; gandalf.lakera.ai redirects here)",
+   "publisher": "Lakera",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://modelcontextprotocol.io/specification/draft/basic/security_best_practices",
+   "title": "Model Context Protocol, “Security Best Practices” (specification, draft)",
+   "publisher": "Model Context Protocol",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://x402.org",
+   "title": "x402: “an open, neutral standard for internet-native payments”",
+   "publisher": "x402 Foundation",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://eips.ethereum.org/EIPS/eip-7715",
+   "title": "ERC-7715: Request Permissions from Wallets (Draft)",
+   "publisher": "Ethereum Improvement Proposals",
+   "date": "2024-05-24",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://ethskills.com/wallets/SKILL.md",
+   "title": "ethskills, “Wallets” skill",
+   "publisher": "ethskills",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://ethskills.com/SKILL.md",
+   "title": "ethskills, index (“The missing knowledge between AI agents and production Ethereum”)",
+   "publisher": "ethskills",
+   "date": "",
+   "checked": "2026-10-26"
   }
  ]
 }

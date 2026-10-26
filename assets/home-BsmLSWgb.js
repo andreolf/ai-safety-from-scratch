@@ -1,4 +1,4 @@
-import{_ as e,g as t,i as n,r,t as i}from"./intern-n-ZOmSH0.js";import{m as a}from"./index-BIqrVWbP.js";import{n as o,t as s}from"./map-Bx9ifLP_.js";function c(c){let l=a.get().last,u=n[0].id;return c.innerHTML=`<div class="wrap">
+import{_ as e,g as t,i as n,r,t as i}from"./intern-C96m5EzT.js";import{m as a}from"./index-BF-miMx_.js";import{n as o,t as s}from"./map-BZOajdgR.js";function c(c){let l=a.get().last,u=n[0].id;return c.innerHTML=`<div class="wrap">
   <section class="hero" aria-labelledby="hero-title">
     <div>
       <p class="pill">Free · hands-on AI security</p>

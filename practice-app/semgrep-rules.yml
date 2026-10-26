@@ -1,0 +1,9 @@
+# A local Semgrep rule for the practice app. Run: semgrep scan --config semgrep-rules.yml ai-written/
+rules:
+  - id: exec-with-concatenated-input
+    languages: [javascript]
+    severity: ERROR
+    message: A shell command is built by joining strings. If any part comes from a user, they can run their own commands. Use execFile with an argument list instead.
+    pattern-either:
+      - pattern: exec($A + $B, ...)
+      - pattern: exec(`...${$X}...`, ...)

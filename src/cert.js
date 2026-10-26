@@ -3,12 +3,23 @@
 import { CERT_PREFIX } from './config.js';
 import { foundationPhases, builderPhases } from './course.js';
 import { tokens, resolveVars } from './util.js';
+import { PRACTICALS } from '../practice-app/practicals.mjs';
 
 export const CERT_W = 2000, CERT_H = 1414; // A4 landscape ratio
 export const CREDENTIALS = {
   foundations: { title: 'Foundations', line: 'AI Safety from Scratch: Foundations', phases: () => foundationPhases.map((p) => p.id), what: 'Phases 00 to 10: how AI works, how it fails, misuse, prompt injection, agents, alignment, testing and governance.' },
   builder: { title: 'Builder', line: 'AI Safety from Scratch: Builder', phases: () => builderPhases.map((p) => p.id), what: 'Phase 11: red-teaming, scanning and guarding an AI app with open-source tools.' },
 };
+// Who has earned what. Foundations: phase tests 00 to 10. Builder: the Phase 11 test and all six practicals.
+export function eligibility(key, s) {
+  const ph = key === 'builder' ? builderPhases : foundationPhases;
+  const passed = ph.filter((p) => s.tests[p.id]?.passed);
+  const prac = key === 'builder' ? PRACTICALS.filter((p) => s.practicals?.[p.id]) : [];
+  const needPrac = key === 'builder' ? PRACTICALS.length : 0;
+  const ok = passed.length === ph.length && prac.length === needPrac;
+  const dates = [...passed.map((p) => s.tests[p.id].date), ...prac.map((p) => s.practicals[p.id])].filter(Boolean).sort();
+  return { ok, phases: ph, passed: passed.length, practicals: prac.length, needPrac, date: dates.pop() };
+}
 export const DISCLAIMER = 'Free certificate of completion. Not accredited, not a professional or security qualification. Not affiliated with or endorsed by ETH Zurich, MetaMask, Consensys, OWASP, any AI lab or any government body.';
 const B32 = '0123456789ABCDEFGHJKMNPQRSTVWXYZ'; // Crockford base32
 export const normName = (s) => String(s || '').normalize('NFC').trim().replace(/\s+/g, ' ');

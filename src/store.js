@@ -1,6 +1,6 @@
 // Progress lives only in this browser (localStorage). No accounts, nothing sent anywhere.
 import { STORE_KEY, POINTS, PASS } from './config.js';
-const blank = () => ({ v: 1, xp: 0, lessons: {}, quiz: {}, tests: {}, days: [], name: '', certs: {}, labs: {}, last: null });
+const blank = () => ({ v: 1, xp: 0, lessons: {}, quiz: {}, tests: {}, days: [], name: '', certs: {}, labs: {}, practicals: {}, last: null });
 let s;
 function load() { try { s = { ...blank(), ...JSON.parse(localStorage.getItem(STORE_KEY) || '{}') }; } catch { s = blank(); } }
 function save() { try { localStorage.setItem(STORE_KEY, JSON.stringify(s)); } catch {} dispatchEvent(new CustomEvent('progress')); }
@@ -18,6 +18,8 @@ export const store = {
   visit(id) { s.last = id; save(); },
   complete(id) { if (s.lessons[id]) return 0; s.lessons[id] = dayKey(); s.xp += POINTS.lesson; touch(); save(); return POINTS.lesson; },
   answer(qid, firstTryCorrect) { if (qid in s.quiz) return 0; s.quiz[qid] = !!firstTryCorrect; const g = firstTryCorrect ? POINTS.question : 0; s.xp += g; touch(); save(); return g; },
+  practical(id) { if (!s.practicals[id]) { s.practicals[id] = dayKey(); touch(); save(); } },
+  practicalDone: (id) => !!s.practicals?.[id],
   labDone(name) { if (s.labs[name]) return false; s.labs[name] = dayKey(); touch(); save(); return true; },
   testResult(pid, score, n) {
     const frac = score / n, passed = frac >= PASS, prev = s.tests[pid];

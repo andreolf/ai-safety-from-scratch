@@ -1,0 +1,5 @@
+{
+  "mcpServers": {
+    "pebble-wallet": { "command": "node", "args": ["mcp-server.mjs"] }
+  }
+}

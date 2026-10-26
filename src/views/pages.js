@@ -4,7 +4,7 @@ import { store } from '../store.js';
 import { esc, pad2, toast, download, fmtDate, rng, hash32, h } from '../util.js';
 import { PASS, TEST_N, SECURITY_URL, LAST_CHECKED, DISCLOSURE } from '../config.js';
 import { questionEl } from './quiz.js';
-import { CREDENTIALS, DISCLAIMER, certCode, drawCert, pdfFromCanvas, cleanCode, normName } from '../cert.js';
+import { CREDENTIALS, DISCLAIMER, eligibility, certCode, drawCert, pdfFromCanvas, cleanCode, normName } from '../cert.js';
 import { phaseMap, xpBar } from './map.js';
 import { labs } from '../labs/meta.js';
 import { mountLab } from '../labs/index.js';
@@ -50,10 +50,10 @@ export async function renderTest(root, pid) {
     els.forEach((e) => { e.reveal(); e.querySelectorAll('input').forEach((i) => (i.disabled = true)); });
     const score = els.filter((e) => e.correct()).length; const pass = score / qs.length >= PASS;
     const gained = store.testResult(pid, score, qs.length);
-    const allF = foundationPhases.every((x) => store.get().tests[x.id]?.passed);
+    const certKey = p.track === 'builder' ? 'builder' : 'foundations'; const allF = eligibility(certKey, store.get()).ok;
     const out = root.querySelector('[data-out]');
-    out.innerHTML = `<div class="complete-card" data-testid="test-result" data-pass="${pass}"><h2 style="margin-top:0">${pass ? 'Passed' : 'Not passed yet'}: ${score} of ${qs.length}</h2><p>${pass ? `Phase ${pad2(p.number)} passed.${gained ? ` +${gained} points.` : ''} ${allF ? 'All Foundations phases passed: your certificate is ready.' : 'Pass every phase from 00 to 10 for the Foundations certificate.'}` : 'You need 80%. Read the explanations above, revisit the linked lessons, then retake: you will get a new set of questions.'}</p>
-      <div class="actions">${pass && allF ? '<a class="btn btn-primary" href="#/certificate/foundations">Get your certificate</a>' : ''}<a class="btn btn-quiet" href="#/test/${p.id}?a=${attempts + 1}" data-testid="retake">Retake with new questions</a><a class="btn btn-quiet" href="#/progress">See progress</a></div></div>`;
+    out.innerHTML = `<div class="complete-card" data-testid="test-result" data-pass="${pass}"><h2 style="margin-top:0">${pass ? 'Passed' : 'Not passed yet'}: ${score} of ${qs.length}</h2><p>${pass ? `Phase ${pad2(p.number)} passed.${gained ? ` +${gained} points.` : ''} ${certKey === 'builder' ? (allF ? 'Test and practicals done: your Builder certificate is ready.' : 'Finish the six practicals in the Builder practicals lab for the Builder certificate.') : (allF ? 'All Foundations phases passed: your certificate is ready.' : 'Pass every phase from 00 to 10 for the Foundations certificate.')}` : 'You need 80%. Read the explanations above, revisit the linked lessons, then retake: you will get a new set of questions.'}</p>
+      <div class="actions">${pass && allF ? `<a class="btn btn-primary" href="#/certificate/${certKey}" data-testid="get-cert">Get your certificate</a>` : ''}<a class="btn btn-quiet" href="#/test/${p.id}?a=${attempts + 1}" data-testid="retake">Retake with new questions</a><a class="btn btn-quiet" href="#/progress">See progress</a></div></div>`;
     if (gained) toast(`+${gained} points · phase test passed`);
     out.scrollIntoView({ block: 'center' });
   });
@@ -73,7 +73,7 @@ export function renderProgress(root) {
       <div class="stat"><dt>Lessons done</dt><dd>${done} <small>of ${total}</small></dd></div>
       <div class="stat"><dt>Phase tests</dt><dd>${passedF} <small>of ${foundationPhases.length} passed</small></dd></div>
     </dl>
-    <section class="panel"><h2>Certificates</h2><p class="muted">Foundations: pass the tests for phases 00 to 10. Builder: pass Phase 11. ${esc(DISCLAIMER)}</p><div class="actions"><a class="btn btn-quiet btn-small" href="#/certificate/foundations">Foundations${passedF === foundationPhases.length ? '' : ' (locked)'}</a><a class="btn btn-quiet btn-small" href="#/certificate/builder">Builder${builderPhases.every((p) => s.tests[p.id]?.passed) ? '' : ' (locked)'}</a><a class="btn btn-quiet btn-small" href="#/verify">Verify a certificate</a></div></section>
+    <section class="panel"><h2>Certificates</h2><p class="muted">Foundations: pass the tests for phases 00 to 10. Builder: pass the Phase 11 test and the six practicals. ${esc(DISCLAIMER)}</p><div class="actions"><a class="btn btn-quiet btn-small" href="#/certificate/foundations">Foundations${passedF === foundationPhases.length ? '' : ' (locked)'}</a><a class="btn btn-quiet btn-small" href="#/certificate/builder">Builder${eligibility('builder', s).ok ? '' : ' (locked)'}</a><a class="btn btn-quiet btn-small" href="#/verify">Verify a certificate</a></div></section>
     <section><h2>Phase map</h2>${phaseMap()}</section>
     <section class="panel"><h2>Backup</h2><div class="actions"><button class="btn btn-quiet btn-small" type="button" data-export>Export progress</button><label class="btn btn-quiet btn-small">Import progress<input type="file" accept="application/json" data-import class="sr"></label><button class="btn btn-quiet btn-small" type="button" data-reset>Reset all progress</button></div><p class="muted" data-msg aria-live="polite"></p></section></div>`;
   root.querySelector('[data-export]').addEventListener('click', () => download(`ai-safety-progress-${store.today()}.json`, new Blob([JSON.stringify(store.get(), null, 2)], { type: 'application/json' })));
@@ -84,10 +84,11 @@ export function renderProgress(root) {
 }
 
 export async function renderCert(root, key) {
-  const c = CREDENTIALS[key]; const s = store.get(); const ph = key === 'foundations' ? foundationPhases : builderPhases;
-  const passed = ph.every((p) => s.tests[p.id]?.passed); const title = `${c.title} certificate`;
-  if (!passed) { const n = ph.filter((p) => s.tests[p.id]?.passed).length; root.innerHTML = `<div class="page"><h1>${title}</h1><p data-testid="cert-locked">Locked. Pass ${ph.length === 1 ? 'the Phase 11 test' : `all ${ph.length} phase tests from 00 to 10`} to unlock it (${n} passed so far).</p><p class="muted">${esc(DISCLAIMER)}</p><div class="actions"><a class="btn btn-primary" href="#/progress">See your progress</a></div></div>`; return title; }
-  const date = ph.map((p) => s.tests[p.id].date).sort().pop();
+  const c = CREDENTIALS[key]; const s = store.get(); const el = eligibility(key, s); const title = `${c.title} certificate`;
+  if (!el.ok) {
+    const need = key === 'builder' ? `Pass the Phase 11 test (${el.passed ? 'passed' : 'not passed yet'}) and finish the six practicals in the Builder practicals lab (${el.practicals} of ${el.needPrac} done).` : `Pass all ${el.phases.length} phase tests from 00 to 10 to unlock it (${el.passed} passed so far).`;
+    root.innerHTML = `<div class="page"><h1>${title}</h1><p data-testid="cert-locked">Locked. ${need}</p><p class="muted">${esc(DISCLAIMER)}</p><div class="actions"><a class="btn btn-primary" href="#/progress">See your progress</a>${key === 'builder' ? '<a class="btn btn-quiet" href="#/labs#lab-15">Builder practicals</a>' : ''}</div></div>`; return title; }
+  const date = el.date;
   root.innerHTML = `<div class="page"><h1>${title}</h1><p class="muted">Type your name as you want it printed. The certificate is drawn in your browser; nothing is uploaded. ${esc(DISCLAIMER)}</p>
     <div class="panel"><label class="field">Name on the certificate<input type="text" maxlength="80" autocomplete="name" value="${esc(s.name)}" data-testid="cert-name"></label>
     <div class="actions"><button class="btn btn-primary" type="button" data-png data-testid="cert-png">Download PNG</button><button class="btn btn-quiet" type="button" data-pdf data-testid="cert-pdf">Download PDF</button></div>

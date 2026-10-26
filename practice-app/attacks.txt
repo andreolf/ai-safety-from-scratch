@@ -1,0 +1,3 @@
+# Practical 11.02: write your own attack messages here, one per line.
+# Lines starting with # are ignored. You need at least 3 attacks, and at least one must make
+# the RAW bot (no guardrails) leak the staff code. Then run: node check.mjs redteam

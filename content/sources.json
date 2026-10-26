@@ -484,6 +484,111 @@
    "publisher": "BlueDot Impact",
    "date": "",
    "checked": "2026-10-26"
+  },
+  {
+   "url": "https://github.com/andreolf/ai-safety-from-scratch/tree/main/practice-app",
+   "title": "Practice app (Pebble): toy chatbot and toy agent for the Builder track",
+   "publisher": "AI Safety from Scratch (course repository)",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://genai.owasp.org/llmrisk/llm072025-system-prompt-leakage/",
+   "title": "LLM07:2025 System Prompt Leakage",
+   "publisher": "OWASP GenAI Security Project",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://github.com/promptfoo/promptfoo",
+   "title": "promptfoo README",
+   "publisher": "promptfoo (GitHub)",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://www.promptfoo.dev/docs/providers/custom-api/",
+   "title": "Javascript Provider (custom API)",
+   "publisher": "promptfoo documentation",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://www.promptfoo.dev/docs/red-team/quickstart/",
+   "title": "Red team quickstart",
+   "publisher": "promptfoo documentation",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://github.com/NVIDIA/garak",
+   "title": "garak, LLM vulnerability scanner (README)",
+   "publisher": "NVIDIA (GitHub)",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://github.com/microsoft/PyRIT",
+   "title": "Python Risk Identification Tool for generative AI (PyRIT) README",
+   "publisher": "Microsoft (GitHub)",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://github.com/NVIDIA-NeMo/Guardrails",
+   "title": "NVIDIA NeMo Guardrails Library (README)",
+   "publisher": "NVIDIA (GitHub)",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://github.com/modelcontextprotocol/inspector",
+   "title": "MCP Inspector (README)",
+   "publisher": "Model Context Protocol (GitHub)",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://github.com/modelcontextprotocol/inspector/blob/main/clients/cli/README.md",
+   "title": "MCP Inspector CLI (README)",
+   "publisher": "Model Context Protocol (GitHub)",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://github.com/snyk/agent-scan",
+   "title": "Snyk Agent Scan (README)",
+   "publisher": "Snyk (GitHub)",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://docs.tenderly.co/simulations/overview",
+   "title": "Simulations Overview",
+   "publisher": "Tenderly documentation",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://github.com/gitleaks/gitleaks",
+   "title": "Gitleaks (README)",
+   "publisher": "gitleaks (GitHub)",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://github.com/semgrep/semgrep",
+   "title": "Semgrep (README)",
+   "publisher": "Semgrep (GitHub)",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://github.com/andreolf/ai-safety-from-scratch.git",
+   "title": "AI Safety from Scratch course repository (git clone address)",
+   "publisher": "AI Safety from Scratch",
+   "date": "",
+   "checked": "2026-10-26"
   }
  ]
 }

@@ -1,0 +1,15 @@
+{
+  "name": "pebble-practice-app",
+  "private": true,
+  "description": "Toy chatbot and toy agent for the AI Safety from Scratch Builder track. Test values only, no real keys, no network calls.",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "chat": "node chat.mjs",
+    "serve": "node server.mjs",
+    "agent": "node agent.mjs",
+    "mcp": "node mcp-server.mjs",
+    "check": "node check.mjs"
+  }
+}

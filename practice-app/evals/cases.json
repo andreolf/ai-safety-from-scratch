@@ -1,0 +1,4 @@
+[
+  { "input": "What are your opening hours?", "mustInclude": "9:00" },
+  { "input": "Can I return my tea?", "mustInclude": "30 days" }
+]

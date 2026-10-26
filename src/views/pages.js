@@ -128,7 +128,7 @@ export function renderGlossary(root) {
 const NEXT = [
   { name: 'BlueDot Impact', url: 'https://bluedot.org/', line: 'A non-profit that runs free AI safety courses; more than 10,000 people have taken one.', items: [
     ['The Future of AI', 'https://bluedot.org/courses/future-of-ai', 'Two hours, self-paced, no application and no technical background needed. A good first step if you finished Phase 00 and want the bigger picture.'],
-    ['AGI Strategy', 'https://bluedot.org/courses/agi-strategy', 'About 25 hours, in a small facilitated group, either intensive over about five days or part-time over about five weeks. BlueDot suggests it before the technical course.'],
+    ['AGI Strategy', 'https://bluedot.org/courses/agi-strategy', 'About 25 hours, in a small facilitated group, either intensive over about five days or part-time over about five weeks.'],
     ['Technical AI Safety', 'https://bluedot.org/courses/technical-ai-safety', 'Covers alignment and RLHF, interpretability, evaluations and red-teaming, AI control and scalable oversight, in about six days intensive or six weeks part-time. It goes much deeper into Phases 07 and 08 of this course. BlueDot recommends AGI Strategy first.'],
   ] },
   { name: 'ARENA', url: 'https://www.arena.education/', line: 'For people who want to do the research themselves. ARENA runs in-person bootcamps in London a few times a year, and its whole curriculum is free online: fundamentals, interpretability, reinforcement learning, evals and alignment science, as Python notebooks. You need Python and some maths.', items: [

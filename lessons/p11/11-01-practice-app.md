@@ -76,7 +76,7 @@ The setup check prints “Passed: Run the practice app” and a code. Normal que
 :::end
 
 :::xlink
-lesson 08-05 | Red-teaming: attacking to protect
+lesson 08-05 | Red-teaming and control evaluations
 lesson 04-01 | The email that gave orders
 :::end
 

@@ -62,9 +62,9 @@ export async function drawCert(canvas, { name, key, dateLabel, code, verifyUrl }
   g.fillStyle = ON_HL; g.fillText(nm, 172, 535, maxW);
   g.font = F(400, 40); const line1 = 'completed ', bold = c.line; g.fillText(line1, 170, 660);
   const x1 = 170 + g.measureText(line1).width; g.font = F(800, 40); g.fillText(bold, x1, 660);
-  g.font = F(400, 40); const rest = key === 'builder' ? ', the optional Builder track:' : ', a free course on how AI works,';
+  g.font = F(400, 40); const rest = key === 'builder' ? ', the optional Builder track:' : ', a free course in AI security:';
   const x2 = x1 + g.measureText(bold).width; g.fillText(rest, x2, 660);
-  g.fillText(key === 'builder' ? 'red-teaming, scanning and guarding an AI app with open-source tools.' : 'how it fails, and how to stay in control.', 170, 715);
+  g.fillText(key === 'builder' ? 'red-teaming, scanning and guarding an AI app with open-source tools.' : 'how AI systems get attacked and go wrong, and how to defend them.', 170, 715);
   const cols = [['DATE', dateLabel, F(800, 38)], ['COURSE AUTHOR', 'Francesco Andreoli', F(800, 38)], ['VERIFY', code, `500 34px ${MONO}`]];
   cols.forEach(([h, v, f], i) => { const x = 170 + i * 560; g.fillStyle = MUTED; g.font = F(800, 26); g.fillText(h, x, 1010); g.fillStyle = INK; g.fillRect(x, 1028, 470, 4); g.font = f; g.fillText(v, x, 1085, 500); });
   g.fillStyle = MUTED; g.font = F(400, 24); g.fillText(`Check the code at ${verifyUrl}`, 170, 1140);

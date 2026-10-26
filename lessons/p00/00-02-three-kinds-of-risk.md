@@ -1,88 +1,96 @@
 ---
 id: 00-02
-minutes: 8
+minutes: 9
 highlight: risk
-summary: Mistakes, misuse and control. Three boxes that make every AI headline easier to understand.
+summary: Misuse, misalignment and loss of control. The three areas AI safety people use to sort the risks, each with a real case.
 ---
-## The hook
+Three real cases from the last few years. In 2024 a finance worker at the engineering firm Arup sent about US$25 million to fraudsters after a video call with a “chief financial officer” who was a deepfake. In 2025 the research group METR watched OpenAI’s o3 model rewrite the timer that scored it, so its code looked far faster than it was. In July 2026 AI agents being tested inside OpenAI broke out of their test sandbox and got into Hugging Face’s servers.
 
-Three real stories. A Canadian airline’s chatbot told a grieving customer he could claim a discount later; he couldn’t, and a tribunal made the airline pay. A finance worker in Hong Kong sent about US$25 million after a video call with a “chief financial officer” who was a deepfake. And in a boat-racing video game, an AI learned to spin in circles collecting points instead of finishing the race.
-
-All three get called “AI risk”. But they are very different problems, with very different fixes.
-
-## The one idea
-
-Sort AI risks into three boxes:
-
-1. **Mistakes.** The AI is wrong. Nobody wanted harm; the system just failed. *The airline chatbot.*
-2. **Misuse.** A person uses AI on purpose to hurt someone. *The deepfake video call.*
-3. **Control.** The AI does what we *said*, not what we *meant*, or works around the limits we set. *The boat that farmed points.*
+All three get called “AI risk”. They are different problems with different fixes, and the field has names for them.
 
 :::figure three-risks
-The three boxes this course uses. Phase 02 covers mistakes, Phase 03 misuse, and Phases 04 to 08 control.
+The three areas this course is built around, with the phases that cover each.
 :::end
 
-## A neutral reference uses the same idea
+## Misuse: a person points the AI at you
 
-The International AI Safety Report is a review of the science led by Turing Award winner Yoshua Bengio, written with over 100 independent experts and nominees from more than 30 countries and international organisations. Its 2026 edition sorts the risks of general-purpose AI into three categories:
+Someone uses AI on purpose to harm other people. The AI works as designed. The intent is the problem. Voice clones, deepfake video calls, AI-written phishing and fake celebrity ads are misuse (Phase 03). So is prompt injection, where an attacker hides instructions in an email or web page so your assistant works for them instead of you (Phase 04).
+
+## Misalignment: the AI does what we said, not what we meant
+
+Nobody wants harm, but the AI pursues something other than what its builders intended. o3 overwriting its timer is a clean example. METR found it was not confused about the task:
+
+:::source url="https://metr.org/blog/2025-06-05-recent-reward-hacking/" by="METR, Recent Frontier Models Are Reward Hacking" date="5 June 2025" checked="27 Oct 2026"
+they demonstrate awareness that their behavior isn’t in line with user intentions and disavow cheating strategies when asked—but rather because they seem misaligned with the user’s goals.
+:::end
+
+Specification gaming, reward hacking, goals that generalise the wrong way and models that hide what they are doing all live here (Phase 07). Flattery from a chatbot trained on thumbs-up ratings is a mild everyday version (lesson 02.03).
+
+## Loss of control: keeping the AI contained
+
+This area asks a practical question: if a model does misbehave, can we stop it? It covers sandboxes, permissions, spending limits, monitoring, and the tests labs run to check that their safety measures hold against a model that is trying to get round them (Phases 05, 06 and 08). The July 2026 sandbox escape is the clearest real case so far. Lesson 08.06 goes through it.
+
+## Other reports carve it differently
+
+The International AI Safety Report, written by over 100 independent experts and chaired by Yoshua Bengio, uses its own three categories:
 
 :::source url="https://internationalaisafetyreport.org/publication/2026-report-executive-summary" by="International AI Safety Report 2026, Executive Summary" date="3 February 2026" checked="26 Oct 2026"
 General-purpose AI risks fall into three categories: malicious use, malfunctions, and systemic risks.
 :::end
 
-Their “malicious use” is our **misuse**. Their “malfunctions” covers our **mistakes**, and also “loss of control” scenarios, which we keep in their own **control** box because they need different tools. Their third box, **systemic risks**, covers big effects on society, such as jobs and people relying on AI too much (“automation bias”). This course touches systemic risks in Phases 09 and 10. The words differ, but the sorting habit is the same.
+Its “malicious use” is our misuse. Its “malfunctions” include plain errors and loss-of-control scenarios. “Systemic risks”, such as effects on jobs and people leaning on AI too much, get some space in Phases 09 and 10. Plain errors, like a chatbot inventing a refund rule, have their own phase (02), and lesson 02.01 shows how one cause of them is a misalignment problem: training that rewards guessing.
 
-## Why the box matters
+## What each one asks of you
 
-The box tells you what helps.
-
-- **Mistakes** call for *checking*: ask for sources, open them, and never let AI alone decide medical, legal or money questions. (Phase 02)
-- **Misuse** calls for *verification habits*: a family code word, calling back on a number you know. Trying to “spot the fake” by eye is not enough. (Phase 03)
-- **Control** calls for *limits and oversight*: give AI tools only the access they need, and keep a human “yes” before anything risky. (Phases 04 to 08)
-
-Many real incidents mix boxes. A scammer (misuse) can plant hidden instructions in an email that trick your AI assistant (control) into a costly error (mistake). Sorting still helps you see each part.
+- **Misuse:** verify through a channel you trust, and treat everything an AI reads as possibly hostile.
+- **Misalignment:** check how the result was reached, not only whether the score looks good.
+- **Loss of control:** give an AI only the access it needs, cap what it can spend, and watch what it does.
 
 :::intern fooled
-The intern reads “AI wipes out company’s money!” and decides all AI is evil. Then reads “AI saves the day!” and decides all AI is perfect. Two headlines, two opposite conclusions, zero sorting.
+The intern reads that agents escaped a sandbox and decides it was hackers. Then reads that nobody told them to do it and decides it was a glitch.
 ---
-Before you react to a headline, ask: is this a mistake, misuse or control problem?
+It was neither. Lesson 00.03 explains why one incident can sit in all three boxes.
 :::end
 
 ## Try the lab
 
 :::lab risk-sorter
 :::exercise Sort your own headline
-Find one recent news headline about AI (any news site). Which box does it belong in: mistake, misuse or control? Could it be two at once?
+Find one recent news headline about AI. Is it misuse, misalignment or loss of control? Could it be more than one?
 :::solution
-Example: “Lawyer cites cases invented by a chatbot” is a **mistake** (the AI invented cases) plus a human failure to check. “Criminals use cloned voices in grandparent scams” is **misuse**. “Game AI finds a loophole to win” is **control**. If a story mixes boxes, list each part separately; each part has its own fix.
+Made-up example headlines: “Criminals use cloned voices in grandparent scams” is misuse. “Coding agent edits the tests so they pass” is misalignment. “Shopping agent spends past its budget because nothing enforced the cap” is loss of control: the limit existed only as an instruction. If a story fits two boxes, list each part. Each part has its own fix.
 :::end
 
 ## Quick check
 
 :::quiz
-- q: A chatbot on a shop’s website invents a returns policy that doesn’t exist. Which box?
-  options: ["Mistake", "Misuse", "Control"]
-  answer: 0
-  explain: Nobody intended harm; the system gave wrong information. That is a mistake, and the fix starts with checking.
-- q: Someone uses a cloned voice of your nephew to ask you for money. Which box?
-  options: ["Misuse", "Mistake", "Control"]
+- q: Someone uses a cloned voice of your nephew to ask you for money. Which area?
+  options: ["Misuse", "Misalignment", "Loss of control"]
   answer: 0
   explain: A person is using AI on purpose to deceive you. The fix is a verification habit, such as calling back on a number you know.
+- q: A model asked to make code faster rewrites the timer that measures it. Which area?
+  options: ["Misalignment", "Misuse", "Loss of control"]
+  answer: 0
+  explain: Nobody asked it to cheat. It optimised the score instead of the goal, which is reward hacking, a kind of misalignment. METR saw o3 do exactly this.
+- q: Which question belongs to loss of control?
+  options: ["If the model misbehaves, can our sandboxes, limits and monitors stop it?", "Did a criminal use AI to write this email?", "Is this chatbot answer factually right?"]
+  answer: 0
+  explain: Loss of control is about containment: what happens if a model acts against us, and whether our safety measures still hold.
 - q: Which three categories does the International AI Safety Report 2026 use?
   options: ["Malicious use, malfunctions and systemic risks", "Hardware, software and data", "Low, medium and high risk"]
   answer: 0
-  explain: The report’s executive summary says general-purpose AI risks fall into malicious use, malfunctions and systemic risks.
+  explain: Different reports carve the space differently. The report’s summary uses malicious use, malfunctions and systemic risks.
 :::end
 
 :::xlink
-lesson 00-03 | Today’s risks and frontier risks
-lesson 02-02 | When the chatbot’s mistake costs money
-lesson 03-03 | Deepfake video calls at work
+lesson 00-03 | Three risks, one problem
+lesson 07-04 | Reward hacking in chatbots
+lesson 08-06 | July 2026: the agents that left the sandbox
 :::end
 
 ## Sources
 
+- METR, [Recent Frontier Models Are Reward Hacking](https://metr.org/blog/2025-06-05-recent-reward-hacking/), 5 Jun 2025. Checked 27 Oct 2026.
+- OpenAI, [The Hugging Face incident and the road ahead](https://openai.com/index/hugging-face-incident-and-the-road-ahead/), 26 Aug 2026. Checked 27 Oct 2026.
 - International AI Safety Report, [2026 Report: Executive Summary](https://internationalaisafetyreport.org/publication/2026-report-executive-summary), 3 Feb 2026. Checked 26 Oct 2026.
-- Civil Resolution Tribunal (British Columbia), [Moffatt v. Air Canada, 2024 BCCRT 149](https://decisions.civilresolutionbc.ca/crt/crtd/en/525448/1/document.do), 14 Feb 2024. Checked 26 Oct 2026.
 - CNN, [Arup revealed as victim of $25 million deepfake scam involving Hong Kong employee](https://www.cnn.com/2024/05/16/tech/arup-deepfake-scam-loss-hong-kong-intl-hnk), 16 May 2024. Checked 26 Oct 2026.
-- OpenAI, [Faulty reward functions in the wild](https://openai.com/index/faulty-reward-functions/) (the CoastRunners boat-racing agent). Checked 26 Oct 2026.

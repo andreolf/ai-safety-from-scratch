@@ -76,7 +76,7 @@ For example: (1) Who were the testers: the company, a government institute, or a
 
 :::xlink
 lesson 08-03 | Evals: exams for AI
-lesson 08-05 | Red-teaming: attacking to protect
+lesson 08-05 | Red-teaming and control evaluations
 :::end
 
 ## Sources

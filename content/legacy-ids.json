@@ -1,0 +1,293 @@
+{
+ "note": "Lesson IDs and titles as launched on 26 Oct 2026, before the rework. Every ID here must still exist or be listed in content/id-moves.json, so old links, progress and certificates keep working.",
+ "lessons": [
+  {
+   "id": "00-01",
+   "title": "Welcome and how the site works"
+  },
+  {
+   "id": "00-02",
+   "title": "Three kinds of AI risk"
+  },
+  {
+   "id": "00-03",
+   "title": "Today's risks and frontier risks"
+  },
+  {
+   "id": "00-04",
+   "title": "How to read a claim about AI"
+  },
+  {
+   "id": "01-01",
+   "title": "What \"AI\" means (and doesn't)"
+  },
+  {
+   "id": "01-02",
+   "title": "Tokens: how AI reads"
+  },
+  {
+   "id": "01-03",
+   "title": "Next-word prediction"
+  },
+  {
+   "id": "01-04",
+   "title": "Training, part 1: reading the internet"
+  },
+  {
+   "id": "01-05",
+   "title": "Training, part 2: learning to be an assistant"
+  },
+  {
+   "id": "01-06",
+   "title": "The context window and tools"
+  },
+  {
+   "id": "01-07",
+   "title": "Open and closed models, including a Swiss one"
+  },
+  {
+   "id": "02-01",
+   "title": "Hallucinations: confident and wrong"
+  },
+  {
+   "id": "02-02",
+   "title": "When the chatbot's mistake costs money"
+  },
+  {
+   "id": "02-03",
+   "title": "Sycophancy: the AI that agrees too much"
+  },
+  {
+   "id": "02-04",
+   "title": "Bias: whose data, whose mistakes?"
+  },
+  {
+   "id": "02-05",
+   "title": "Strange knowledge: the reversal curse"
+  },
+  {
+   "id": "02-06",
+   "title": "How to check AI output"
+  },
+  {
+   "id": "02-07",
+   "title": "Practice: find the five errors"
+  },
+  {
+   "id": "03-01",
+   "title": "What generative AI makes possible"
+  },
+  {
+   "id": "03-02",
+   "title": "Voice clones and the \"family emergency\" call"
+  },
+  {
+   "id": "03-03",
+   "title": "Deepfake video calls at work"
+  },
+  {
+   "id": "03-04",
+   "title": "AI-written phishing"
+  },
+  {
+   "id": "03-05",
+   "title": "Fake celebrity ads and AI investment pitches"
+  },
+  {
+   "id": "03-06",
+   "title": "Verify, don't spot"
+  },
+  {
+   "id": "04-01",
+   "title": "The email that gave orders"
+  },
+  {
+   "id": "04-02",
+   "title": "Direct and indirect injection"
+  },
+  {
+   "id": "04-03",
+   "title": "Hidden text the AI can see"
+  },
+  {
+   "id": "04-04",
+   "title": "Jailbreaks: talking the AI out of its rules"
+  },
+  {
+   "id": "04-05",
+   "title": "Why there is no simple fix"
+  },
+  {
+   "id": "04-06",
+   "title": "Practice: Agent Breaker and Gandalf-style games"
+  },
+  {
+   "id": "04-07",
+   "title": "Defences that help"
+  },
+  {
+   "id": "05-01",
+   "title": "From chatbot to agent"
+  },
+  {
+   "id": "05-02",
+   "title": "Permissions: what can it touch?"
+  },
+  {
+   "id": "05-03",
+   "title": "The lethal trifecta"
+  },
+  {
+   "id": "05-04",
+   "title": "The top agent risks"
+  },
+  {
+   "id": "05-05",
+   "title": "Plugins and connectors are software too"
+  },
+  {
+   "id": "05-06",
+   "title": "Humans in the loop"
+  },
+  {
+   "id": "06-01",
+   "title": "AI can pay now"
+  },
+  {
+   "id": "06-02",
+   "title": "Never give an agent your keys or full card"
+  },
+  {
+   "id": "06-03",
+   "title": "Budgets, caps, allowlists and expiry"
+  },
+  {
+   "id": "06-04",
+   "title": "Show me before you pay"
+  },
+  {
+   "id": "06-05",
+   "title": "When the agent gets tricked"
+  },
+  {
+   "id": "06-06",
+   "title": "Taking permission back"
+  },
+  {
+   "id": "07-01",
+   "title": "Saying what we mean is hard"
+  },
+  {
+   "id": "07-02",
+   "title": "Specification gaming"
+  },
+  {
+   "id": "07-03",
+   "title": "The boat that went in circles"
+  },
+  {
+   "id": "07-04",
+   "title": "Reward hacking in chatbots"
+  },
+  {
+   "id": "07-05",
+   "title": "Why this matters more as AI gets more capable"
+  },
+  {
+   "id": "08-01",
+   "title": "The black box problem"
+  },
+  {
+   "id": "08-02",
+   "title": "Interpretability: finding \"features\""
+  },
+  {
+   "id": "08-03",
+   "title": "Evals: exams for AI"
+  },
+  {
+   "id": "08-04",
+   "title": "Who tests frontier AI?"
+  },
+  {
+   "id": "08-05",
+   "title": "Red-teaming: attacking to protect"
+  },
+  {
+   "id": "08-06",
+   "title": "Incidents: learning from real failures"
+  },
+  {
+   "id": "09-01",
+   "title": "Why governments regulate AI"
+  },
+  {
+   "id": "09-02",
+   "title": "The EU AI Act: four tiers of risk"
+  },
+  {
+   "id": "09-03",
+   "title": "The EU AI Act timeline, as amended"
+  },
+  {
+   "id": "09-04",
+   "title": "The Council of Europe AI Convention"
+  },
+  {
+   "id": "09-05",
+   "title": "Switzerland's approach"
+  },
+  {
+   "id": "09-06",
+   "title": "Beyond Europe"
+  },
+  {
+   "id": "10-01",
+   "title": "Paths into AI safety"
+  },
+  {
+   "id": "10-02",
+   "title": "Free courses and next steps"
+  },
+  {
+   "id": "10-03",
+   "title": "Read the evidence"
+  },
+  {
+   "id": "10-04",
+   "title": "Your personal AI safety plan"
+  },
+  {
+   "id": "10-05",
+   "title": "Course recap and final test prep"
+  },
+  {
+   "id": "11-01",
+   "title": "Set up the practice app"
+  },
+  {
+   "id": "11-02",
+   "title": "Red-team with promptfoo"
+  },
+  {
+   "id": "11-03",
+   "title": "Scan a model with garak and PyRIT"
+  },
+  {
+   "id": "11-04",
+   "title": "Add guardrails"
+  },
+  {
+   "id": "11-05",
+   "title": "Check your agent's tools"
+  },
+  {
+   "id": "11-06",
+   "title": "Don't leak secrets, check AI-written code"
+  },
+  {
+   "id": "11-07",
+   "title": "Evals for your app"
+  }
+ ]
+}

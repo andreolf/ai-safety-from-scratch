@@ -589,6 +589,97 @@
    "publisher": "AI Safety from Scratch",
    "date": "",
    "checked": "2026-10-26"
+  },
+  {
+   "url": "https://bluedot.org/",
+   "title": "BlueDot Impact home page",
+   "publisher": "BlueDot Impact",
+   "checked": "2026-10-27",
+   "date": ""
+  },
+  {
+   "url": "https://bluedot.org/courses/agi-strategy",
+   "title": "AGI Strategy course",
+   "publisher": "BlueDot Impact",
+   "checked": "2026-10-27",
+   "date": ""
+  },
+  {
+   "url": "https://learn.arena.education/",
+   "title": "ARENA curriculum (free online materials)",
+   "publisher": "ARENA",
+   "checked": "2026-10-27",
+   "date": ""
+  },
+  {
+   "url": "https://www.arena.education/",
+   "title": "ARENA: Alignment Research Engineer Accelerator",
+   "publisher": "ARENA",
+   "checked": "2026-10-27",
+   "date": ""
+  },
+  {
+   "url": "https://jailbroken.gg/",
+   "title": "Jailbroken: a playable academy for AI security",
+   "publisher": "Jailbroken",
+   "checked": "2026-10-27",
+   "date": ""
+  },
+  {
+   "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+   "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
+   "publisher": "OpenAI",
+   "date": "2026-07-21",
+   "checked": "2026-10-27"
+  },
+  {
+   "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
+   "title": "The Hugging Face incident and the road ahead",
+   "publisher": "OpenAI",
+   "date": "2026-08-26",
+   "checked": "2026-10-27"
+  },
+  {
+   "url": "https://huggingface.co/blog/security-incident-july-2026",
+   "title": "Security incident, July 2026",
+   "publisher": "Hugging Face",
+   "date": "2026-07-16",
+   "checked": "2026-10-27"
+  },
+  {
+   "url": "https://www.anthropic.com/research/alignment-faking",
+   "title": "Alignment faking in large language models",
+   "publisher": "Anthropic (with Redwood Research)",
+   "date": "2024-12-18",
+   "checked": "2026-10-27"
+  },
+  {
+   "url": "https://metr.org/blog/2025-06-05-recent-reward-hacking/",
+   "title": "Recent Frontier Models Are Reward Hacking",
+   "publisher": "METR",
+   "date": "2025-06-05",
+   "checked": "2026-10-27"
+  },
+  {
+   "url": "https://arxiv.org/abs/2312.06942",
+   "title": "AI Control: Improving Safety Despite Intentional Subversion (Greenblatt, Shlegeris, Sachan, Roger)",
+   "publisher": "Redwood Research, arXiv 2312.06942",
+   "date": "2023-12",
+   "checked": "2026-10-27"
+  },
+  {
+   "url": "https://arxiv.org/abs/2210.01790",
+   "title": "Goal Misgeneralization: Why Correct Specifications Aren't Enough For Correct Goals (Shah et al.)",
+   "publisher": "DeepMind, arXiv 2210.01790",
+   "date": "2022-10",
+   "checked": "2026-10-27"
+  },
+  {
+   "url": "https://www.apolloresearch.ai/research/scheming-reasoning-evaluations",
+   "title": "Frontier Models are Capable of In-Context Scheming",
+   "publisher": "Apollo Research",
+   "date": "2024-12-05",
+   "checked": "2026-10-27"
   }
  ]
 }

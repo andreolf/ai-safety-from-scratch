@@ -70,7 +70,7 @@ Answers will vary. A good record names a specific system and date, describes the
 
 :::xlink
 lesson 02-02 | When the chatbot's mistake costs money
-lesson 00-02 | Three kinds of AI risk
+lesson 00-02 | Misuse, misalignment, loss of control
 :::end
 
 ## Sources

@@ -1,28 +1,28 @@
 {
  "title": "AI Safety from Scratch",
- "tagline": "How AI works, how it fails, and how to stay in control.",
+ "tagline": "Hands-on AI security: prompt injection, jailbreaks and AI agents.",
  "phases": [
   {
    "id": "p00",
    "number": 0,
-   "title": "Welcome: What \"AI Safety\" Means",
-   "tagline": "Sort AI risks into mistakes, misuse and control, and today versus frontier.",
+   "title": "Start Here: Misuse, Misalignment and Loss of Control",
+   "tagline": "Sort AI risks into misuse, misalignment and loss of control, and explain why many researchers treat them as one problem.",
    "track": "foundations",
    "lessons": [
     {
      "id": "00-01",
      "n": 1,
-     "title": "Welcome and how the site works"
+     "title": "What this course is and how it works"
     },
     {
      "id": "00-02",
      "n": 2,
-     "title": "Three kinds of AI risk"
+     "title": "Misuse, misalignment, loss of control"
     },
     {
      "id": "00-03",
      "n": 3,
-     "title": "Today's risks and frontier risks"
+     "title": "Three risks, one problem"
     },
     {
      "id": "00-04",
@@ -34,8 +34,8 @@
   {
    "id": "p01",
    "number": 1,
-   "title": "What AI and LLMs Actually Are",
-   "tagline": "Explain tokens, next-word prediction, training and context windows in plain words.",
+   "title": "How Language Models Work",
+   "tagline": "Explain tokens, next-word prediction, training and context windows: the parts that attacks exploit.",
    "track": "foundations",
    "lessons": [
     {
@@ -78,8 +78,8 @@
   {
    "id": "p02",
    "number": 2,
-   "title": "Why AI Gets Things Wrong",
-   "tagline": "Spot hallucinations, sycophancy and bias, and check AI output before trusting it.",
+   "title": "When the Model Is Wrong",
+   "tagline": "Spot hallucinations, sycophancy and bias, see where they come from, and check output before you rely on it.",
    "track": "foundations",
    "lessons": [
     {
@@ -162,7 +162,7 @@
    "id": "p04",
    "number": 4,
    "title": "Prompt Injection and Jailbreaks (Hands-On)",
-   "tagline": "Demonstrate in a sandbox how text can hijack an AI, and why it is hard to fix.",
+   "tagline": "Show in a sandbox how text can hijack an AI, why there is no simple fix, and where to practise on real models.",
    "track": "foundations",
    "lessons": [
     {
@@ -193,7 +193,7 @@
     {
      "id": "04-06",
      "n": 6,
-     "title": "Practice: Agent Breaker and Gandalf-style games"
+     "title": "Practice on real targets: Gandalf, Agent Breaker, Jailbroken"
     },
     {
      "id": "04-07",
@@ -205,8 +205,8 @@
   {
    "id": "p05",
    "number": 5,
-   "title": "AI Agents: When AI Takes Actions",
-   "tagline": "Understand agents, tools and permissions, and use the lethal trifecta test.",
+   "title": "AI Agents: Tools, Permissions and Sandboxes",
+   "tagline": "Understand agents and tools, apply the lethal trifecta test, and contain an agent with sandboxes and monitoring.",
    "track": "foundations",
    "lessons": [
     {
@@ -238,6 +238,11 @@
      "id": "05-06",
      "n": 6,
      "title": "Humans in the loop"
+    },
+    {
+     "id": "05-07",
+     "n": 7,
+     "title": "Sandboxes and monitoring"
     }
    ]
   },
@@ -245,7 +250,7 @@
    "id": "p06",
    "number": 6,
    "title": "Agents That Spend Money",
-   "tagline": "Design limits for an agent that can pay: budgets, allowlists, expiry, approvals.",
+   "tagline": "Design limits for an agent that can pay or sign onchain: budgets, allowlists, expiry, approvals.",
    "track": "foundations",
    "lessons": [
     {
@@ -283,8 +288,8 @@
   {
    "id": "p07",
    "number": 7,
-   "title": "Alignment Basics: Getting AI to Want the Right Thing",
-   "tagline": "Explain specification gaming and reward hacking with real examples.",
+   "title": "Misalignment: Doing What We Said, Not What We Meant",
+   "tagline": "Explain specification gaming, reward hacking, goal misgeneralisation and deception, with real cases.",
    "track": "foundations",
    "lessons": [
     {
@@ -310,26 +315,31 @@
     {
      "id": "07-05",
      "n": 5,
-     "title": "Why this matters more as AI gets more capable"
+     "title": "Goal misgeneralisation: right score, wrong goal"
+    },
+    {
+     "id": "07-06",
+     "n": 6,
+     "title": "Deception: alignment faking and scheming"
     }
    ]
   },
   {
    "id": "p08",
    "number": 8,
-   "title": "Looking Inside and Testing: Interpretability, Evals and Red-Teaming",
-   "tagline": "Describe how researchers inspect, measure and stress-test AI.",
+   "title": "Loss of Control: Containment, Monitoring and Evals",
+   "tagline": "Describe how labs try to keep AI under control, and what happened when agents escaped a test sandbox in July 2026.",
    "track": "foundations",
    "lessons": [
     {
      "id": "08-01",
      "n": 1,
-     "title": "The black box problem"
+     "title": "AI control: plan for a model that misbehaves"
     },
     {
      "id": "08-02",
      "n": 2,
-     "title": "Interpretability: finding \"features\""
+     "title": "Looking inside the black box"
     },
     {
      "id": "08-03",
@@ -344,12 +354,12 @@
     {
      "id": "08-05",
      "n": 5,
-     "title": "Red-teaming: attacking to protect"
+     "title": "Red-teaming and control evaluations"
     },
     {
      "id": "08-06",
      "n": 6,
-     "title": "Incidents: learning from real failures"
+     "title": "July 2026: the agents that left the sandbox"
     }
    ]
   },
@@ -407,7 +417,7 @@
     {
      "id": "10-02",
      "n": 2,
-     "title": "Free courses and next steps"
+     "title": "Where to go next"
     },
     {
      "id": "10-03",

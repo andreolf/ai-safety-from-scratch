@@ -2,23 +2,19 @@
 id: 00-01
 minutes: 6
 highlight: works
-summary: What this course covers, how a lesson works, and why everything here comes with a source.
+summary: A hands-on AI security course for builders and curious people. What it covers, how a lesson works, and why every fact has a source.
 ---
-## The hook
+This is a hands-on course in AI security. You will see how AI systems get attacked and how they go wrong, and you will try the attacks yourself in simulated labs: hide an instruction in an email and watch an assistant follow it, talk a chatbot out of its rules, give a shopping agent a budget and try to make it overspend.
 
-You probably talk to an AI already. Maybe you ask a chatbot to fix an email, plan a trip or explain a bill. It answers in a second, politely and in perfect sentences. That is useful. It is also exactly why it is easy to trust it too much.
+It is for two kinds of people. People who build with AI, who need to know what can go wrong in their app or agent. And people who use AI and want to understand the attacks well enough not to fall for them. The browser labs need no code. The Builder track (Phase 11) has you test a real app on your own computer with open-source tools.
 
-This course is about using AI with your eyes open. You will learn, in plain words, how these systems work, why they sometimes get things badly wrong, how criminals use them, and what researchers and governments are doing about it. No maths, no code, no signup.
+The course is organised around the three areas AI safety people use: **misuse**, **misalignment** and **loss of control**. Lesson 00.02 explains them and 00.03 argues that they are one problem. Phases 04 to 06 are the security core: prompt injection, jailbreaks, agents with tools, and agents that can spend money.
 
 :::intern neutral
-Meet the gullible intern. First day on the job, very eager, and they believe everything a computer tells them. In every phase they will fall for the trick the lesson explains: the confident wrong answer, the cloned voice, the email that gives orders.
+Meet the gullible intern. Eager, and they believe whatever a computer tells them. In most lessons they fall for the attack the lesson explains, so you can see how it works from the victim’s side.
 ---
-Laugh at the intern, then copy what they do *after* they get burned.
+Watch what goes wrong for the intern, then look at what would have stopped it.
 :::end
-
-## The one idea
-
-**AI safety, in this course, means three things:** AI making mistakes, people misusing AI to harm others, and AI doing what we *said* instead of what we *meant*. Lesson 00.02 unpacks those three. Everything else hangs off them.
 
 ## How a lesson works
 
@@ -28,7 +24,7 @@ Every lesson follows the same short pattern, so you always know where you are.
 Tap **Next step** to walk through it. With JavaScript off, all five steps are listed.
 :::end
 
-- **A short story** with one idea. Six to ten minutes.
+- **A real case** and what it shows. Six to ten minutes.
 - **A lab** in many lessons: a small, playful simulation that runs in your browser. Labs never send anything anywhere, and they never ask you to attack a real service.
 - **Three quick questions** with instant explanations. Get one right on the first try for +10 points.
 - **A phase test** of 10 questions at the end of each phase. 8 out of 10 passes.
@@ -44,7 +40,7 @@ Two buttons at the top help: **Light/Dark** switches the colour theme, and the *
 
 ## Why every fact has a link
 
-AI is surrounded by hype and by fear. This course tries to avoid both. Every fact and number links to where it comes from: a court decision, a government warning, a research paper, a company’s own report. You can open each link and check. If something could not be confirmed, the page says so with a <span class="flag">NEEDS SOURCED DATA</span> label instead of guessing. Lesson 00.04 shows you how to apply the same habit to any claim about AI.
+Every fact and number links to where it comes from: a court decision, a government warning, a research paper, a company’s own report. You can open each link and check. If something could not be confirmed, the page says so with a <span class="flag">NEEDS SOURCED DATA</span> label instead of guessing. Lesson 00.04 shows you how to apply the same habit to any claim about AI.
 
 :::callout key The one thing to remember
 Fluent is not the same as true. An AI can sound sure and still be wrong. This whole course is about checking.
@@ -53,7 +49,7 @@ Fluent is not the same as true. An AI can sound sure and still be wrong. This wh
 :::exercise Pick your three questions
 Before you go on, write down three things you want to know about AI. For example: “Can a chatbot be trusted with medical questions?”, “How would I know if a call is a cloned voice?”, “What happens if an AI agent spends my money?”
 :::solution
-There is no wrong list. Keep it. Most questions like these are answered in Phases 02 (why AI gets things wrong), 03 (scams and deepfakes) and 06 (agents that spend money). At the end of the course, Lesson 10.04 helps you turn your answers into a one-page personal plan.
+There is no wrong list. Keep it. Questions like these are answered in Phases 04 (prompt injection), 03 (scams and deepfakes) and 06 (agents that spend money). At the end of the course, Lesson 10.04 helps you turn your answers into a one-page personal plan.
 :::end
 
 ## Quick check
@@ -74,7 +70,7 @@ There is no wrong list. Keep it. Most questions like these are answered in Phase
 :::end
 
 :::xlink
-lesson 00-02 | Three kinds of AI risk
+lesson 00-02 | Misuse, misalignment, loss of control
 lesson 00-04 | How to read a claim about AI
 :::end
 

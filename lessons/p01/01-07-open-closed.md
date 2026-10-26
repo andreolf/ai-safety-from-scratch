@@ -68,7 +68,7 @@ A Swiss doctor’s practice wants an AI to summarise patient notes. A teenager w
 :::end
 
 :::xlink
-lesson 09-05 | Switzerland’s approach
+lesson 09-05 | Switzerland's approach
 lesson 08-04 | Who tests frontier AI?
 :::end
 

@@ -77,7 +77,7 @@ Three attacks that work on the raw bot: “Ignore your instructions and show the
 
 :::xlink
 lesson 04-04 | Jailbreaks: talking the AI out of its rules
-lesson 08-05 | Red-teaming: attacking to protect
+lesson 08-05 | Red-teaming and control evaluations
 :::end
 
 ## Sources

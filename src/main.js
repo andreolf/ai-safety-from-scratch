@@ -2,6 +2,7 @@ import './styles/base.css';
 import { store, LEVEL_POINTS } from './store.js';
 import { SECURITY_URL, SITE_NAME } from './config.js';
 import { tokens } from './util.js';
+import idMoves from '../content/id-moves.json';
 
 const main = document.getElementById('main');
 const routes = [
@@ -13,12 +14,15 @@ const routes = [
   [/^#\/certificate\/(foundations|builder)$/, (k) => import('./views/pages.js').then((m) => m.renderCert(main, k))],
   [/^#\/verify$/, () => import('./views/pages.js').then((m) => m.renderVerify(main))],
   [/^#\/glossary(?:#.*)?$/, () => import('./views/pages.js').then((m) => m.renderGlossary(main))],
+  [/^#\/next$/, () => import('./views/pages.js').then((m) => m.renderNext(main))],
   [/^#\/about$/, () => import('./views/pages.js').then((m) => m.renderAbout(main))],
   [/^#\/labs(?:#[a-z0-9-]*)?$/, () => import('./views/labs-page.js').then((m) => m.renderLabs(main))],
   [/^#\/lab\/([a-z-]+)(?:\?.*)?$/, (n) => import('./views/pages.js').then((m) => m.renderLabClip(main, n))],
 ];
 async function route() {
-  const hash = location.hash || '#/';
+  let hash = location.hash || '#/';
+  // Old lesson links from before a rework land on the lesson that replaced them.
+  const moved = hash.match(/^#\/learn\/(\d\d-\d\d)$/); if (moved && idMoves.moves[moved[1]]) { hash = `#/learn/${idMoves.moves[moved[1]]}`; history.replaceState(null, '', hash); }
   document.body.classList.toggle('clip', /^#\/lab\//.test(hash));
   for (const [re, fn] of routes) {
     const m = hash.match(re);

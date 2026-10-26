@@ -79,7 +79,7 @@ Example: “Chatbots invent refund rules and companies have to pay.” Source: A
 
 :::xlink
 lesson 00-04 | How to read a claim about AI
-lesson 08-06 | Incidents: learning from real failures
+lesson 08-06 | July 2026: the agents that left the sandbox
 :::end
 
 ## Sources

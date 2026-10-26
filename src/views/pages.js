@@ -125,9 +125,37 @@ export function renderGlossary(root) {
   return 'Glossary';
 }
 
+const NEXT = [
+  { name: 'BlueDot Impact', url: 'https://bluedot.org/', line: 'A non-profit that runs free AI safety courses; more than 10,000 people have taken one.', items: [
+    ['The Future of AI', 'https://bluedot.org/courses/future-of-ai', 'Two hours, self-paced, no application and no technical background needed. A good first step if you finished Phase 00 and want the bigger picture.'],
+    ['AGI Strategy', 'https://bluedot.org/courses/agi-strategy', 'About 25 hours, in a small facilitated group, either intensive over about five days or part-time over about five weeks. It covers the strategic picture: who is building advanced AI, what could go wrong, and what people are doing about it.'],
+    ['Technical AI Safety', 'https://bluedot.org/courses/technical-ai-safety', 'Covers alignment and RLHF, interpretability, evaluations and red-teaming, AI control and scalable oversight, in about six days intensive or six weeks part-time. It goes much deeper into Phases 07 and 08 of this course. BlueDot recommends AGI Strategy first.'],
+  ] },
+  { name: 'ARENA', url: 'https://www.arena.education/', line: 'For people who want to do the research themselves. ARENA runs in-person bootcamps in London a few times a year, and its whole curriculum is free online: fundamentals, interpretability, reinforcement learning, evals and alignment science, as Python notebooks. You need Python and some maths.', items: [
+    ['ARENA curriculum (free, online)', 'https://learn.arena.education/', 'Work through it at your own pace.'],
+  ] },
+  { name: 'Jailbroken', url: 'https://jailbroken.gg/', line: 'A game for learning AI red-teaming. You attack live, model-backed targets and compete on a shared Daily Challenge. The labs in this course are simulations; Jailbroken is where you practise against real models.', items: [] },
+];
+
+export function renderNext(root) {
+  root.innerHTML = `<div class="page"><h1>Where to go next</h1><div class="prose">
+    <p>This course is about AI security: how AI systems get attacked and how to protect them. If you want to go deeper, these are the places I would send a friend. Each does something this course does not.</p>
+    ${NEXT.map((o) => `<section class="card next-card" style="margin-top:16px" data-testid="next-${o.name.split(' ')[0].toLowerCase()}"><h2 style="margin-top:0"><a href="${esc(o.url)}" target="_blank" rel="noopener">${esc(o.name)}</a></h2><p>${esc(o.line)}</p>${o.items.length ? `<ul>${o.items.map(([t, u, l]) => `<li><a href="${esc(u)}" target="_blank" rel="noopener"><b>${esc(t)}</b></a>: ${esc(l)}</li>`).join('')}</ul>` : ''}</section>`).join('')}
+    <h2>Which one first?</h2>
+    <ul><li>Want the big picture, with no code: BlueDot’s The Future of AI, then AGI Strategy.</li><li>Want to attack models: Jailbroken, alongside Phase 04 and the Builder track here.</li><li>Want to work on alignment research: BlueDot’s Technical AI Safety, then the ARENA curriculum.</li></ul>
+    <p class="muted">Course details (length, format, dates) were checked on the course websites on 27 October 2026 and can change. Check the course page before you sign up.</p>
+    <p><a href="#/learn/10-01">Careers and paths into AI safety (lesson 10.01)</a> · <a href="#/">Back to the course</a></p>
+  </div></div>`;
+  return 'Where to go next';
+}
+
 export function renderAbout(root) {
   root.innerHTML = `<div class="page"><h1>About and sources</h1><div class="prose">
-    <p>AI Safety from Scratch is a free course for curious beginners: no maths, no code, no signup. It covers everyday safety (wrong answers, scams, agents that act for you) and the basics of alignment research, with balanced, sourced claims.</p>
+    <p>AI Safety from Scratch is a free, hands-on course in AI security. You learn how AI systems get attacked and how they go wrong, then try it in simulated labs: prompt injection, jailbreaks, agents with tools, and agents that can spend money or sign transactions.</p>
+    <p>It is for people who build with AI and for anyone curious about how the attacks work. The Foundations track needs no code. The Builder track (Phase 11) has you test your own app with open-source tools.</p>
+    <h2>How it is organised</h2><p>The course uses the split that is standard in AI safety: <b>misuse</b> (people using AI to do harm), <b>misalignment</b> (AI doing what we said, not what we meant) and <b>loss of control</b> (keeping AI systems contained and watched). Phase 00 explains the three and why many researchers treat them as one problem. Phases 04 to 06 and the Builder track are the security core.</p>
+    <h2>A note from me</h2><p>I’m Francesco Andreoli. The first version of this course split AI risk into mistakes, misuse and control, and filed reward hacking under control. An AI-safety practitioner who reviewed it pointed out that the field files it under misalignment and treats loss of control as its own area. She was right, so on 27 October 2026 I restructured the course around that split and moved the focus to what I know best: security.</p>
+    <p>When you want to go further, see <a href="#/next">Where to go next</a>.</p>
     <h2>How facts are handled</h2><p>Every fact links to a source that was opened and read on the “checked” date. Anything not yet confirmed is marked <span class="flag">NEEDS SOURCED DATA</span>. Sources are re-checked every quarter. Last full check: ${fmtDate(LAST_CHECKED)}.</p>
     <h2>Labs</h2><p>All labs are simulations in your browser: scripted or rule-based toys. No API keys, no data sent anywhere, and you are never asked to attack a real service.</p>
     <h2>Sister course</h2><p><a href="${esc(SECURITY_URL)}" target="_blank" rel="noopener">Security from Scratch</a> teaches everyday digital safety for older adults and their families.</p>

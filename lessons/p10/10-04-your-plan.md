@@ -73,7 +73,7 @@ For example: “Every agent that can pay has a weekly cap of 50 francs and permi
 
 :::xlink
 security 11.02 | The 30-minute safety afternoon
-lesson 03-06 | Verify, don’t spot
+lesson 03-06 | Verify, don't spot
 lesson 06-03 | Budgets, caps, allowlists and expiry
 :::end
 

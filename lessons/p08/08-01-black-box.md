@@ -73,7 +73,7 @@ For example: “Who wrote the novel *Heidi*?” (Johanna Spyri) and “Which fam
 
 :::xlink
 lesson 01-04 | Training, part 1: reading the internet
-lesson 08-02 | Interpretability: finding "features"
+lesson 08-02 | Looking inside the black box
 :::end
 
 ## Sources

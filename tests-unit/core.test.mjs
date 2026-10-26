@@ -55,14 +55,17 @@ test('theme guard passes: no colours or fonts outside tokens.css', () => {
   execFileSync('node', ['scripts/check-tokens.mjs'], { cwd: ROOT, stdio: 'pipe' });
 });
 
-test('lesson IDs and titles match the curriculum draft (numbering is stable)', (t) => {
-  const draft = '/home/box/second-brain/Agents/physic-teacher/outputs/2026-10-26-ai-safety-from-scratch-curriculum.md';
-  if (!fs.existsSync(draft)) return t.skip('draft not on this machine');
-  const d = {}; for (const m of fs.readFileSync(draft, 'utf8').matchAll(/^\s*[-*]\s*\*\*((?:0\d|1[01])\.\d{2})\s+(.+?)\*\*/gm)) d[m[1]] ??= m[2].replace(/\.$/, '');
+test('every launched lesson ID still exists or redirects (old links, progress and certificates keep working)', () => {
   const c = JSON.parse(read('content/curriculum.json'));
-  const mine = Object.fromEntries(c.phases.flatMap((p) => p.lessons.map((l) => [l.id.replace('-', '.'), l.title])));
-  assert.equal(Object.keys(mine).length, 72);
-  assert.deepEqual(mine, d);
+  const ids = new Set(c.phases.flatMap((p) => p.lessons.map((l) => l.id)));
+  const { moves } = JSON.parse(read('content/id-moves.json'));
+  const legacy = JSON.parse(read('content/legacy-ids.json')).lessons;
+  assert.equal(legacy.length, 72);
+  for (const l of legacy) assert.ok(ids.has(l.id) || ids.has(moves[l.id]), `${l.id} (${l.title}) is gone and has no redirect`);
+  for (const [from, to] of Object.entries(moves)) { assert.ok(!ids.has(from), `${from} still exists, so it should not redirect`); assert.ok(ids.has(to), `${from} redirects to missing ${to}`); }
+  for (const id of ids) assert.match(id, /^\d\d-\d\d$/);
+  const phaseIds = c.phases.map((p) => p.id);
+  assert.deepEqual(phaseIds, Array.from({ length: 12 }, (_, i) => 'p' + String(i).padStart(2, '0')), 'phase IDs are part of certificate codes and must not change');
 });
 
 test('launched: no noindex, no draft banner, robots.txt allows all, sitemap present', () => {

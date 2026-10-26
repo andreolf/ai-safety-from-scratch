@@ -72,7 +72,7 @@ For example: “Here is an essay. List its three biggest weaknesses, in order of
 
 :::xlink
 lesson 02-03 | Sycophancy: the AI that agrees too much
-lesson 07-05 | Why this matters more as AI gets more capable
+lesson 07-05 | Goal misgeneralisation: right score, wrong goal
 :::end
 
 ## Sources

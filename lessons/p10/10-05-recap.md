@@ -75,7 +75,7 @@ Examples: “A chatbot guesses the next word, so it can sound sure and still be 
 :::end
 
 :::xlink
-lesson 00-02 | Three kinds of AI risk
+lesson 00-02 | Misuse, misalignment, loss of control
 lesson 05-03 | The lethal trifecta
 lesson 07-03 | The boat that went in circles
 :::end

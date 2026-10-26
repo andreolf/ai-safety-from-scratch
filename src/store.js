@@ -1,8 +1,11 @@
 // Progress lives only in this browser (localStorage). No accounts, nothing sent anywhere.
 import { STORE_KEY, POINTS, PASS } from './config.js';
+import idMoves from '../content/id-moves.json';
 const blank = () => ({ v: 1, xp: 0, lessons: {}, quiz: {}, tests: {}, days: [], name: '', certs: {}, labs: {}, practicals: {}, last: null });
 let s;
-function load() { try { s = { ...blank(), ...JSON.parse(localStorage.getItem(STORE_KEY) || '{}') }; } catch { s = blank(); } }
+function load() { try { s = { ...blank(), ...JSON.parse(localStorage.getItem(STORE_KEY) || '{}') }; } catch { s = blank(); } migrate(); }
+// Lessons merged or moved in a rework keep their progress under the new ID.
+function migrate() { for (const [from, to] of Object.entries(idMoves.moves)) { if (s.lessons[from] && !s.lessons[to]) s.lessons[to] = s.lessons[from]; if (s.last === from) s.last = to; } }
 function save() { try { localStorage.setItem(STORE_KEY, JSON.stringify(s)); } catch {} dispatchEvent(new CustomEvent('progress')); }
 const pad = (n) => String(n).padStart(2, '0');
 const dayKey = (d = new Date()) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;

@@ -70,7 +70,7 @@ Two ways to make a chatbot mention bridges a lot: (a) add “Always talk about b
 :::end
 
 :::xlink
-lesson 08-01 | The black box problem
+lesson 08-01 | AI control: plan for a model that misbehaves
 lesson 08-03 | Evals: exams for AI
 :::end
 

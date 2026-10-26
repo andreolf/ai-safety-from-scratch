@@ -28,7 +28,7 @@ OpenAI explained that it teaches models partly by “incorporating user signals 
 
 ## Not just one model
 
-Researchers at Anthropic studied this before the rollback. Their 2023 paper, *Towards Understanding Sycophancy in Language Models*, found that “five state-of-the-art AI assistants consistently exhibit sycophancy across four varied free-form text-generation tasks.” They also found that when a response matched a user’s views, it was more likely to be preferred, and that both humans and preference models sometimes preferred “convincingly-written sycophantic responses over correct ones”.
+A research team led by Mrinank Sharma studied this two years earlier. Their 2023 paper, *Towards Understanding Sycophancy in Language Models*, found that “five state-of-the-art AI assistants consistently exhibit sycophancy across four varied free-form text-generation tasks.” They also found that when a response matched a user’s views, it was more likely to be preferred, and that both humans and preference models sometimes preferred “convincingly-written sycophantic responses over correct ones”.
 
 This links straight back to Lesson 01.05: if people reward agreement, training produces agreement.
 
@@ -74,4 +74,4 @@ lesson 07-04 | Reward hacking in chatbots
 ## Sources
 
 - OpenAI, [Sycophancy in GPT-4o: what happened and what we’re doing about it](https://openai.com/index/sycophancy-in-gpt-4o/), 29 Apr 2025. Checked 26 Oct 2026.
-- Sharma et al. (Anthropic), [Towards Understanding Sycophancy in Language Models](https://arxiv.org/abs/2310.13548), arXiv 2310.13548, 2023. Checked 26 Oct 2026.
+- Sharma et al., [Towards Understanding Sycophancy in Language Models](https://arxiv.org/abs/2310.13548), arXiv 2310.13548, 2023. Checked 26 Oct 2026.

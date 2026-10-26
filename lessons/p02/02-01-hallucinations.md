@@ -77,7 +77,7 @@ A model answers 10 questions: 6 right, 2 wrong, 2 “I don’t know”. Score it
 
 :::xlink
 lesson 02-06 | How to check AI output
-security 02.01 | Spotting a scam message
+security 02.01 | What “phishing” means
 :::end
 
 ## Sources

@@ -83,6 +83,8 @@ security 09.01 | Voices can be copied
 security 01.07 | Practice: saying no on the phone
 security 06.01 | "Hi Mum, this is my new number."
 security 06.05 | Fake friend requests and hacked friends
+security 04.02 | The golden rule: never read a code to anyone
+security 11.04 | Be the "call me first" person
 :::end
 
 ## Sources

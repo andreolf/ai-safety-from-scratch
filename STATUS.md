@@ -54,13 +54,13 @@ All 72 lesson IDs and titles match the curriculum draft exactly; a unit test enf
 ## Verified 26 Oct 2026 (Phases 10–11)
 - Lesson 03.05: the five-step investment-scam flow now cites the sources Security from Scratch uses in its lesson 06.06 (BACS Week 7, 18 Feb 2025; cybercrimepolice.ch, Zurich cantonal police; FINMA warning list), each re-opened and the quoted passages found. The old attribution to Security 08.03–08.05 (not written yet) is gone.
 - Security snapshot refreshed: 44 of 71 Security lessons opened live (Phases 00–07). New back-links: 03-02 and 03-06 → 06.01, 06.05; 03-04 → 06.03, 04.02; 03-01 and 03-03 → 06.06; 05-02 → 05.05, 05.03; 06-01 → 07.03; 06-02 → 04.02, 04.05, 07.02. Titles match the live pages.
+- Security from Scratch complete: snapshot refreshed to 71 of 71, every title checked against the live page. 10.04 now links to Security 11.02 (no more “Coming soon”). New back-links: 03-01 → 08.01; 03-02 → 04.02, 11.04; 03-05 → 08.03, 10.05; 06-01 → 12.03, 12.04; 06-02 → 12.04 (it already linked 12.03).
 - Phase 10: 80,000 Hours career reviews; BlueDot Impact course pages (Future of AI, Technical AI Safety, Frontier AI Governance); International AI Safety Report; AI Incident Database; FBI IC3 alert (secret word).
 - Phase 11 READMEs and docs read: promptfoo (now part of OpenAI, MIT), garak, PyRIT, NeMo Guardrails, MCP Inspector (v2, Node 22.19+), Snyk Agent Scan (needs a Snyk token; starts MCP servers to scan), gitleaks (feature complete), Semgrep (Community Edition limits), Inspect, OWASP LLM07, Tenderly simulations (kept as a Builder corner in 11.05).
 - Run on the box against the practice app: promptfoo eval (2 passed, 4 failed on the starter), MCP Inspector `--cli ... --method tools/list`, gitleaks `dir` (one `generic-api-key` finding in `config.mjs`), Semgrep with the local rule (one finding).
 - Not run (described from READMEs only, and the lessons say so): garak, PyRIT, NeMo Guardrails, Snyk agent-scan, Inspect.
 
 ## Needs verification before use
-- Security from Scratch cross-links: Phases 08–12 of Security are not live yet and show “Coming soon”, including 11.02 (linked from 10.04) and 09.01–09.03. Refresh `content/security-lessons.json` when more go live.
 - Lesson 08.01: Karpathy’s talk is dated only “2023” (no exact date on the transcript used). Lesson 10.02 gives no date.
 - AI Act content (09.02, 09.03) and Swiss timing (09.05): re-check quarterly; next review by end of January 2027.
 - BlueDot cohort courses have changing application deadlines; the lesson tells readers to check the course page and gives no dates.

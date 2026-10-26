@@ -68,6 +68,7 @@ For each, name the kind of generative AI the FBI would put it under (text, image
 security 09.01 | Voices can be copied
 security 09.02 | Video calls can be faked too
 security 06.06 | Fake ads with famous faces
+security 08.01 | When a new online friend needs money
 :::end
 
 ## Sources

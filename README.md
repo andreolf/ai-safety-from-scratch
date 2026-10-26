@@ -19,7 +19,7 @@ npm run shots        # regenerate screenshots/ (needs the preview server running
 - Figures: `src/visuals/registry.js` (SVG, rendered at build time, each with a text version). Mascot: `src/visuals/intern.js`.
 - Labs: `src/labs/lab-*.js`, metadata in `src/labs/meta.js`. All 15 are simulations in the browser and send nothing anywhere.
 - Glossary shared with Security from Scratch: `content/glossary.json`. Every external link must be listed in `content/sources.json` after being opened and read.
-- Security from Scratch cross-links: snapshot in `content/security-lessons.json`; unwritten lessons render as “Coming soon”. `SECURITY_URL` lives in `src/config.js`.
+- Security from Scratch cross-links: snapshot of all 71 Security lessons in `content/security-lessons.json` (all live, titles checked on 26 Oct 2026); the build fails if a cross-link title does not match. A lesson marked unwritten would render as “Coming soon”. `SECURITY_URL` lives in `src/config.js`.
 
 ## Builder track and practice app
 

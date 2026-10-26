@@ -1,5 +1,5 @@
 {
- "note": "Snapshot of the Security from Scratch curriculum (read only from the sibling repo). 'written' lessons were opened live on the checked date; the others render as 'Coming soon' instead of a link.",
+ "note": "Snapshot of the Security from Scratch curriculum (read only from the sibling repo). All 71 lessons were opened live on the checked date.",
  "url": "https://andreolf.github.io/security-from-scratch/",
  "checked": "2026-10-26",
  "lessons": [
@@ -226,137 +226,137 @@
   {
    "id": "08-01",
    "title": "When a new online friend needs money",
-   "written": false
+   "written": true
   },
   {
    "id": "08-02",
    "title": "Why it is not your fault",
-   "written": false
+   "written": true
   },
   {
    "id": "08-03",
    "title": "\"Guaranteed\" returns",
-   "written": false
+   "written": true
   },
   {
    "id": "08-04",
    "title": "The friendly investment \"advisor\" and the fake trading app",
-   "written": false
+   "written": true
   },
   {
    "id": "08-05",
    "title": "\"Pay a fee to get your money out.\"",
-   "written": false
+   "written": true
   },
   {
    "id": "08-06",
    "title": "Practice: the trusted-person test",
-   "written": false
+   "written": true
   },
   {
    "id": "09-01",
    "title": "Voices can be copied",
-   "written": false
+   "written": true
   },
   {
    "id": "09-02",
    "title": "Video calls can be faked too",
-   "written": false
+   "written": true
   },
   {
    "id": "09-03",
    "title": "Try it: set up a family code word",
-   "written": false
+   "written": true
   },
   {
    "id": "09-04",
    "title": "Keep your voice and photos private",
-   "written": false
+   "written": true
   },
   {
    "id": "10-01",
    "title": "First: it is not your fault, and time matters",
-   "written": false
+   "written": true
   },
   {
    "id": "10-02",
    "title": "Step 1: call your bank",
-   "written": false
+   "written": true
   },
   {
    "id": "10-03",
    "title": "Step 2: report it",
-   "written": false
+   "written": true
   },
   {
    "id": "10-04",
    "title": "Step 3: change passwords and secure your email",
-   "written": false
+   "written": true
   },
   {
    "id": "10-05",
    "title": "The second scam: \"We can get your money back.\"",
-   "written": false
+   "written": true
   },
   {
    "id": "10-06",
    "title": "Getting support and talking about it",
-   "written": false
+   "written": true
   },
   {
    "id": "11-01",
    "title": "How to help without taking over",
-   "written": false
+   "written": true
   },
   {
    "id": "11-02",
    "title": "The 30-minute safety afternoon",
-   "written": false
+   "written": true
   },
   {
    "id": "11-03",
    "title": "Setting up a new phone together",
-   "written": false
+   "written": true
   },
   {
    "id": "11-04",
    "title": "Be the \"call me first\" person",
-   "written": false
+   "written": true
   },
   {
    "id": "11-05",
    "title": "Signs someone may be in a scam",
-   "written": false
+   "written": true
   },
   {
    "id": "12-01",
    "title": "What a crypto wallet is, in plain words",
-   "written": false
+   "written": true
   },
   {
    "id": "12-02",
    "title": "The secret phrase: 12 or 24 words that are the whole safe",
-   "written": false
+   "written": true
   },
   {
    "id": "12-03",
    "title": "Nobody real will ever ask for your phrase",
-   "written": false
+   "written": true
   },
   {
    "id": "12-04",
    "title": "Crypto ATMs and \"move your money into crypto to protect it\"",
-   "written": false
+   "written": true
   },
   {
    "id": "12-05",
    "title": "Hardware wallets, and the pre-filled phrase trap",
-   "written": false
+   "written": true
   },
   {
    "id": "12-06",
    "title": "Clicked something bad? What to do",
-   "written": false
+   "written": true
   }
  ]
 }

@@ -170,17 +170,17 @@ for (const p of ['p04', 'p05', 'p06', 'p07', 'p08', 'p09', 'p10', 'p11']) test(`
   await expect(page.getByTestId('test-result')).toHaveAttribute('data-pass', 'true');
 });
 
-test('Security cross-links: written lessons link out, unwritten ones say Coming soon', async ({ page }) => {
+test('Security cross-links: all 71 Security lessons are live, so every cross-link is a real link', async ({ page }) => {
   await go(page, '#/learn/06-02');
   await expect(page.locator('nav.xlink a[data-xlink="security"][href*="#/learn/07-02"]')).toBeVisible();
+  await expect(page.locator('nav.xlink a[data-xlink="security"][href*="#/learn/12-04"]')).toBeVisible();
   await go(page, '#/learn/03-02');
   const nav = page.locator('nav.xlink');
-  await expect(nav.locator('a[data-xlink="security"][href*="#/learn/01-07"]')).toBeVisible();
-  await expect(nav.locator('a[data-xlink="security"][href*="#/learn/01-01"]')).toBeVisible();
-  const soon = nav.locator('[data-xlink="security-soon"]');
-  await expect(soon).toContainText('09.01');
-  await expect(soon).toContainText('Coming soon');
-  await expect(nav.locator('a[href*="#/learn/09-01"]')).toHaveCount(0);
+  for (const id of ['01-01', '01-07', '09-01', '04-02', '11-04']) await expect(nav.locator(`a[data-xlink="security"][href*="#/learn/${id}"]`)).toBeVisible();
+  await expect(page.locator('[data-xlink="security-soon"]')).toHaveCount(0);
+  await go(page, '#/learn/10-04');
+  await expect(page.locator('nav.xlink a[data-xlink="security"][href*="#/learn/11-02"]')).toContainText('The 30-minute safety afternoon');
+  await expect(page.locator('main')).not.toContainText('Coming soon');
 });
 
 test('Reward Designer in lesson 07-03: boat circles with default points, finishes after re-designing the reward', async ({ page }) => {

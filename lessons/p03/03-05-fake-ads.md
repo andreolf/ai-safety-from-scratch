@@ -88,6 +88,8 @@ An ad shows a well-known business leader saying: “My new platform guarantees 3
 :::xlink
 security 06.06 | Fake ads with famous faces
 security 08.04 | The friendly investment “advisor” and the fake trading app
+security 08.03 | "Guaranteed" returns
+security 10.05 | The second scam: "We can get your money back."
 :::end
 
 ## Sources

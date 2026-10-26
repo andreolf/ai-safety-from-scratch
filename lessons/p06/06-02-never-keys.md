@@ -78,6 +78,7 @@ security 12.03 | Nobody real will ever ask for your phrase
 security 04.02 | The golden rule: never read a code to anyone
 security 04.05 | Backup codes and a "spare key"
 security 07.02 | Paying by card online, safely
+security 12.04 | Crypto ATMs and "move your money into crypto to protect it"
 :::end
 
 ## Sources

@@ -79,6 +79,8 @@ Which of these setups lets an AI agent spend money? (1) A chatbot that recommend
 security 07.02 | Paying by card online, safely
 lesson 04-01 | The email that gave orders
 security 07.03 | TWINT, the safe way
+security 12.03 | Nobody real will ever ask for your phrase
+security 12.04 | Crypto ATMs and "move your money into crypto to protect it"
 :::end
 
 ## Sources

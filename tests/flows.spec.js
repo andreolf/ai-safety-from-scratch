@@ -7,7 +7,7 @@ test('home shows phase map, points bar, mascot and counts', async ({ page }) => 
   await expect(page.getByTestId('phase-map')).toBeVisible();
   await expect(page.getByTestId('xp-bar').getByRole('progressbar')).toBeVisible();
   await expect(page.locator('.intern-tile svg').first()).toBeVisible();
-  await expect(page.getByTestId('written-count')).toContainText('65');
+  await expect(page.getByTestId('written-count')).toContainText('72');
   expect(errs).toEqual([]);
 });
 
@@ -162,7 +162,7 @@ test('Agent Permission Simulator in lesson 06-05: poisoned invoice paid without 
   expect(errs).toEqual([]);
 });
 
-for (const p of ['p04', 'p05', 'p06', 'p07', 'p08', 'p09', 'p10']) test(`phase test ${p}: 10 questions drawn and passable`, async ({ page }) => {
+for (const p of ['p04', 'p05', 'p06', 'p07', 'p08', 'p09', 'p10', 'p11']) test(`phase test ${p}: 10 questions drawn and passable`, async ({ page }) => {
   await go(page, `#/test/${p}`);
   const qs = page.getByTestId('question'); await expect(qs).toHaveCount(10);
   for (let i = 0; i < 10; i++) await qs.nth(i).locator('[data-correct=true]').first().click();
@@ -171,6 +171,8 @@ for (const p of ['p04', 'p05', 'p06', 'p07', 'p08', 'p09', 'p10']) test(`phase t
 });
 
 test('Security cross-links: written lessons link out, unwritten ones say Coming soon', async ({ page }) => {
+  await go(page, '#/learn/06-02');
+  await expect(page.locator('nav.xlink a[data-xlink="security"][href*="#/learn/07-02"]')).toBeVisible();
   await go(page, '#/learn/03-02');
   const nav = page.locator('nav.xlink');
   await expect(nav.locator('a[data-xlink="security"][href*="#/learn/01-07"]')).toBeVisible();

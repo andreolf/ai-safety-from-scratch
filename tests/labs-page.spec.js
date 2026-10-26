@@ -5,7 +5,7 @@ const READY = Object.values(labs).filter((l) => l.ready).length;
 const FIRST_LOCKED = Object.entries(labs).find(([, l]) => !l.ready)?.[0];
 // Labs page: every lab playable inline, lazy-mounted, with a mini-nav and #/labs#lab-NN anchors.
 
-test('labs page: inline sections, mini-nav, locked teasers, lazy mount, no overflow', async ({ page }) => {
+test('labs page: inline sections, mini-nav, no teasers left, lazy mount, no overflow', async ({ page }) => {
   const errs = watchErrors(page); await go(page, '#/labs');
   const nav = page.getByTestId('lab-nav');
   await expect(nav.locator('a')).toHaveCount(15);

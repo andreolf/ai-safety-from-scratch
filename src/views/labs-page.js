@@ -11,18 +11,14 @@ const anchor = (l) => `lab-${pad2(l.n)}`;
 function usedIn(name) { return Object.entries(lessonIndex).filter(([, v]) => v.labs?.includes(name)).map(([id]) => id); }
 
 export function renderLabs(root) {
-  const list = Object.entries(labs).sort((a, b) => a[1].n - b[1].n);
-  const ready = list.filter(([, l]) => l.ready).length;
+  const list = Object.entries(labs).filter(([, l]) => l.ready).sort((a, b) => a[1].n - b[1].n);
   root.innerHTML = `<div class="page labs-page">
     <h1>The labs</h1>
-    <p class="muted">${list.length} playful simulations, one or more per phase. Play them right here, or inside their lessons. They run in your browser and send nothing anywhere. ${ready} are ready now.</p>
-    <nav class="lab-nav" aria-label="Jump to a lab" data-testid="lab-nav"><ol>${list.map(([, l]) => `<li><a href="#/labs#${anchor(l)}" data-jump="${anchor(l)}" class="${l.ready ? '' : 'locked'}" aria-label="Lab ${pad2(l.n)}: ${esc(l.title)}${l.ready ? '' : ' (coming later)'}">${pad2(l.n)}</a></li>`).join('')}</ol></nav>
+    <p class="muted">${list.length} playful simulations, one or more per phase. Play them right here, or inside their lessons. They run in your browser and send nothing anywhere.</p>
+    <nav class="lab-nav" aria-label="Jump to a lab" data-testid="lab-nav"><ol>${list.map(([, l]) => `<li><a href="#/labs#${anchor(l)}" data-jump="${anchor(l)}" aria-label="Lab ${pad2(l.n)}: ${esc(l.title)}">${pad2(l.n)}</a></li>`).join('')}</ol></nav>
     ${list.map(([k, l]) => {
       const lessons = usedIn(k);
       const where = lessons.length ? `<p class="lab-where">Used in ${lessons.map((id) => `<a href="#/learn/${id}">lesson ${id}${byId.get(id) ? `, ${esc(byId.get(id).title)}` : ''}</a>`).join(' and ')}.</p>` : '';
-      if (!l.ready) return `<section class="lab-section is-locked" id="${anchor(l)}" aria-labelledby="${anchor(l)}-h" data-testid="labsec-${k}">
-        <div class="lab-teaser"><span class="lab-lock" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><rect x="5" y="11" width="14" height="10" rx="2" class="svg-box" stroke-width="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3" class="svg-line" stroke-width="2"/></svg></span>
-        <div><h2 id="${anchor(l)}-h"><span class="lab-num">${pad2(l.n)}</span> ${esc(l.title)}${l.flagship ? ' ★' : ''}</h2><p>${esc(l.blurb)}</p><p class="lab-where">Coming with <a href="#/phase/${l.phase}">${l.phase.replace('p', 'Phase ')}</a>.</p></div></div></section>`;
       return `<section class="lab-section" id="${anchor(l)}" aria-labelledby="${anchor(l)}-h" data-testid="labsec-${k}">
         <h2 id="${anchor(l)}-h"><span class="lab-num">${pad2(l.n)}</span> ${esc(l.title)}${l.flagship ? ' ★' : ''}</h2>
         <p class="lab-line">${esc(l.blurb)}</p>${where}

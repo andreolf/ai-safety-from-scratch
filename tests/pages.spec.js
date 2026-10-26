@@ -19,6 +19,6 @@ test('robots: noindex, nofollow meta and robots.txt', async ({ page, request }) 
 });
 test('banner stays visible after scrolling', async ({ page }) => {
   await go(page, '#/learn/01-03');
-  await page.mouse.wheel(0, 3000); await page.evaluate(() => window.scrollTo(0, 3000)); await page.waitForTimeout(200);
+  await page.evaluate(() => window.scrollTo(0, 3000)); await page.waitForTimeout(200);
   await expect(page.getByTestId('draft-banner')).toBeInViewport();
 });

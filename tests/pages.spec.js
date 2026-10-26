@@ -21,11 +21,20 @@ test('launched: indexable, robots.txt allows all and points to the sitemap', asy
   expect(t).toMatch(/Allow: \//); expect(t).not.toMatch(/Disallow/); expect(t).toContain('Sitemap: https://andreolf.github.io/ai-safety-from-scratch/sitemap.xml');
   const sm = await request.get('./sitemap.xml'); expect(sm.ok()).toBeTruthy(); expect(await sm.text()).toContain('<loc>https://andreolf.github.io/ai-safety-from-scratch/</loc>');
 });
-test('footer links to the three sibling courses', async ({ page }) => {
+test('shared footer: three columns, sibling links, tap targets, no underline at rest, disclosure verbatim', async ({ page }) => {
   await go(page, '#/');
+  const foot = page.locator('footer.foot');
+  await expect(foot.locator('.foot-h')).toHaveText(['This course', 'More from Scratch', 'About']);
   const sib = page.getByTestId('sibling-courses');
   for (const [name, url] of [['Security from Scratch', 'https://andreolf.github.io/security-from-scratch/'], ['Mechanical Engineering from Scratch', 'https://andreolf.github.io/mechanical-engineering-from-scratch/'], ['Mechatronics from Scratch', 'https://andreolf.github.io/mechatronics-from-scratch/']])
     await expect(sib.getByRole('link', { name })).toHaveAttribute('href', url);
+  await expect(sib.getByRole('link', { name: /AI Safety from Scratch/ })).toHaveCount(0);
+  const links = await foot.locator('.foot-list a').evaluateAll((as) => as.map((a) => ({ h: a.getBoundingClientRect().height, d: getComputedStyle(a).textDecorationLine, t: getComputedStyle(a.querySelector('.foot-link-t') || a).textDecorationLine })));
+  expect(links.length).toBe(8);
+  for (const l of links) { expect(l.h).toBeGreaterThanOrEqual(44); expect(l.d).toBe('none'); expect(l.t).toBe('none'); }
+  await expect(foot).toContainText('This site is not an official MetaMask or Consensys product and is not endorsed by them, or by ETH Zurich, OWASP, any AI company or any government body. The agents-and-payments lessons (Phase 06) are written to be wallet-neutral. Where MetaMask is mentioned, it is one example among others, and the page says so.');
+  await expect(page.locator('main')).not.toContainText('Sister course');
+  await noOverflow(page);
 });
 
 test('Phase 06 shows the full disclosure note at the top', async ({ page }) => {

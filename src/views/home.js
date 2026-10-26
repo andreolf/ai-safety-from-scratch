@@ -1,10 +1,8 @@
 import { phases, allLessons, writtenCount } from '../course.js';
 import { labs } from '../labs/meta.js';
 import { store } from '../store.js';
-import { SECURITY_URL } from '../config.js';
 import { internSVG } from '../visuals/intern.js';
 import { phaseMap, xpBar } from './map.js';
-import { esc } from '../util.js';
 
 export function renderHome(root) {
   const s = store.get(); const last = s.last; const first = allLessons[0].id;
@@ -27,7 +25,7 @@ export function renderHome(root) {
     </div>
   </section>
   <section class="section" aria-labelledby="map-h"><h2 id="map-h">Your phase map</h2>${xpBar()}<div style="margin-top:16px">${phaseMap()}</div></section>
-  <section class="section" aria-labelledby="sib"><h2 id="sib">Sister course</h2><p class="muted" style="max-width:60ch">Want the everyday version for parents and grandparents: phone scams, passwords, 2FA? <a href="${esc(SECURITY_URL)}" target="_blank" rel="noopener" data-xlink="security">Security from Scratch</a> covers it, and the two courses link to each other lesson by lesson.</p></section>
+
   </div>`;
   return '';
 }

@@ -407,6 +407,27 @@
    "publisher": "NIST AI Resource Center",
    "date": "2023-01-26",
    "checked": "2026-10-26"
+  },
+  {
+   "url": "https://www.aisi.gov.uk/",
+   "title": "The AI Security Institute (AISI)",
+   "publisher": "UK AI Security Institute",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/",
+   "title": "Red-Teaming OpenAI’s Internal Agent Monitoring Systems",
+   "publisher": "METR",
+   "date": "2026-10-22",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://genai.owasp.org/resource/genai-red-teaming-manual-version-1-0/",
+   "title": "GenAI Red Teaming Manual Version 1.0",
+   "publisher": "OWASP GenAI Security Project",
+   "date": "2026-10-20",
+   "checked": "2026-10-26"
   }
  ]
 }

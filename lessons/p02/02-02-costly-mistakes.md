@@ -71,7 +71,7 @@ You ask a train company’s chatbot whether you can get a refund if you miss you
 :::end
 
 :::xlink
-lesson 02-01 | Hallucinations
+lesson 02-01 | Hallucinations: confident and wrong
 lesson 02-06 | How to check AI output
 :::end
 

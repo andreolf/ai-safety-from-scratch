@@ -72,7 +72,7 @@ Which of these is the model likely to know well, and which might it get wrong? (
 
 :::xlink
 lesson 01-05 | Training, part 2: learning to be an assistant
-lesson 02-01 | Hallucinations
+lesson 02-01 | Hallucinations: confident and wrong
 :::end
 
 ## Sources

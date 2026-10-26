@@ -95,6 +95,7 @@ export function compile(src, file) {
           return `<a href="${esc(securityLesson(id))}" rel="noopener" target="_blank" data-xlink="security">Security from Scratch ${esc(id)} · ${esc(title || s.title)}</a>`;
         }
         if (!titles.has(id)) errors.push(`${file}: xlink to unknown lesson ${id}`);
+        else if (title && title.replace(/[“”"’']/g, '') !== titles.get(id).title.replace(/[“”"’']/g, '')) errors.push(`${file}: lesson ${id} title should be "${titles.get(id).title}"`);
         return `<a href="#/learn/${esc(id)}" data-xlink="lesson">${esc(id.replace('-', '.'))} · ${esc(title || titles.get(id)?.title)}</a>`; });
       html.push(`<nav class="xlink" aria-label="Related lessons">${items.join('')}</nav>`);
     } else errors.push(`${file}: unknown block ${kind}`);

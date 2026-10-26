@@ -7,7 +7,7 @@ test('home shows phase map, points bar, mascot and counts', async ({ page }) => 
   await expect(page.getByTestId('phase-map')).toBeVisible();
   await expect(page.getByTestId('xp-bar').getByRole('progressbar')).toBeVisible();
   await expect(page.locator('.intern-tile svg').first()).toBeVisible();
-  await expect(page.getByTestId('written-count')).toContainText('43');
+  await expect(page.getByTestId('written-count')).toContainText('48');
   expect(errs).toEqual([]);
 });
 
@@ -162,7 +162,7 @@ test('Agent Permission Simulator in lesson 06-05: poisoned invoice paid without 
   expect(errs).toEqual([]);
 });
 
-for (const p of ['p04', 'p05', 'p06']) test(`phase test ${p}: 10 questions drawn and passable`, async ({ page }) => {
+for (const p of ['p04', 'p05', 'p06', 'p07']) test(`phase test ${p}: 10 questions drawn and passable`, async ({ page }) => {
   await go(page, `#/test/${p}`);
   const qs = page.getByTestId('question'); await expect(qs).toHaveCount(10);
   for (let i = 0; i < 10; i++) await qs.nth(i).locator('[data-correct=true]').first().click();
@@ -171,7 +171,7 @@ for (const p of ['p04', 'p05', 'p06']) test(`phase test ${p}: 10 questions drawn
 });
 
 test('Security cross-links: written lessons link out, unwritten ones say Coming soon', async ({ page }) => {
-  await page.goto('./#/learn/03-02');
+  await go(page, '#/learn/03-02');
   const nav = page.locator('nav.xlink');
   await expect(nav.locator('a[data-xlink="security"][href*="#/learn/01-07"]')).toBeVisible();
   await expect(nav.locator('a[data-xlink="security"][href*="#/learn/01-01"]')).toBeVisible();
@@ -179,4 +179,20 @@ test('Security cross-links: written lessons link out, unwritten ones say Coming 
   await expect(soon).toContainText('09.01');
   await expect(soon).toContainText('Coming soon');
   await expect(nav.locator('a[href*="#/learn/09-01"]')).toHaveCount(0);
+});
+
+test('Reward Designer in lesson 07-03: boat circles with default points, finishes after re-designing the reward', async ({ page }) => {
+  const errs = watchErrors(page); await go(page, '#/learn/07-03');
+  const lab = page.getByTestId('lab-reward-designer');
+  await expect(lab).toHaveAttribute('data-lab-ready', '1');
+  const out = lab.getByTestId('rd-out');
+  await expect(out).toHaveAttribute('data-pick', 'loop');
+  await lab.getByTestId('rd-target').fill('2');
+  await lab.getByTestId('rd-finish').fill('100');
+  await expect(out).toHaveAttribute('data-pick', 'race');
+  await expect(lab.getByTestId('rd-row-race')).toContainText('112');
+  await lab.getByTestId('rd-target').fill('0'); await lab.getByTestId('rd-finish').fill('0');
+  await expect(out).toHaveAttribute('data-pick', 'idle');
+  await expect(lab.getByTestId('lab-reward-designer-score')).toHaveText('3/3 behaviours seen');
+  expect(errs).toEqual([]);
 });

@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { watchErrors, go, noOverflow, tapTargets } from './helpers.js';
-const ROUTES = ['#/', '#/learn/00-01', '#/learn/01-03', '#/learn/02-01', '#/learn/03-06', '#/learn/04-01', '#/phase/p02', '#/test/p01', '#/progress', '#/glossary', '#/verify', '#/about', '#/labs', '#/lab/token-predictor', '#/certificate/foundations'];
+const ROUTES = ['#/', '#/learn/00-01', '#/learn/01-03', '#/learn/02-01', '#/learn/03-06', '#/learn/04-01', '#/phase/p02', '#/test/p01', '#/progress', '#/glossary', '#/verify', '#/about', '#/labs', '#/lab/token-predictor', '#/certificate/foundations', '#/next', '#/learn/00-03', '#/learn/08-06'];
 for (const r of ROUTES) {
   test(`page ${r}: launched (no draft banner), sibling links, no overflow, no console errors, tap targets`, async ({ page }) => {
     const errs = watchErrors(page);
@@ -30,7 +30,7 @@ test('shared footer: three columns, sibling links, tap targets, no underline at 
     await expect(sib.getByRole('link', { name })).toHaveAttribute('href', url);
   await expect(sib.getByRole('link', { name: /AI Safety from Scratch/ })).toHaveCount(0);
   const links = await foot.locator('.foot-list a').evaluateAll((as) => as.map((a) => ({ h: a.getBoundingClientRect().height, d: getComputedStyle(a).textDecorationLine, t: getComputedStyle(a.querySelector('.foot-link-t') || a).textDecorationLine })));
-  expect(links.length).toBe(8);
+  expect(links.length).toBe(9);
   for (const l of links) { expect(l.h).toBeGreaterThanOrEqual(44); expect(l.d).toBe('none'); expect(l.t).toBe('none'); }
   await expect(foot).toContainText('This site is not an official MetaMask or Consensys product and is not endorsed by them, or by ETH Zurich, OWASP, any AI company or any government body. The agents-and-payments lessons (Phase 06) are written to be wallet-neutral. Where MetaMask is mentioned, it is one example among others, and the page says so.');
   await expect(page.locator('main')).not.toContainText('Sister course');
@@ -42,4 +42,27 @@ test('Phase 06 shows the full disclosure note at the top', async ({ page }) => {
   await expect(page.getByTestId('phase-disclosure')).toContainText('not an official MetaMask or Consensys product');
   await page.goto('./#/learn/06-01');
   await expect(page.locator('.prose blockquote, blockquote').first()).toContainText('Head of Developer Relations');
+});
+
+test('Where to go next: linked from the footer, recommends BlueDot, ARENA and Jailbroken with working links', async ({ page }) => {
+  await page.goto('./#/');
+  await page.getByTestId('foot-next').click();
+  await expect(page).toHaveURL(/#\/next$/);
+  await expect(page.locator('main h1')).toHaveText('Where to go next');
+  for (const id of ['next-bluedot', 'next-arena', 'next-jailbroken']) await expect(page.getByTestId(id)).toBeVisible();
+  for (const u of ['https://bluedot.org/courses/future-of-ai', 'https://bluedot.org/courses/agi-strategy', 'https://bluedot.org/courses/technical-ai-safety', 'https://learn.arena.education/', 'https://jailbroken.gg/'])
+    await expect(page.locator(`main a[href="${u}"]`).first()).toBeVisible();
+  await noOverflow(page);
+  await page.goto('./#/learn/10-05');
+  await expect(page.locator('main a[href="#/next"]').first()).toBeVisible();
+});
+
+test('home and About describe a hands-on AI security course around misuse, misalignment and loss of control', async ({ page }) => {
+  await page.goto('./#/');
+  await expect(page.locator('.hero')).toContainText('hands-on AI security');
+  for (const t of ['Misuse', 'Misalignment', 'Loss of control']) await expect(page.locator('#why').locator('..')).toContainText(t);
+  await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', /hands-on AI security course/);
+  await page.goto('./#/about');
+  await expect(page.locator('main')).toContainText('misalignment');
+  await expect(page.locator('main a[href="#/next"]')).toBeVisible();
 });

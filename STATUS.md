@@ -3,7 +3,7 @@
 Last updated 26 Oct 2026 (Asia/Makassar).
 
 ## Done
-- **Lessons 72 of 72**: Phases 00 (4), 01 (7), 02 (7), 03 (6), 04 (7), 05 (6), 06 (6), 07 (5), 08 (6), 09 (6), 10 (5), 11 (7). Every lesson has at least one visual, a mascot scene, an exercise with a worked solution, 3 quiz questions and a sources list.
+- **Lessons 74**: Phases 00 (4), 01 (7), 02 (7), 03 (6), 04 (7), 05 (7), 06 (6), 07 (6), 08 (6), 09 (6), 10 (5), 11 (7). Every lesson has at least one visual, a mascot scene, an exercise with a worked solution, 3 quiz questions and a sources list.
 - **15 of 15 labs**, including Plan Builder (14, printable one-page plan, also saved as text) and Builder practicals (15, enter the six practical codes).
 - Phase tests (10 questions, pass at 80%, deterministic draw) open for all 12 phases.
 - **Certificates, earnable and verifiable end to end.** Foundations: phase tests 00–10. Builder: the Phase 11 test plus all six practicals. PNG and PDF, SHA-256 verification code, `#/verify`. Playwright tests earn both for real (Phase 10 and Phase 11 tests taken in the UI, practical codes entered in the lab) and verify the codes.
@@ -13,7 +13,7 @@ Last updated 26 Oct 2026 (Asia/Makassar).
 - Checks: `npm run check` (lesson checker plus theme guard). Tests: `npm run test:unit` and `npm run test:e2e` (device matrix, `--workers=1`). Screenshots: `npm run shots`.
 
 ## Lesson numbering
-All 72 lesson IDs and titles match the curriculum draft exactly; a unit test enforces this. None changed.
+Rework, 27 October 2026: the course was restructured around misuse, misalignment and loss of control after practitioner feedback, and repositioned as a hands-on AI security course. Two lessons were added (05-07 Sandboxes and monitoring, 07-06 Deception). Every one of the 72 launched lesson IDs still exists; a unit test enforces that each one exists or redirects through `content/id-moves.json` (currently empty). Some titles changed and some lessons were merged into others under the same ID, so saved progress carries over. New page: `#/next` (Where to go next).
 
 ## Defaults (not yet confirmed by Francesco)
 - Name: "AI Safety from Scratch".

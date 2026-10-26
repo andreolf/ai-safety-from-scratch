@@ -1,8 +1,8 @@
 # AI Safety from Scratch
 
-A free, hands-on AI security course: prompt injection, jailbreaks, AI agents and agents that hold money. Built around the standard split of AI risk into misuse, misalignment and loss of control. 12 phases, 72 lessons, 15 browser labs, and an optional Builder track with a practice app you run on your own computer.
+A free, hands-on AI security course: prompt injection, jailbreaks, AI agents and agents that hold money. Organised around three kinds of AI risk: misuse, misalignment and loss of control. 12 phases, 74 lessons, 15 browser labs, and an optional Builder track with a practice app you run on your own computer.
 
-**Status: complete (72 of 72 lessons) and live at https://andreolf.github.io/ai-safety-from-scratch/** (launched 26 October 2026). Sibling courses: [Security from Scratch](https://andreolf.github.io/security-from-scratch/), [Mechanical Engineering from Scratch](https://andreolf.github.io/mechanical-engineering-from-scratch/) and [Mechatronics from Scratch](https://andreolf.github.io/mechatronics-from-scratch/). See `STATUS.md`.
+**Status: complete (74 lessons) and live at https://andreolf.github.io/ai-safety-from-scratch/** (launched 26 October 2026). Sibling courses: [Security from Scratch](https://andreolf.github.io/security-from-scratch/), [Mechanical Engineering from Scratch](https://andreolf.github.io/mechanical-engineering-from-scratch/) and [Mechatronics from Scratch](https://andreolf.github.io/mechatronics-from-scratch/). See `STATUS.md`.
 
 ```bash
 npm install

@@ -116,3 +116,17 @@ test('reduced motion: no running animations on step-through and mascot', async (
   const running = await page.evaluate(() => document.getAnimations().filter((a) => a.playState === 'running' && (a.effect?.getComputedTiming().duration || 0) > 50).length);
   expect(running).toBe(0);
 });
+
+test('Fake Inbox in lesson 04-07: fooled without defences, safe with the send tool removed', async ({ page }) => {
+  const errs = watchErrors(page); await go(page, '#/learn/04-07');
+  const lab = page.getByTestId('lab-fake-inbox');
+  await expect(lab).toHaveAttribute('data-lab-ready', '1');
+  await lab.getByTestId('inbox-run').click();
+  await expect(lab.getByTestId('inbox-out')).toHaveAttribute('data-verdict', 'bad');
+  await lab.getByTestId('mail-news').click();
+  await lab.getByTestId('def-nosend').check();
+  await lab.getByTestId('inbox-run').click();
+  await expect(lab.getByTestId('inbox-out')).toHaveAttribute('data-verdict', 'good');
+  await expect(lab.getByTestId('lab-fake-inbox-score')).toHaveText('3/3');
+  expect(errs).toEqual([]);
+});

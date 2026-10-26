@@ -78,6 +78,7 @@ Which of these setups lets an AI agent spend money? (1) A chatbot that recommend
 :::xlink
 security 07.02 | Paying by card online, safely
 lesson 04-01 | The email that gave orders
+security 07.03 | TWINT, the safe way
 :::end
 
 ## Sources

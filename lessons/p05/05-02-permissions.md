@@ -77,6 +77,8 @@ Read access to email (ideally only receipts or a dedicated label) and write acce
 :::xlink
 lesson 04-07 | Defences that help
 security 05.04 | Never let a stranger control your screen
+security 05.05 | Apps only from the official store
+security 05.03 | Fake "virus" warnings and tech-support calls
 :::end
 
 ## Sources

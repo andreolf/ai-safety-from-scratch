@@ -31,20 +31,30 @@ Criminals use AI-generated videos to create believable depictions of public figu
 
 ## How the scam usually unfolds
 
-1. **The hook:** an ad or fake news article with a famous face.
-2. **The form:** you leave your phone number “to learn more”.
-3. **The friendly advisor:** someone calls, helpful and patient, and helps you open an account.
-4. **The fake dashboard:** a website or app shows your “profits” growing, so you invest more.
-5. **The trap:** when you try to withdraw, there are fees, taxes or “unlock” payments. The money is gone.
+The Swiss Federal Office for Cyber Security (BACS) and the Zurich cantonal police describe the same five steps:
 
-Steps 3 to 5 are covered in detail in Security from Scratch (lessons 08.03 and 08.04). AI makes step 1 more convincing and cheaper to produce in every language.
+1. **The hook:** a fake news-style article or ad with a famous face promises a fortune from a small investment, usually 250 francs or euros (BACS).
+2. **The form:** you register on the “investment platform” through a link.
+3. **The friendly advisor:** a “personal adviser” or “broker” calls quickly, often within minutes, and is trained to push you into rash decisions (BACS, Zurich cantonal police).
+4. **The fake dashboard:** a website shows your money growing, so you pay in more. The money is never invested.
+5. **The trap:** when you try to withdraw, you are asked for more payments, such as supposed fees and taxes. Later, fake “lawyers” or “authorities” may offer to recover the money for a fee (BACS).
+
+:::source url="https://www.bacs.admin.ch/de/25w07-de" by="Federal Office for Cyber Security (BACS), Week 7 (in German)" date="18 Feb 2025" checked="26 Oct 2026"
+When you want to withdraw money, the fraudsters insist on many further payments, for example supposed fees and taxes. (Our translation.)
+:::end
+
+:::source url="https://cybercrimepolice.ch/de/faelle/online-anlagebetrueger-missbrauchen-prominente" by="cybercrimepolice.ch (Zurich cantonal police, in German)" checked="26 Oct 2026"
+After registering, people are contacted straight away, usually within a few minutes, by email or phone from a call centre. (Our translation.)
+:::end
+
+AI makes step 1 more convincing and cheaper to produce in every language. Security from Scratch covers the whole scam for families in its lesson on fake ads with famous faces.
 
 ## Questions that expose it
 
 - **Would this person really sell this?** Famous people are not giving away investment tips in ads.
 - **Is it on their official channels?** Check their verified accounts or website, not the ad.
 - **“Guaranteed”, “risk-free”, “limited time”?** Real investments carry risk, and nobody guarantees returns.
-- **Is the firm authorised?** Check the financial regulator’s list in your country before sending money.
+- **Is the firm authorised?** Check the financial regulator’s list in your country before sending money. In Switzerland, FINMA lists authorised firms and keeps a warning list of companies that “are not authorised and may be engaging in financial market activity without the requisite licence”.
 
 :::intern fooled
 The intern sees a video of a famous Swiss skier “revealing” a crypto platform that doubled her savings. The lips match the words. The intern signs up, and a friendly advisor calls within the hour.
@@ -82,4 +92,7 @@ security 08.04 | The friendly investment “advisor” and the fake trading app
 
 ## Sources
 
+- Federal Office for Cyber Security (BACS), [Woche 7: Wie Prominente für Investment-Betrug missbraucht werden](https://www.bacs.admin.ch/de/25w07-de), 18 Feb 2025. Checked 26 Oct 2026.
+- cybercrimepolice.ch (Zurich cantonal police), [Missbräuchliche Verwendung von Promibildern](https://cybercrimepolice.ch/de/faelle/online-anlagebetrueger-missbrauchen-prominente). Checked 26 Oct 2026.
+- FINMA, [Warning list](https://www.finma.ch/en/finma-public/warnungen/warnliste). Checked 26 Oct 2026.
 - FBI Internet Crime Complaint Center, [Criminals Use Generative Artificial Intelligence to Facilitate Financial Fraud](https://www.ic3.gov/PSA/2024/PSA241203), 3 Dec 2024. Checked 26 Oct 2026.

@@ -75,6 +75,9 @@ For example: a separate virtual card with a 200-franc monthly limit (or a small 
 :::xlink
 security 12.02 | The secret phrase: 12 or 24 words that are the whole safe
 security 12.03 | Nobody real will ever ask for your phrase
+security 04.02 | The golden rule: never read a code to anyone
+security 04.05 | Backup codes and a "spare key"
+security 07.02 | Paying by card online, safely
 :::end
 
 ## Sources

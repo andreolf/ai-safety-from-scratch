@@ -81,6 +81,8 @@ Example: “I want to help, so I’m going to hang up and call you straight back
 security 01.01 | The grandchild-in-trouble phone call
 security 09.01 | Voices can be copied
 security 01.07 | Practice: saying no on the phone
+security 06.01 | "Hi Mum, this is my new number."
+security 06.05 | Fake friend requests and hacked friends
 :::end
 
 ## Sources

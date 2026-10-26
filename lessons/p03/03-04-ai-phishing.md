@@ -72,6 +72,8 @@ Warning signs: urgency (24 hours), a threat (suspension), and a request to log i
 security 02.01 | What “phishing” means
 security 02.02 | Reading the sender and the link without clicking
 security 02.06 | Practice: spot the fake
+security 06.03 | Never forward a WhatsApp code
+security 04.02 | The golden rule: never read a code to anyone
 :::end
 
 ## Sources

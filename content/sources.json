@@ -190,6 +190,13 @@
    "publisher": "3Blue1Brown",
    "date": "",
    "checked": "2026-10-26"
+  },
+  {
+   "url": "https://arxiv.org/abs/2309.12288",
+   "title": "Berglund et al., “The Reversal Curse: LLMs trained on “A is B” fail to learn “B is A””",
+   "publisher": "arXiv",
+   "date": "2023-09-21",
+   "checked": "2026-10-26"
   }
  ]
 }

@@ -1,4 +1,4 @@
-# Status: AI Safety from Scratch (draft, not launched)
+# Status: AI Safety from Scratch (launched 26 October 2026)
 
 Last updated 26 Oct 2026 (Asia/Makassar).
 
@@ -66,8 +66,8 @@ All 72 lesson IDs and titles match the curriculum draft exactly; a unit test enf
 - BlueDot cohort courses have changing application deadlines; the lesson tells readers to check the course page and gives no dates.
 
 ## Remaining
-- Nothing in the curriculum. Launch (removing the draft banner, noindex and robots.txt) waits for Francesco's go.
+- Nothing in the curriculum. Launched on 26 October 2026 on Francesco's go: the draft banner and noindex are gone, robots.txt allows all and points to `sitemap.xml` (the site uses hash routes, so the sitemap lists the home page only), and the footer links to the sibling courses.
 
 ## Notes
 - The build was done locally on the box, because no CloudAgent was available.
-- The draft preview is unlisted: it has a "Draft preview" banner on every page, robots noindex/nofollow, and a robots.txt with `Disallow: /`.
+- Before launch the preview was unlisted (Draft banner, noindex/nofollow, `Disallow: /`).

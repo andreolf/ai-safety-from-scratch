@@ -2,7 +2,7 @@
 
 How AI works, how it fails, and how to stay in control. A free, beginner course: 12 phases, 72 lessons, 15 browser labs, and an optional Builder track with a practice app you run on your own computer.
 
-**Status: complete (72 of 72 lessons), not launched.** A draft preview exists with a “Draft preview” banner, `noindex, nofollow` and a `robots.txt` that disallows everything. Launch needs Francesco’s go. See `STATUS.md`.
+**Status: complete (72 of 72 lessons) and live at https://andreolf.github.io/ai-safety-from-scratch/** (launched 26 October 2026). Sibling courses: [Security from Scratch](https://andreolf.github.io/security-from-scratch/), [Mechanical Engineering from Scratch](https://andreolf.github.io/mechanical-engineering-from-scratch/) and [Mechatronics from Scratch](https://andreolf.github.io/mechatronics-from-scratch/). See `STATUS.md`.
 
 ```bash
 npm install

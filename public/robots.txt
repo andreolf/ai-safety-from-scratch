@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://andreolf.github.io/ai-safety-from-scratch/sitemap.xml

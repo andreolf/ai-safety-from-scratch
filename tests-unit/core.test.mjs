@@ -65,10 +65,12 @@ test('lesson IDs and titles match the curriculum draft (numbering is stable)', (
   assert.deepEqual(mine, d);
 });
 
-test('robots: noindex,nofollow meta and Disallow: / are present', () => {
-  assert.match(read('index.html'), /<meta name="robots" content="noindex, nofollow"/);
-  assert.match(read('public/robots.txt'), /User-agent: \*\s+Disallow: \//);
-  assert.match(read('index.html'), /data-testid="draft-banner"/);
+test('launched: no noindex, no draft banner, robots.txt allows all, sitemap present', () => {
+  assert.doesNotMatch(read('index.html'), /noindex|nofollow/);
+  assert.doesNotMatch(read('index.html'), /draft-banner|Draft preview/);
+  assert.match(read('public/robots.txt'), /User-agent: \*\s+Allow: \//);
+  assert.doesNotMatch(read('public/robots.txt'), /Disallow/);
+  assert.match(read('public/sitemap.xml'), /<loc>https:\/\/andreolf\.github\.io\/ai-safety-from-scratch\/<\/loc>/);
 });
 
 // "XP" reads like a crypto token: user-facing text says "points". Internal keys (store.xp, data-xp-*) may stay.

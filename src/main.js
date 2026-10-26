@@ -1,6 +1,7 @@
 import './styles/base.css';
 import { store, LEVEL_XP } from './store.js';
 import { SECURITY_URL, SITE_NAME } from './config.js';
+import { tokens } from './util.js';
 
 const main = document.getElementById('main');
 const routes = [
@@ -36,9 +37,17 @@ function paintXP() {
   document.querySelector('[data-xp-label]').textContent = `${s.xp} XP`;
   document.querySelector('[data-xp-fill]').style.width = `${Math.round(frac * 100)}%`;
 }
+// theme-color and the favicon can't use CSS variables, so they are painted from tokens.css at runtime.
+function paintChrome() {
+  const k = tokens(['--bg', '--accent', '--on-accent', '--font-display']);
+  document.querySelector('meta[name=theme-color]').content = k['--bg'];
+  const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='${k['--accent']}'/><text x='16' y='21.5' font-family="${k['--font-display'].replace(/"/g, "'")}" font-weight='900' font-size='14' text-anchor='middle' fill='${k['--on-accent']}'>AI</text></svg>`;
+  let l = document.querySelector('link[rel=icon]'); if (!l) { l = document.createElement('link'); l.rel = 'icon'; document.head.appendChild(l); }
+  l.href = 'data:image/svg+xml,' + encodeURIComponent(svg);
+}
 function theme() {
   const b = document.querySelector('[data-theme-toggle]');
-  const set = (t) => { document.documentElement.dataset.theme = t; b.textContent = t === 'dark' ? 'Light' : 'Dark'; b.setAttribute('aria-label', t === 'dark' ? 'Switch to light (Daylight) theme' : 'Switch to dark (Signal) theme'); document.querySelector('meta[name=theme-color]').content = t === 'dark' ? '#000000' : '#FAFAF5'; };
+  const set = (t) => { document.documentElement.dataset.theme = t; b.textContent = t === 'dark' ? 'Light' : 'Dark'; b.setAttribute('aria-label', t === 'dark' ? 'Switch to light (Daylight) theme' : 'Switch to dark (Signal) theme'); paintChrome(); };
   set(document.documentElement.dataset.theme || 'dark');
   b.addEventListener('click', () => { const t = document.documentElement.dataset.theme === 'dark' ? 'daylight' : 'dark'; try { localStorage.setItem('aisfs-theme', t); } catch {} set(t); });
 }

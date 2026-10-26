@@ -1,5 +1,4 @@
-@import '@fontsource-variable/archivo/wdth.css';
-@import '@fontsource-variable/jetbrains-mono/index.css';
+/* Theme: everything brand-specific (colours, fonts, font files) is in tokens.css. */
 @import './tokens.css';
 
 /* Derived values (not brand tokens): built only from tokens.css names, so the kit can replace tokens.css. */
@@ -259,3 +258,7 @@ code, kbd, pre, .mono { font-family: var(--font-mono); font-size: .9em; }
 .lesson-hero { position: relative; display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 12px; align-items: end; padding: 18px 0 8px; border-bottom: 1px solid var(--line); margin-bottom: 22px; }
 .lesson-num { font-family: var(--font-display); font-stretch: var(--stretch-expanded); font-weight: var(--weight-black); font-size: clamp(3.4rem, 15vw, 6.5rem); line-height: .9; color: transparent; -webkit-text-stroke: 1.5px var(--muted); margin: 0 0 10px; letter-spacing: var(--tracking-display); }
 .lesson-hero .intern-svg { width: clamp(72px, 18vw, 120px); }
+
+/* Draft preview banner: on every page until launch */
+.draft-banner { background: var(--accent); color: var(--on-accent); font-size: var(--text-sm); line-height: 1.35; text-align: center; padding: 6px var(--space-4); }
+.draft-banner b { font-weight: var(--weight-black); text-transform: uppercase; letter-spacing: .04em; }

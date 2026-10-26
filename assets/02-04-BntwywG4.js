@@ -1,0 +1,56 @@
+var e=`02-04`,t=8,n=`AI learns from data made by people, including its gaps. The Gender Shades study showed how unevenly a system can fail.`,r=`data`,i=`neutral`,a=`<h2 id="the-hook">The hook</h2>
+<p>Imagine a face-analysis system that is right almost every time for some people, and wrong about one time in three for others. Would you call it “accurate”? On average it might look fine. For the people it fails, it is not.</p>
+<h2 id="the-one-idea">The one idea</h2>
+<p><strong>AI learns patterns from data. If the data under-represents some groups, or carries past unfairness, the AI can work worse for those groups. An average accuracy number can hide this.</strong> This is what people mean by AI <a class="term" href="#/glossary#bias" title="When an AI system works worse, or unfairly, for some groups of people, often because of its training data.">Bias (in AI)</a>.</p>
+
+<figure class="fig" data-figure="gender-shades"><svg viewBox="0 0 400 200" role="img" aria-label="Gender Shades: worst error rate 34.7% for darker-skinned women versus at most 0.8% for lighter-skinned men." focusable="false"><defs><marker id="ar-gender-shades" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:var(--muted-strong)"/></marker></defs><text x="20" y="30" class="svg-m" text-anchor="start" style="font-size:13px;font-weight:800"><tspan x="20" dy="0">Commercial gender classifiers, 2018</tspan></text>
+     <text x="20" y="74" class="svg-t" text-anchor="start" style="font-size:14px;font-weight:700"><tspan x="20" dy="0">Darker-skinned women</tspan><tspan x="20" dy="17.5">(highest error rate)</tspan></text><rect x="190" y="58" width="150" height="26" rx="4" class="svg-box" stroke-width="1"/><rect x="190" y="58" width="52.05" height="26" rx="4" class="svg-hl"/><text x="348" y="77" class="svg-t" text-anchor="start" style="font-size:15px;font-weight:900"><tspan x="348" dy="0">34.7%</tspan></text>
+     <text x="20" y="134" class="svg-t" text-anchor="start" style="font-size:14px;font-weight:700"><tspan x="20" dy="0">Lighter-skinned men</tspan><tspan x="20" dy="17.5">(highest error rate)</tspan></text><rect x="190" y="118" width="150" height="26" rx="4" class="svg-box" stroke-width="1"/><rect x="190" y="118" width="1.2" height="26" rx="4" style="fill:var(--muted-strong)"/><text x="348" y="137" class="svg-t" text-anchor="start" style="font-size:15px;font-weight:900"><tspan x="348" dy="0">0.8%</tspan></text>
+     <text x="20" y="188" class="svg-m" text-anchor="start" style="font-size:12px;font-weight:400"><tspan x="20" dy="0">Source: Buolamwini &amp; Gebru, Gender Shades (PMLR, 2018)</tspan></text></svg><figcaption>The worst error rates the study found for two groups, drawn to scale.</figcaption><details><summary>Text version of this picture</summary><p>Bar chart from the 2018 Gender Shades study of three commercial gender classifiers. The highest error rate for darker-skinned women was 34.7%. The highest error rate for lighter-skinned men was 0.8%.</p></details></figure>
+<h2 id="gender-shades">Gender Shades</h2>
+<p>In 2018, researchers Joy Buolamwini and Timnit Gebru published <em>Gender Shades</em>. They tested three commercial gender classification systems, software that looks at a photo of a face and guesses whether the person is a man or a woman.</p>
+<p>First they looked at the data. Two well-known face benchmarks were “overwhelmingly composed of lighter-skinned subjects”: 79.6% for one (IJB-A) and 86.2% for the other (Adience). So they built a new test set balanced by gender and skin type, using a skin-type scale used by dermatologists. Then they measured each group separately.</p>
+
+<blockquote class="source"><q>darker-skinned females are the most misclassified group (with error rates of up to 34.7%). The maximum error rate for lighter-skinned males is 0.8%.</q><cite>Buolamwini &amp; Gebru, Gender Shades (Proceedings of Machine Learning Research, vol. 81), 2018. <a href="https://proceedings.mlr.press/v81/buolamwini18a.html" rel="noopener" target="_blank">Read the source</a> · checked 26 Oct 2026</cite></blockquote>
+<h2 id="why-this-matters-for-chatbots-too">Why this matters for chatbots too</h2>
+<p>Gender Shades studied face analysis, not chatbots, but the lesson carries over. Large language models learn from huge amounts of text (Lesson 01.04). Some languages, regions and communities are much less represented in that text than others, and the text reflects the views and stereotypes of the people who wrote it. You saw one practical effect in Lesson 01.02: less common languages are cut into more tokens. Projects like Swiss Apertus, with 40% non-English training data, are one response (Lesson 01.07).</p>
+<h2 id="what-you-can-do">What you can do</h2>
+<ul>
+<li><strong>Ask “accurate for whom?”</strong> when you see a single accuracy number.</li>
+<li><strong>Notice when an answer assumes</strong> a gender, culture or country you did not mention.</li>
+<li><strong>Be extra careful with decisions about people</strong>, such as hiring, loans or school places. Uses like these are among those the EU AI Act treats as high-risk (Phase 09).</li>
+</ul>
+
+<aside class="intern-scene" data-pose="alarmed" aria-label="Story: the gullible intern"><div class="intern-svg"><span class="intern-tile"><svg role="img" aria-label="The gullible intern, alarmed: wide eyes and open mouth, realising it was a trick." focusable="false" class="intern intern-alarmed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><title>The gullible intern, alarmed: wide eyes and open mouth, realising it was a trick.</title>
+  <path d="M58 196 L66 140 Q68 128 80 128 L120 128 Q132 128 134 140 L142 196" stroke-width="10" stroke-linejoin="round" stroke-linecap="round" style="fill:var(--ink);stroke:var(--white)"/>
+  <path d="M64 150 L38 120 M136 150 L162 120" stroke-width="10" stroke-linecap="round" fill="none" style="stroke:var(--white)"/>
+  <path d="M86 130 L100 150 L114 130" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--highlighter)"/>
+  <rect x="86" y="150" width="28" height="22" rx="4" style="fill:var(--highlighter)"/>
+  <rect x="93" y="158" width="14" height="5" rx="2" style="fill:var(--ink)"/>
+  <g transform="rotate(0 100 78)">
+    <line x1="100" y1="30" x2="100" y2="14" stroke-width="10" stroke-linecap="round" style="stroke:var(--white)"/>
+    <circle cx="100" cy="12" r="8" style="fill:var(--highlighter)"/>
+    <rect x="44" y="30" width="112" height="92" rx="26" style="fill:var(--white)"/>
+    
+    <circle cx="78" cy="70" r="15" style="fill:var(--ink)"/><circle cx="122" cy="70" r="15" style="fill:var(--ink)"/>
+    <circle cx="78" cy="70" r="5" style="fill:var(--white)"/><circle cx="122" cy="70" r="5" style="fill:var(--white)"/>
+    <ellipse cx="100" cy="102" rx="10" ry="12" style="fill:var(--ink)"/>
+  </g>
+  <path d="M30 34 L20 22 M24 58 L8 56 M170 34 L180 22 M176 58 L192 56" stroke-width="10" stroke-linecap="round" style="stroke:var(--alarm)"/>
+</svg>
+</span></div><div><span class="who">The gullible intern</span><div class="bubble"><p>The intern uses an AI tool to sort job applications. It quietly ranks applicants from one region lower, because past hires mostly came from somewhere else. Nobody checked the results by group.</p>
+</div><span class="lesson-learned"><span class="hl">Lesson:</span> When AI makes or shapes decisions about people, check its results group by group, and keep a human responsible.</span></div></aside>
+
+<div class="exercise"><h3>Try it: Read the average</h3><p>A system reports “95% accuracy”. In the test, 90 people are from group A and 10 from group B. It is right for 88 of group A and 7 of group B. What is its accuracy for each group? What would you ask the seller?</p>
+<details><summary>Show a worked answer</summary><p>Overall: (88 + 7) / 100 = 95%. Group A: 88 / 90 ≈ 98%. Group B: 7 / 10 = 70%. The headline hides that group B is wrong three times in ten. Ask: “What is the accuracy for each group, how many people from each group were in your test, and does that match the people who will use this?”</p>
+</details></div>
+<h2 id="quick-check">Quick check</h2>
+
+<div class="quiz-mount" data-quiz></div>
+
+<nav class="xlink" aria-label="Related lessons"><a href="#/learn/09-02" data-xlink="lesson">09.02 · The EU AI Act: four tiers of risk</a><a href="#/learn/01-07" data-xlink="lesson">01.07 · Open and closed models, including a Swiss one</a></nav>
+<h2 id="sources">Sources</h2>
+<ul>
+<li>Joy Buolamwini and Timnit Gebru, <a href="https://proceedings.mlr.press/v81/buolamwini18a.html" rel="noopener" target="_blank">Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification</a>, Proceedings of Machine Learning Research 81, 2018. Checked 26 Oct 2026.</li>
+</ul>
+`,o=[{id:`the-hook`,t:`The hook`},{id:`the-one-idea`,t:`The one idea`},{id:`gender-shades`,t:`Gender Shades`},{id:`why-this-matters-for-chatbots-too`,t:`Why this matters for chatbots too`},{id:`what-you-can-do`,t:`What you can do`},{id:`quick-check`,t:`Quick check`},{id:`sources`,t:`Sources`}],s=[{id:`02-04-q1`,type:`mc`,q:`What did Gender Shades find?`,options:[`Error rates of up to 34.7% for darker-skinned women, versus at most 0.8% for lighter-skinned men`,`All systems were equally accurate for everyone`,`The systems only failed on blurry photos`],answer:0,explain:`The study measured each group separately, which revealed a large gap hidden by average accuracy.`,why:null},{id:`02-04-q2`,type:`mc`,q:`What problem did the researchers find in existing face benchmarks?`,options:[`They were overwhelmingly made up of lighter-skinned subjects`,`They had too many photos`,`They used only cartoons`],answer:0,explain:`79.6% and 86.2% lighter-skinned subjects, so the tests themselves could hide failures.`,why:null},{id:`02-04-q3`,type:`mc`,q:`What is the best question to ask about a single “95% accurate” claim?`,options:[`Accurate for whom? What is the accuracy for each group?`,`Is it fast?`,`Is 95 a nice number?`],answer:0,explain:`Averages can hide large failures for smaller groups.`,why:null}],c={figures:[`gender-shades`],images:[],labs:[],interns:1,sources:1,exercises:1},l=[`https://proceedings.mlr.press/v81/buolamwini18a.html`],u=0,d=`Bias: whose data, whose mistakes?`,f={id:e,minutes:8,summary:n,highlight:r,pose:i,html:a,toc:o,quiz:s,used:c,links:l,flags:0,title:d};export{f as default,u as flags,r as highlight,a as html,e as id,l as links,t as minutes,i as pose,s as quiz,n as summary,d as title,o as toc,c as used};

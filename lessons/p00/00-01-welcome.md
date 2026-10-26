@@ -1,6 +1,7 @@
 ---
 id: 00-01
 minutes: 6
+highlight: works
 summary: What this course covers, how a lesson works, and why everything here comes with a source.
 ---
 ## The hook

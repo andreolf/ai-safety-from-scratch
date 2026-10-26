@@ -13,7 +13,7 @@ const PROMPTS = ['the cat sat on a', 'our new wonder pill cures', 'my favourite 
 const withTemp = (opts, T) => { const w = opts.map(([t, p]) => [t, Math.pow(p, 1 / T)]); const s = w.reduce((a, [, x]) => a + x, 0); return w.map(([t, x]) => [t, x / s]); };
 export default function (body, ctx) {
   let prompt = PROMPTS[ctx.args?.state === 'pill' ? 1 : 0], text = prompt, T = 1, steps = 0;
-  const out = h('p', { class: 'lab-out', 'data-testid': 'tp-text', style: 'font-family:var(--sig-mono);font-size:1.05rem' });
+  const out = h('p', { class: 'lab-out', 'data-testid': 'tp-text', style: 'font-family:var(--font-mono);font-size:1.05rem' });
   const bars = h('div', { class: 'bars', 'data-testid': 'tp-bars', role: 'list', 'aria-label': 'Next-token probabilities' });
   const tval = h('output', {}, '1.0');
   const slider = h('input', { type: 'range', min: '0.2', max: '2.5', step: '0.1', value: '1', 'aria-label': 'Temperature', 'data-testid': 'tp-temp' });

@@ -24,33 +24,36 @@ export async function certCode(name, key, date) {
   return codeFromDigest(buf);
 }
 function wrap(ctx, text, maxW) { const words = text.split(' '), lines = []; let cur = ''; for (const w of words) { const t = cur ? cur + ' ' + w : w; if (ctx.measureText(t).width > maxW && cur) { lines.push(cur); cur = w; } else cur = t; } if (cur) lines.push(cur); return lines; }
-const F = (w, size, wdth = 100) => `${w} ${size}px 'Archivo Variable', Archivo, system-ui, sans-serif`;
+const F = (w, size, wdth = 100) => `${wdth === 125 ? 'expanded ' : ''}${w} ${size}px 'Archivo Variable', Archivo, system-ui, sans-serif`;
 
+// Layout follows the branding kit's certificate template (2026-10-26-ai-safety-certificate-a4):
+// Daylight card, name on the one highlighter box, mascot tile top right, date / author / verify row.
+function loadImg(src) { return new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = src; }); }
 export async function drawCert(canvas, { name, key, dateLabel, code, verifyUrl }) {
-  try { await Promise.all([document.fonts.load(F(900, 80)), document.fonts.load(F(400, 30))]); } catch {}
+  try { await Promise.all([document.fonts.load(F(900, 80)), document.fonts.load(F(400, 30)), document.fonts.load(`500 30px 'JetBrains Mono Variable'`)]); } catch {}
   const c = CREDENTIALS[key]; canvas.width = CERT_W; canvas.height = CERT_H;
-  const g = canvas.getContext('2d'); const HL = '#EEFF41';
-  g.fillStyle = '#000'; g.fillRect(0, 0, CERT_W, CERT_H);
-  g.strokeStyle = '#2A2A2A'; g.lineWidth = 4; g.strokeRect(60, 60, CERT_W - 120, CERT_H - 120);
-  // brand mark
-  g.fillStyle = HL; g.beginPath(); g.roundRect(130, 130, 96, 96, 18); g.fill();
-  g.fillStyle = '#000'; g.font = F(900, 44); g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText('AI', 178, 180);
-  g.textAlign = 'left'; g.textBaseline = 'alphabetic';
-  g.fillStyle = '#fff'; g.font = F(800, 38); g.fillText('AI Safety from Scratch', 256, 176);
-  g.fillStyle = '#B8B8B8'; g.font = F(400, 28); g.fillText('How AI works, how it fails, and how to stay in control.', 256, 216);
-  g.fillStyle = '#fff'; g.font = F(900, 104); g.fillText('CERTIFICATE', 130, 420); g.fillText('OF COMPLETION', 130, 530);
-  g.fillStyle = '#B8B8B8'; g.font = F(400, 34); g.fillText('This certifies that', 130, 640);
-  // the one highlighted line: the name
-  const nm = name || 'Your name'; g.font = F(900, 92); const nw = Math.min(g.measureText(nm).width, CERT_W - 300);
-  g.fillStyle = HL; g.fillRect(118, 668, nw + 28, 118);
-  g.fillStyle = '#000'; g.fillText(nm, 132, 760, CERT_W - 300);
-  g.fillStyle = '#fff'; g.font = F(400, 36); g.fillText('completed', 130, 860);
-  g.font = F(800, 50); g.fillText(c.line, 130, 925);
-  g.fillStyle = '#B8B8B8'; g.font = F(400, 30); wrap(g, c.what, 1700).forEach((l, i) => g.fillText(l, 130, 985 + i * 40));
-  g.fillStyle = '#fff'; g.font = F(800, 32); g.fillText(`Date: ${dateLabel}`, 130, 1110);
-  g.fillText(`Verification code: ${code}`, 130, 1160);
-  g.fillStyle = '#B8B8B8'; g.font = F(400, 24); g.fillText(`Check it at ${verifyUrl}`, 130, 1200);
-  wrap(g, DISCLAIMER, 1740).forEach((l, i) => g.fillText(l, 130, 1268 + i * 32));
+  const g = canvas.getContext('2d'); const HL = '#EEFF41', INK = '#111111', BG = '#FAFAF5', MUTED = '#4A4A4A';
+  g.fillStyle = BG; g.fillRect(0, 0, CERT_W, CERT_H);
+  g.strokeStyle = INK; g.lineWidth = 8; g.beginPath(); g.roundRect(64, 64, CERT_W - 128, CERT_H - 128, 28); g.stroke();
+  g.textBaseline = 'alphabetic'; g.textAlign = 'left';
+  g.fillStyle = INK; g.font = F(900, 40, 125); g.fillText('AI SAFETY FROM SCRATCH', 170, 230);
+  // mascot tile
+  g.fillStyle = '#000'; g.beginPath(); g.roundRect(CERT_W - 330, 140, 150, 150, 26); g.fill();
+  try { const svg = (await import('./visuals/mascot-svgs.js')).MASCOT.proud; const img = await loadImg('data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg)); g.drawImage(img, CERT_W - 318, 152, 126, 126); } catch {}
+  g.fillStyle = MUTED; g.font = F(800, 34); g.fillText('CERTIFICATE OF COMPLETION', 170, 390);
+  const nm = name || 'Your name'; g.font = F(900, 110, 125); const maxW = CERT_W - 360; const nw = Math.min(g.measureText(nm).width, maxW);
+  g.fillStyle = HL; g.beginPath(); g.roundRect(150, 420, nw + 44, 150, 12); g.fill();
+  g.fillStyle = INK; g.fillText(nm, 172, 535, maxW);
+  g.font = F(400, 40); const line1 = 'completed ', bold = c.line; g.fillText(line1, 170, 660);
+  const x1 = 170 + g.measureText(line1).width; g.font = F(800, 40); g.fillText(bold, x1, 660);
+  g.font = F(400, 40); const rest = key === 'builder' ? ', the optional Builder track:' : ', a free course on how AI works,';
+  const x2 = x1 + g.measureText(bold).width; g.fillText(rest, x2, 660);
+  g.fillText(key === 'builder' ? 'red-teaming, scanning and guarding an AI app with open-source tools.' : 'how it fails, and how to stay in control.', 170, 715);
+  const cols = [['DATE', dateLabel, F(800, 38)], ['COURSE AUTHOR', 'Francesco Andreoli', F(800, 38)], ['VERIFY', code, `500 34px 'JetBrains Mono Variable', ui-monospace, monospace`]];
+  cols.forEach(([h, v, f], i) => { const x = 170 + i * 560; g.fillStyle = MUTED; g.font = F(800, 26); g.fillText(h, x, 1010); g.fillStyle = INK; g.fillRect(x, 1028, 470, 4); g.font = f; g.fillText(v, x, 1085, 500); });
+  g.fillStyle = MUTED; g.font = F(400, 24); g.fillText(`Check the code at ${verifyUrl}`, 170, 1140);
+  g.fillStyle = '#D9D9D2'; g.fillRect(170, 1180, CERT_W - 340, 2);
+  g.fillStyle = MUTED; g.font = F(400, 24); wrap(g, DISCLAIMER + ' Personal project by Francesco Andreoli.', CERT_W - 340).forEach((l, i) => g.fillText(l, 170, 1225 + i * 34));
 }
 
 export function pdfFromCanvas(canvas) {

@@ -1,6 +1,7 @@
 ---
 id: 00-02
 minutes: 8
+highlight: risk
 summary: Mistakes, misuse and control. Three boxes that make every AI headline easier to understand.
 ---
 ## The hook

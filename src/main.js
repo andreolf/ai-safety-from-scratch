@@ -38,9 +38,9 @@ function paintXP() {
 }
 function theme() {
   const b = document.querySelector('[data-theme-toggle]');
-  const set = (t) => { document.documentElement.dataset.theme = t; b.textContent = t === 'dark' ? 'Light' : 'Dark'; b.setAttribute('aria-label', t === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'); document.querySelector('meta[name=theme-color]').content = t === 'dark' ? '#000000' : '#FAFAF5'; };
+  const set = (t) => { document.documentElement.dataset.theme = t; b.textContent = t === 'dark' ? 'Light' : 'Dark'; b.setAttribute('aria-label', t === 'dark' ? 'Switch to light (Daylight) theme' : 'Switch to dark (Signal) theme'); document.querySelector('meta[name=theme-color]').content = t === 'dark' ? '#000000' : '#FAFAF5'; };
   set(document.documentElement.dataset.theme || 'dark');
-  b.addEventListener('click', () => { const t = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'; try { localStorage.setItem('aisfs-theme', t); } catch {} set(t); });
+  b.addEventListener('click', () => { const t = document.documentElement.dataset.theme === 'dark' ? 'daylight' : 'dark'; try { localStorage.setItem('aisfs-theme', t); } catch {} set(t); });
 }
 document.querySelectorAll('[data-security-link]').forEach((a) => { a.href = SECURITY_URL; a.target = '_blank'; a.rel = 'noopener'; });
 theme(); paintXP(); addEventListener('progress', paintXP);

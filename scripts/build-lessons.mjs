@@ -22,6 +22,7 @@ const OUT = path.join(ROOT, 'src/generated');
 const curriculum = JSON.parse(fs.readFileSync(path.join(ROOT, 'content/curriculum.json'), 'utf8'));
 const glossary = JSON.parse(fs.readFileSync(path.join(ROOT, 'content/glossary.json'), 'utf8'));
 const gl = new Map(glossary.terms.map((t) => [t.id, t]));
+const kit = JSON.parse(fs.readFileSync(path.join(ROOT, 'content/kit-images.json'), 'utf8'));
 const titles = new Map(curriculum.phases.flatMap((p) => p.lessons.map((l) => [l.id, { ...l, phase: p.id }])));
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const attrs = (s) => Object.fromEntries([...String(s || '').matchAll(/(\w+)=("([^"]*)"|\S+)/g)].map((m) => [m[1], m[3] ?? m[2]]));
@@ -41,7 +42,7 @@ const md = (s) => marked.parse(inline(s));
 export function compile(src, file) {
   const fm = src.match(/^---\n([\s\S]*?)\n---\n/); if (!fm) throw new Error(`${file}: missing front matter`);
   const meta = yaml.load(fm[1]); const body = src.slice(fm[0].length);
-  const lines = body.split('\n'); const html = []; let buf = []; const quiz = []; const used = { figures: [], labs: [], interns: 0, sources: 0, exercises: 0 };
+  const lines = body.split('\n'); const html = []; let buf = []; const quiz = []; const used = { figures: [], images: [], labs: [], interns: 0, sources: 0, exercises: 0 };
   const flush = () => { if (buf.length) { html.push(md(buf.join('\n'))); buf = []; } };
   const take = (i) => { const out = []; while (i < lines.length && !/^:::end\s*$/.test(lines[i])) out.push(lines[i++]); if (i >= lines.length) errors.push(`${file}: unclosed block`); return [out, i]; };
   for (let i = 0; i < lines.length; i++) {
@@ -59,6 +60,11 @@ export function compile(src, file) {
       used.figures.push(rest);
       if (!visuals[rest]) { errors.push(`${file}: unknown figure ${rest}`); continue; }
       html.push(renderVisual(rest, inline(text.trim()) ? marked.parseInline(inline(text.trim())) : ''));
+    } else if (kind === 'image') {
+      const k = kit[rest]; used.images.push(rest);
+      if (!k) { errors.push(`${file}: unknown kit image ${rest}`); continue; }
+      if (!fs.existsSync(path.join(ROOT, 'public/kit', `${rest}-1600.webp`))) errors.push(`${file}: missing public/kit/${rest}-1600.webp (run node scripts/sync-kit.mjs)`);
+      html.push(`<figure class="kit-img" data-image="${esc(rest)}"><img src="kit/${esc(rest)}-1600.webp" srcset="kit/${esc(rest)}-800.webp 800w, kit/${esc(rest)}-1600.webp 1600w" sizes="(min-width: 900px) 860px, 100vw" width="1600" height="900" loading="lazy" decoding="async" alt="${esc(k.alt)}">${text.trim() ? `<figcaption>${marked.parseInline(inline(text.trim()))}</figcaption>` : ''}<details><summary>Text version of this infographic</summary><p>${esc(k.text)}</p></details></figure>`);
     } else if (kind === 'intern') {
       used.interns++; const [story, learned = ''] = text.split(/^---\s*$/m);
       html.push(`<aside class="intern-scene" data-pose="${esc(rest || 'neutral')}" aria-label="Story: the gullible intern"><div class="intern-svg">${internSVG(rest || 'neutral')}</div><div><span class="who">The gullible intern</span><div class="bubble">${md(story.trim())}</div>${learned.trim() ? `<span class="lesson-learned"><span class="hl">Lesson:</span> ${marked.parseInline(inline(learned.trim()))}</span>` : ''}</div></aside>`);
@@ -89,7 +95,7 @@ export function compile(src, file) {
   out = out.replace(/<h2>(.*?)<\/h2>/g, (_, t) => { const id = slug(t); toc.push({ id, t: t.replace(/<[^>]+>/g, '') }); return `<h2 id="${id}">${t}</h2>`; });
   out = out.replace(/<a href="(https?:[^"]+)"(?![^>]*target)/g, '<a href="$1" rel="noopener" target="_blank"');
   const links = [...new Set([...body.matchAll(/https?:\/\/[^\s)"'<>\]]+/g)].map((x) => x[0].replace(/[.,;]+$/, '')))];
-  return { id: meta.id, minutes: meta.minutes, summary: meta.summary, html: out, toc, quiz, used, links, flags: (body.match(/\[\[NEEDS SOURCED DATA\]\]/g) || []).length };
+  return { id: meta.id, minutes: meta.minutes, summary: meta.summary, highlight: meta.highlight || '', pose: meta.pose || 'neutral', html: out, toc, quiz, used, links, flags: (body.match(/\[\[NEEDS SOURCED DATA\]\]/g) || []).length };
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

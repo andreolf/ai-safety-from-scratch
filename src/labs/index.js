@@ -13,7 +13,7 @@ export function labShell(name) {
   const say = h('p', { class: 'lab-say', 'aria-live': 'polite', style: 'margin:0;font-weight:700' });
   const head = h('div', { class: 'lab-head' }, h('span', { class: 'pill' }, `Lab ${String(m.n).padStart(2, '0')}${m.flagship ? ' ★' : ''}`), h('h3', {}, m.title), score, h('p', {}, m.blurb));
   const body = h('div', { class: 'lab-body' });
-  const foot = h('div', { class: 'lab-body', style: 'display:flex;gap:12px;align-items:center;border-top:1px solid var(--sig-line);padding-top:12px' }, intern, h('div', {}, h('span', { class: 'kicker', style: 'margin:0' }, 'The intern says'), say));
+  const foot = h('div', { class: 'lab-body', style: 'display:flex;gap:12px;align-items:center;border-top:1px solid var(--line);padding-top:12px' }, intern, h('div', {}, h('span', { class: 'kicker', style: 'margin:0' }, 'The intern says'), say));
   const el = h('section', { class: 'lab', 'data-testid': `lab-${name}`, 'data-lab-ready': '0' }, head, body, foot);
   const ctx = {
     body, score,

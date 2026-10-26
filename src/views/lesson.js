@@ -3,6 +3,7 @@ import { store } from '../store.js';
 import { esc, pad2, toast, reducedMotion } from '../util.js';
 import { questionEl } from './quiz.js';
 import { hydrateLabs } from '../labs/index.js';
+import { internSVG } from '../visuals/intern.js';
 
 export async function renderLesson(root, id) {
   const meta = byId.get(id);
@@ -15,9 +16,9 @@ export async function renderLesson(root, id) {
   }
   store.visit(id);
   root.innerHTML = `<article class="page lesson" data-lesson="${id}">
-    <header class="lesson-head"><p class="kicker"><a href="#/phase/${p.id}">Phase ${pad2(p.number)} · ${esc(p.title)}</a></p>
-      <h1>${esc(L.title)}</h1><p class="muted" style="font-size:1.1rem">${esc(L.summary)}</p>
-      <div class="lesson-meta"><span class="chip">Lesson ${id.replace('-', '.')}</span><span class="chip">${L.minutes} min</span>${store.isDone(id) ? '<span class="chip on">Done</span>' : ''}<button class="chip" type="button" data-read style="min-height:44px;background:none;cursor:pointer;font:inherit;font-size:.82rem;font-weight:700;color:var(--sig-muted-strong)">Read aloud</button></div>
+    <header class="lesson-head"><div class="lesson-hero"><div><p class="lesson-num" aria-hidden="true">${id.replace('-', '.')}</p><p class="kicker"><a href="#/phase/${p.id}">Phase ${pad2(p.number)} · ${esc(p.title)}</a></p></div><div class="intern-svg">${internSVG(L.pose, { title: false })}</div></div>
+      <h1>${titleHTML(L.title, L.highlight)}</h1><p class="muted" style="font-size:1.1rem">${esc(L.summary)}</p>
+      <div class="lesson-meta"><span class="chip">Lesson ${id.replace('-', '.')}</span><span class="chip">${L.minutes} min</span>${store.isDone(id) ? '<span class="chip on">Done</span>' : ''}<button class="chip" type="button" data-read style="min-height:44px;background:none;cursor:pointer;font:inherit;font-size:.82rem;font-weight:700;color:var(--muted-strong)">Read aloud</button></div>
     </header>
     <div class="prose">${L.html}</div>
     <section class="complete-card" aria-labelledby="done-h"><h2 id="done-h" style="margin-top:0">Finished reading?</h2><p>Mark the lesson done for +50 XP. Your progress stays in this browser.</p>
@@ -51,4 +52,10 @@ export function hydrateSteps(root) {
     next.addEventListener('click', () => { i = i === steps.length - 1 ? 0 : i + 1; show(); });
     show();
   });
+}
+
+// One highlighter per surface: wrap the lesson's chosen key word (front matter `highlight`).
+function titleHTML(title, word) {
+  const t = esc(title); if (!word) return t; const w = esc(word); const i = t.toLowerCase().lastIndexOf(w.toLowerCase());
+  return i < 0 ? t : `${t.slice(0, i)}<span class="hl">${t.slice(i, i + w.length)}</span>${t.slice(i + w.length)}`;
 }

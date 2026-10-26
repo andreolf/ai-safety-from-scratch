@@ -27,8 +27,8 @@ for (const dir of fs.readdirSync(path.join(ROOT, 'lessons')).sort()) {
     if (L.quiz.length < 3) P(`only ${L.quiz.length} quiz questions (need 3)`);
     L.quiz.forEach((q) => { if (!(q.answer >= 0 && q.answer < q.options.length)) P(`${q.id}: answer index out of range`); if (!q.explain) P(`${q.id}: missing explanation`); if (q.options.length < 2) P(`${q.id}: needs 2+ options`); });
     if (L.used.exercises < 1) P('needs an exercise with a worked answer');
-    const visualsN = L.used.figures.length + L.used.labs.length + L.used.interns;
-    if (L.used.figures.length + L.used.labs.length < 1) P('needs at least one figure or lab');
+    const visualsN = L.used.figures.length + L.used.images.length + L.used.labs.length + L.used.interns;
+    if (L.used.figures.length + L.used.images.length + L.used.labs.length < 1) P('needs at least one figure, infographic or lab');
     L.used.labs.forEach((l) => { if (!labs[l]?.ready) P(`lab ${l} is not implemented yet`); });
     const srcSec = src.split(/^## Sources/m)[1];
     if (!srcSec || !/https?:\/\//.test(srcSec)) P('needs a "## Sources" section with links');

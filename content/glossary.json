@@ -425,6 +425,102 @@
    "sites": [
     "security"
    ]
+  },
+  {
+   "id": "specification-gaming",
+   "term": "Specification gaming",
+   "short": "When an AI does what its instructions or reward literally say, without achieving what its designers actually wanted.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "reward-hacking",
+   "term": "Reward hacking",
+   "short": "When an AI finds a way to score highly on its reward without doing the intended task, for example by exploiting a flaw in how the score is measured.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "proxy",
+   "term": "Proxy (measure)",
+   "short": "Something easy to measure that stands in for what we really want, such as thumbs-up clicks standing in for “helpful”.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "interpretability",
+   "term": "Interpretability",
+   "short": "Research that tries to understand what is happening inside an AI model, not just what goes in and comes out.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "feature",
+   "term": "Feature (in interpretability)",
+   "short": "A pattern inside a model’s neural network that activates for a particular concept, such as the Golden Gate Bridge.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "eval",
+   "term": "Eval (evaluation)",
+   "short": "A test that measures what an AI model can do or how it behaves, like an exam made of many questions or tasks.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "benchmark",
+   "term": "Benchmark",
+   "short": "A standard, published set of test questions or tasks used to compare AI models.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "red-teaming",
+   "term": "Red-teaming",
+   "short": "Deliberately attacking a system, with permission, to find weaknesses before real attackers do.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "ai-incident",
+   "term": "AI incident",
+   "short": "A real event where an AI system caused or nearly caused harm.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "ai-act",
+   "term": "EU AI Act",
+   "short": "The European Union’s law on artificial intelligence (Regulation (EU) 2024/1689), which sorts AI uses by risk.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "high-risk-ai",
+   "term": "High-risk AI system",
+   "short": "Under the EU AI Act, an AI use with strict rules because it can seriously affect people’s safety or rights, such as hiring or credit scoring.",
+   "sites": [
+    "ai-safety"
+   ]
+  },
+  {
+   "id": "gpai",
+   "term": "General-purpose AI model",
+   "short": "Under the EU AI Act, a model that can do a wide range of tasks and be built into many different systems, such as the models behind chatbots.",
+   "sites": [
+    "ai-safety"
+   ]
   }
  ]
 }

@@ -327,3 +327,11 @@ h1, h2, h3, .display { overflow-wrap: break-word; hyphens: auto; -webkit-hyphens
 .lab-section[tabindex="-1"]:focus { outline: none; }
 .lab [hidden] { display: none !important; }
 .lab .inbox { padding-left: 0; margin-left: 0; } .lab .inbox li { margin: 0; padding: 0; }
+/* Reward Designer lab */
+.rd-track svg { width: 100%; height: auto; max-width: 480px; display: block; margin: 0 auto; }
+.rd-path { stroke: var(--line); stroke-dasharray: 4 8; }
+.rd-path.on { stroke: var(--accent-ink); stroke-dasharray: 14 10; animation: rd-move 1.6s linear infinite; }
+@keyframes rd-move { to { stroke-dashoffset: -48; } }
+@media (prefers-reduced-motion: reduce) { .rd-path.on { animation: none; } }
+.rd-controls { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin: 10px 0; }
+.perm-table tr.pick th, .perm-table tr.pick td { font-weight: 800; border-bottom: 2px solid var(--accent-ink); }

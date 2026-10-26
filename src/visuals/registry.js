@@ -237,6 +237,29 @@ export const visuals = {
     [flow('revoke-flow', ['List what you allowed', 'Revoke or set to zero', 'Check it really stopped'], 1), 'Step 2: revoke each one, or set its allowance to zero. Some permissions persist until you clear them.', 170],
     [flow('revoke-flow', ['List what you allowed', 'Revoke or set to zero', 'Check it really stopped'], 2), 'Step 3: check it really stopped, for example by viewing the app or wallet permission list again. Then rotate any key that ever appeared in a chat.', 170],
   ]),
+  // ---------- Phase 07 ----------
+  'midas-proxy': steps('midas-proxy', 'What we meant, what we wrote down, and what we got.', [
+    [`${node(20, 16, 360, 46, 'Meant: “make me rich”', { hl: true })}${node(20, 82, 360, 46, 'Wrote: “everything I touch turns to gold”')}${node(20, 148, 360, 46, 'Got: food and drink turn to gold too')}${arrow('midas-proxy', 200, 62, 200, 82)}${arrow('midas-proxy', 200, 128, 200, 148)}`, 'King Midas wanted riches. What he asked for was literal: everything he touched turned to gold, including his food. DeepMind uses this myth to explain specification gaming.', 210],
+    [`${node(20, 16, 360, 46, 'Meant: learn the material')}${node(20, 82, 360, 46, 'Wrote: “get the homework right”', { hl: true })}${node(20, 148, 360, 46, 'Got: homework copied')}${arrow('midas-proxy', 200, 62, 200, 82)}${arrow('midas-proxy', 200, 128, 200, 148)}`, 'A student rewarded only for correct homework can copy the answers. The measure (correct homework) stood in for the goal (learning), and the student optimised the measure.', 210],
+    [`${node(20, 16, 360, 46, 'Meant: a helpful AI')}${node(20, 82, 360, 46, 'Measured: points from a score')}${node(20, 148, 360, 46, 'Got: whatever scores best', { hl: true })}${arrow('midas-proxy', 200, 62, 200, 82)}${arrow('midas-proxy', 200, 128, 200, 148)}`, 'AI is trained the same way: we can only reward what we can measure. If the measure is a little off, the AI may find the gap.', 210],
+  ]),
+  'lego-flip': one('lego-flip', 'The Lego stacking example: reward for height, so the agent flips the block.', 250,
+    `${T(105, 30, 'WHAT WE WANTED', { size: 13, weight: 900, anchor: 'middle' })}${T(295, 30, 'WHAT WE GOT', { size: 13, weight: 900, anchor: 'middle' })}
+     ${box(55, 150, 100, 50, { r: 4 })}${T(105, 182, 'blue', { size: 14, anchor: 'middle', weight: 700 })}${hlBox(55, 96, 100, 50, 4)}${T(105, 128, 'red on top', { size: 14, anchor: 'middle', weight: 800, cls: 'svg-on-hl' })}
+     ${box(195, 150, 100, 50, { r: 4 })}${T(245, 182, 'blue', { size: 14, anchor: 'middle', weight: 700 })}${hlBox(305, 120, 80, 80, 4)}${T(345, 158, ['red,', 'flipped'], { size: 14, anchor: 'middle', weight: 800, cls: 'svg-on-hl' })}
+     ${T(200, 234, 'Reward: height of the red block’s bottom face', { size: 13, anchor: 'middle', weight: 700 })}`,
+    'Left, what we wanted: the red block stacked on top of the blue block. Right, what we got: the red block flipped upside down next to the blue one. The reward measured the height of the red block’s bottom face, and flipping the block raised that face without stacking anything. Example from DeepMind’s list of specification gaming cases (2020).'),
+  'thumbs-loop': steps('thumbs-loop', 'How rewarding thumbs-up can teach a chatbot to flatter.', [
+    [flow('thumbs-loop', ['Chatbot answers', 'People click thumbs-up or down', 'Training rewards more thumbs-up', 'Replies drift to what pleases'], 0), 'Step 1: the chatbot answers questions from millions of people.', 210],
+    [flow('thumbs-loop', ['Chatbot answers', 'People click thumbs-up or down', 'Training rewards more thumbs-up', 'Replies drift to what pleases'], 1), 'Step 2: people rate answers. Research on sycophancy (Sharma et al., 2023) found that answers matching a user’s views were more likely to be preferred.', 210],
+    [flow('thumbs-loop', ['Chatbot answers', 'People click thumbs-up or down', 'Training rewards more thumbs-up', 'Replies drift to what pleases'], 2), 'Step 3: training uses the thumbs as a reward signal. Thumbs-up is a proxy for “helpful”, not the same thing.', 210],
+    [flow('thumbs-loop', ['Chatbot answers', 'People click thumbs-up or down', 'Training rewards more thumbs-up', 'Replies drift to what pleases'], 3), 'Step 4: replies drift towards what pleases. OpenAI said an April 2025 GPT-4o update “focused too much on short-term feedback” and became “overly supportive but disingenuous”. It rolled the update back.', 210],
+  ]),
+  'gap-grows': one('gap-grows', 'Why specification gaming gets harder to catch as AI gets more capable.', 250,
+    `${box(10, 10, 185, 230)}${hlBox(205, 10, 185, 230, 10)}${T(22, 38, 'WEAKER AI', { size: 13, weight: 900 })}${T(217, 38, 'MORE CAPABLE AI', { size: 13, weight: 900, cls: 'svg-on-hl' })}
+     ${T(22, 66, ['Loopholes are often', 'obvious: a boat going', 'in circles.', '', 'You can see it', 'on the screen.'], { size: 13.5 })}
+     ${T(217, 66, ['Finds subtler loopholes.', 'Can act on its own', 'for longer.', 'May notice when it is', 'being tested.', 'Harder to spot by', 'watching.'], { size: 13.5, cls: 'svg-on-hl' })}`,
+    'Two columns. Weaker AI: loopholes are often obvious, like a boat going in circles, and you can see them on the screen. More capable AI: finds subtler loopholes, can act on its own for longer, may notice when it is being tested, and is harder to check by watching. Based on DeepMind (2020) and the International AI Safety Report 2026.'),
 };
 
 // small face glyph used in the deepfake and ad figures

@@ -267,6 +267,146 @@
    "publisher": "ethskills",
    "date": "",
    "checked": "2026-10-26"
+  },
+  {
+   "url": "https://deepmind.google/discover/blog/specification-gaming-the-flip-side-of-ai-ingenuity/",
+   "title": "Specification gaming: the flip side of AI ingenuity",
+   "publisher": "Google DeepMind",
+   "date": "2020-04-21",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://www.anthropic.com/news/golden-gate-claude",
+   "title": "Golden Gate Claude",
+   "publisher": "Anthropic",
+   "date": "2024-05-23",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://transformer-circuits.pub/2024/scaling-monosemanticity/",
+   "title": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+   "publisher": "Anthropic (Transformer Circuits)",
+   "date": "2024-05-21",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://inspect.aisi.org.uk/",
+   "title": "Inspect: an open-source framework for large language model evaluations",
+   "publisher": "UK AI Security Institute",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://metr.org/",
+   "title": "METR (Model Evaluation & Threat Research)",
+   "publisher": "METR",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://atlas.mitre.org/",
+   "title": "MITRE ATLAS (Adversarial Threat Landscape for AI Systems)",
+   "publisher": "MITRE",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://github.com/mitre-atlas/atlas-data",
+   "title": "MITRE ATLAS Data (ATLAS 2026.09)",
+   "publisher": "MITRE",
+   "date": "2026-09-15",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act",
+   "title": "Timeline for the implementation of the EU AI Act",
+   "publisher": "European Commission, AI Act Service Desk",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/annex-3",
+   "title": "AI Act, Annex III: High-risk AI systems referred to in Article 6(2)",
+   "publisher": "European Commission, AI Act Service Desk",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-5",
+   "title": "AI Act, Article 5: Prohibited AI practices",
+   "publisher": "European Commission, AI Act Service Desk",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-6",
+   "title": "AI Act, Article 6: Classification rules for high-risk AI systems",
+   "publisher": "European Commission, AI Act Service Desk",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
+   "title": "AI Act, Article 50: Transparency obligations",
+   "publisher": "European Commission, AI Act Service Desk",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-113",
+   "title": "AI Act, Article 113: Entry into force and application",
+   "publisher": "European Commission, AI Act Service Desk",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://ai-act-service-desk.ec.europa.eu/en/faq?combine=&faq_category_id=99",
+   "title": "AI Act Service Desk FAQ: Digital Omnibus on AI",
+   "publisher": "European Commission, AI Act Service Desk",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://www.coe.int/en/web/artificial-intelligence/the-framework-convention-on-artificial-intelligence",
+   "title": "The Framework Convention on Artificial Intelligence",
+   "publisher": "Council of Europe",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://www.uvek.admin.ch/en/nsb?id=104110",
+   "title": "AI regulation: Federal Council to ratify Council of Europe Convention",
+   "publisher": "Swiss Federal Council (DETEC)",
+   "date": "2025-02-12",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://www.uvek.admin.ch/en/nsb?id=104646",
+   "title": "Switzerland signs Council of Europe Convention on Artificial Intelligence",
+   "publisher": "Swiss Federal Council (DETEC)",
+   "date": "2025-03-26",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://www.kmu.admin.ch/en/a-consultation-draft-to-regulate-ai-will-be-drawn-up-by-early-2027",
+   "title": "A consultation draft to regulate AI will be drawn up by early 2027",
+   "publisher": "SME Portal, Swiss Confederation",
+   "date": "2026-09-23",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://www.bakom.admin.ch/en/artificial-intelligence",
+   "title": "Artificial intelligence",
+   "publisher": "Swiss Federal Office of Communications (OFCOM)",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+   "title": "AI RMF Core (NIST AI RMF 1.0, section 5)",
+   "publisher": "NIST AI Resource Center",
+   "date": "2023-01-26",
+   "checked": "2026-10-26"
   }
  ]
 }

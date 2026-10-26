@@ -428,6 +428,13 @@
    "publisher": "OWASP GenAI Security Project",
    "date": "2026-10-20",
    "checked": "2026-10-26"
+  },
+  {
+   "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+   "title": "AI Act (Shaping Europe’s digital future)",
+   "publisher": "European Commission",
+   "date": "",
+   "checked": "2026-10-26"
   }
  ]
 }

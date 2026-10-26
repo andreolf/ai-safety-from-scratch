@@ -456,6 +456,34 @@
    "publisher": "FINMA",
    "date": "",
    "checked": "2026-10-26"
+  },
+  {
+   "url": "https://80000hours.org/career-reviews/",
+   "title": "Career reviews",
+   "publisher": "80,000 Hours",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://bluedot.org/courses/future-of-ai",
+   "title": "The Future of AI (self-paced course)",
+   "publisher": "BlueDot Impact",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://bluedot.org/courses/technical-ai-safety",
+   "title": "Technical AI Safety (cohort course)",
+   "publisher": "BlueDot Impact",
+   "date": "",
+   "checked": "2026-10-26"
+  },
+  {
+   "url": "https://bluedot.org/courses/ai-governance",
+   "title": "Frontier AI Governance (cohort course)",
+   "publisher": "BlueDot Impact",
+   "date": "",
+   "checked": "2026-10-26"
   }
  ]
 }

@@ -4,13 +4,9 @@ minutes: 8
 highlight: assistant
 summary: Fine-tuning on example conversations, then learning from people’s comparisons (RLHF), turns a document dreamer into a helpful assistant, with side effects.
 ---
-## The hook
+In 2022 OpenAI reported that people preferred answers from a model with 1.3 billion parameters to answers from GPT-3, which has more than 100 times as many. The difference was what happened after pretraining. This lesson covers those extra stages.
 
-A freshly pretrained model is like a brilliant parrot that has read the whole library but never had a conversation. Ask it “What is the capital of France?” and it might continue with “What is the capital of Germany?”, because lists of questions are common on the internet. So how do companies turn it into an assistant that answers?
-
-## The one idea
-
-**After pretraining come two more stages: [[term:fine-tuning]] on high-quality example conversations, and [[term:rlhf|learning from human feedback]], where people compare answers and the model is pushed towards the ones they prefer.**
+After pretraining come two more stages: [[term:fine-tuning]] on high-quality example conversations, and [[term:rlhf|learning from human feedback]], where people compare answers and the model is pushed towards the ones they prefer.
 
 :::figure three-stages
 The three stages, as described in Karpathy’s talk and OpenAI’s InstructGPT paper.

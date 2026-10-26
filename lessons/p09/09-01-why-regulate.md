@@ -5,13 +5,9 @@ highlight: regulate
 pose: neutral
 summary: Cars have seatbelt laws and medicines need approval. Why are governments now writing rules for AI, and what are they trying to balance?
 ---
-## The hook
-
 A company uses an AI system to sort job applications. You are rejected in seconds. You ask why. Nobody can tell you, not even the company, because the system can’t explain itself. Is that allowed?
 
-## The one idea
-
-**Governments regulate AI for the same reasons they regulate cars and medicines: to protect people’s safety and rights, and to build enough trust that people will use the technology. The hard part is doing it without blocking the benefits, and the world has chosen different balances.**
+Governments regulate AI for the same reasons they regulate cars and medicines: to protect people’s safety and rights, and to build enough trust that people will use the technology. The hard part is doing it without blocking the benefits, and the world has chosen different balances.
 
 :::figure why-regulate
 The European Commission’s three reasons, in its own words.

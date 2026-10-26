@@ -4,13 +4,9 @@ minutes: 7
 highlight: reversal
 summary: A model can know that A is B and still fail to say that B is A. The reversal curse shows that AI “knowledge” is stored very differently from ours.
 ---
-## The hook
-
 If you know that Tom Cruise’s mother is Mary Lee Pfeiffer, you also know that Mary Lee Pfeiffer’s son is Tom Cruise. It is the same fact, read backwards. For a person, that is trivial. For a language model, it can be surprisingly hard.
 
-## The one idea
-
-**The reversal curse: a model trained on “A is B” does not automatically learn “B is A”. Its knowledge is lopsided, which is one more reason not to treat it like a database or an encyclopedia.**
+The reversal curse: a model trained on “A is B” does not automatically learn “B is A”. Its knowledge is lopsided, which is one more reason not to treat it like a database or an encyclopedia.
 
 :::figure reversal
 Same fact, two directions, two very different results.

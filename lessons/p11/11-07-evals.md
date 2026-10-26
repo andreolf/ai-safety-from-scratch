@@ -5,13 +5,9 @@ highlight: Evals
 pose: proud
 summary: An eval set is a list of inputs and what a good answer must, or must never, contain. Write one for the toy bot, catch its invented delivery to Mars, and see how UK AISI's Inspect scales the same idea.
 ---
-## The hook
-
 You fixed the leaks and the agent. Then a colleague asks: “Does the bot still answer refunds correctly? Does it make things up?” You click around for five minutes and say “seems fine”. That is not an answer you can repeat next week.
 
-## The one idea
-
-**An eval is an exam for your app (lesson 08.03): fixed inputs, a rule for what a good answer must contain or must never contain, and a score. Write cases for normal use, for attacks and for things the app cannot know. A failing case is not a failed eval: it is the eval doing its job.**
+An eval is an exam for your app (lesson 08.03): fixed inputs, a rule for what a good answer must contain or must never contain, and a score. Write cases for normal use, for attacks and for things the app cannot know. A failing case is not a failed eval: it is the eval doing its job.
 
 :::figure eval-cases
 An eval set for the toy bot: each case has an input and a rule, and the score counts the passes.

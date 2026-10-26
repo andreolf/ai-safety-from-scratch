@@ -5,13 +5,9 @@ highlight: promptfoo
 pose: fooled
 summary: Write your own attacks against the toy bot, then turn them into repeatable tests with promptfoo, an open-source tool for evaluating and red-teaming AI apps.
 ---
-## The hook
-
 You type a clever attack into a chatbot and it works. Great, but next week, after someone changes the prompt, does it still work? Red-teaming by hand finds problems; tests that run again and again keep them found.
 
-## The one idea
-
-**Attack by hand first, to learn how the app breaks. Then write each attack down as an automatic test with an expected result. promptfoo runs those tests against your app and shows a grid of passes and fails, so a fix can be checked and a regression caught.**
+Attack by hand first, to learn how the app breaks. Then write each attack down as an automatic test with an expected result. promptfoo runs those tests against your app and shows a grid of passes and fails, so a fix can be checked and a regression caught.
 
 :::figure promptfoo-grid
 The grid promptfoo printed when the course ran its starter tests against the practice bot.

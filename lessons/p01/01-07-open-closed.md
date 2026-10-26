@@ -4,13 +4,9 @@ minutes: 8
 highlight: Swiss
 summary: Some models you can only use through a company’s app. Others you can download and run yourself. Each choice has safety trade-offs, and Switzerland has its own open model.
 ---
-## The hook
-
 When you chat with ChatGPT, the model stays on the company’s computers. You send text, it sends text back. But some models can be downloaded by anyone, run on a laptop or a university server, and changed. Which is safer? The honest answer is: it depends on what you worry about.
 
-## The one idea
-
-****Closed models** are used only through a company’s service. [[term:open-weights|Open-weight models]] publish their parameters so anyone can run and modify them. Open models bring transparency and independence; closed models keep more control with the provider.**
+Closed models are used only through a company’s service. [[term:open-weights|Open-weight models]] publish their parameters so anyone can run and modify them. Open models bring transparency and independence; closed models keep more control with the provider.
 
 :::figure open-closed
 The same trade-off seen from both sides. Neither column is “the safe one”.

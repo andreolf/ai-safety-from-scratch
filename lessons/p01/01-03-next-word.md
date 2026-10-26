@@ -5,13 +5,9 @@ highlight: prediction
 pose: fooled
 summary: An LLM writes by guessing the next token, again and again. That single trick explains both its fluency and its confident mistakes.
 ---
-## The hook
+Your phone suggests the next word as you type. Train that kind of autocomplete on a large part of the internet, give it billions of adjustable numbers, and let it pick one word after another. At its core, that is what a chatbot does.
 
-Your phone suggests the next word as you type a message. Now imagine that autocomplete trained on a large part of the internet, with billions of adjustable numbers, picking one word after another until it has written a whole essay. That is, at its core, what a chatbot does.
-
-## The one idea
-
-**An LLM generates text one token at a time. At each step it predicts the probabilities of every possible next token, picks one, adds it, and repeats.**
+An LLM generates text one token at a time. At each step it predicts the probabilities of every possible next token, picks one, adds it, and repeats.
 
 :::image figure-next-word
 The flagship infographic for this lesson. The percentages are illustrative, as the card says.

@@ -4,13 +4,9 @@ minutes: 8
 highlight: money
 summary: When Air Canada’s website chatbot gave a grieving customer wrong refund information, a Canadian tribunal said the airline was responsible. A short, true story with a big lesson.
 ---
-## The hook
-
 Your grandmother has just died. You need a last-minute flight to the funeral, and the airline’s website chatbot tells you that you can claim a cheaper “bereavement” fare afterwards. You book, travel, apply… and the airline says no.
 
-## The one idea
-
-**A company is responsible for what its chatbot tells customers. And you should treat chatbot answers about money, rules and deadlines as claims to check, not as promises.**
+A company is responsible for what its chatbot tells customers. And you should treat chatbot answers about money, rules and deadlines as claims to check, not as promises.
 
 :::figure air-canada
 The case in four steps.

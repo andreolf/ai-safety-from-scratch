@@ -4,13 +4,9 @@ minutes: 8
 highlight: touch
 summary: Least privilege in plain words. Give an agent only the access it needs, for only as long as it needs it, and check what a connection really allows.
 ---
-## The hook
+OWASP names three root causes of “excessive agency” in AI apps: too many tools, too much access and too much freedom. Each one is a setting somebody chose, usually for convenience.
 
-You wouldn’t give a dog-sitter the keys to your house, your car, your safe and your office “just in case”. You’d give them the front-door key for the week. Yet many people connect an AI agent to everything at once, forever.
-
-## The one idea
-
-**[[term:least-privilege|Least privilege]]: give an agent only the access it needs for the job, for only as long as it needs it. If it is fooled or makes a mistake, the damage stays small.**
+[[term:least-privilege|Least privilege]]: give an agent only the access it needs for the job, for only as long as it needs it. If it is fooled or makes a mistake, the damage stays small.
 
 :::figure least-privilege
 A master key versus a key for one job.

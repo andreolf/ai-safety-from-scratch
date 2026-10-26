@@ -4,15 +4,11 @@ minutes: 7
 highlight: agent
 summary: A chatbot answers. An agent acts. When AI can use your email, browser, files or money, its mistakes and tricks turn into actions.
 ---
-## The hook
-
 Ask a chatbot to “book me a table for Friday” and it writes a nice paragraph about restaurants. Ask an AI [[term:agent|agent]] the same thing and it opens a booking site, picks a time, fills in your name and maybe pays the deposit.
 
 Same request. Very different consequences if something goes wrong.
 
-## The one idea
-
-**An agent is an AI that uses tools, such as email, a browser, files or payments, to do things for you, often several steps in a row without asking. That makes it useful, and it turns every mistake or trick into an action.**
+An agent is an AI that uses tools, such as email, a browser, files or payments, to do things for you, often several steps in a row without asking. That makes it useful, and it turns every mistake or trick into an action.
 
 :::figure chat-to-agent
 From words to actions, in three steps.

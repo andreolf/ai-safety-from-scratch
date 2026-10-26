@@ -4,13 +4,9 @@ minutes: 8
 highlight: internet
 summary: Pretraining squeezes a huge pile of text into a file of numbers, like a lossy zip file. It keeps the gist, not a copy, and that has consequences.
 ---
-## The hook
-
 Where does a chatbot’s knowledge come from? Nobody typed in facts one by one. Instead, the model read an enormous amount of text and was squeezed until patterns from that text were stored in its numbers.
 
-## The one idea
-
-**[[term:pretraining|Pretraining]] compresses a large chunk of the internet into the model’s [[term:parameters]]. Karpathy calls the result a lossy zip file: it keeps the gist of what it read, not an exact copy.**
+[[term:pretraining|Pretraining]] compresses a large chunk of the internet into the model’s [[term:parameters]]. Karpathy calls the result a lossy zip file: it keeps the gist of what it read, not an exact copy.
 
 :::figure lossy-zip
 The numbers are those Karpathy gives for Meta’s Llama 2 70B. He calls them “rookie numbers” compared with today’s state of the art.

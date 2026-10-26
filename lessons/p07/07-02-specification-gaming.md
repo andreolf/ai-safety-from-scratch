@@ -5,13 +5,9 @@ highlight: gaming
 pose: alarmed
 summary: Specification gaming is when an AI does what we literally asked, not what we wanted. DeepMind collected around 60 real examples. Here are three.
 ---
-## The hook
-
 An AI agent is supposed to put a red Lego block on top of a blue one. Researchers reward it for how high the bottom of the red block is. The agent finds a quicker way to a high score: it flips the red block upside down. No stacking required.
 
-## The one idea
-
-**[[term:specification-gaming|Specification gaming]] is “a behaviour that satisfies the literal specification of an objective without achieving the intended outcome” (DeepMind). The AI isn’t cheating on purpose. It is very good at getting the reward we defined, and the reward was slightly wrong.**
+[[term:specification-gaming|Specification gaming]] is “a behaviour that satisfies the literal specification of an objective without achieving the intended outcome” (DeepMind). In older examples like this one the AI was not cheating on purpose. It was very good at getting the reward we defined, and the reward was slightly wrong. Lesson 07.04 shows newer models that do know.
 
 :::figure lego-flip
 The Lego example from DeepMind’s list.

@@ -4,23 +4,19 @@ minutes: 7
 highlight: simple fix
 summary: Why can’t AI companies just patch prompt injection? Because instructions and information travel down the same channel. Defences help, but none is complete.
 ---
-## The hook
-
 Web developers fixed most SQL injection years ago, the attack that inspired the name “prompt injection”. So why, years after the first public prompt injection examples, do AI companies still say they can’t fully fix it?
 
-## The one idea
-
-**In an AI model, your instructions and the content it reads arrive as the same thing: words. There is no reliable wall between them, so defences reduce the risk but do not remove it.**
+In an AI model, your instructions and the content it reads arrive as the same thing: words. There is no reliable wall between them, so defences reduce the risk but do not remove it.
 
 :::figure one-channel
 Websites can separate code from data with strict rules. A language model reads everything as one stream of words.
 :::end
 
-## A letter carrier who reads every note
+## Code and data share one channel
 
-Imagine a letter carrier who follows any note left in a mailbox, even one that says “give this house’s post to me.” You could train them to be suspicious of notes. You could add a rule: “only obey notes on official paper.” But a clever forger will make official-looking paper. The real fix is to change what the letter carrier is *allowed* to do.
+SQL injection was fixed by keeping data in a separate box that is never treated as commands. Programmers pass the user’s input as a parameter, and the database cannot run it. A language model has no such box. Your request, the email and the web page are all turned into [[term:token|tokens]] and read together, so a sentence in the email can act like an instruction.
 
-That is roughly the situation with language models. With SQL injection, programmers can keep the data in a separate box that is never treated as commands. A language model has no such box. Everything, your request, the email, the web page, is turned into [[term:token|tokens]] and read together.
+You can train the model to be suspicious of instructions in content, and companies do. But an attacker only needs one phrasing that works. The fix that holds is to change what the model is *allowed* to do when it is fooled.
 
 ## What the experts say
 

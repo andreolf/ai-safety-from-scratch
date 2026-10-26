@@ -4,13 +4,9 @@ minutes: 7
 highlight: Tokens
 summary: AI does not read letters or whole words. It reads tokens, and that explains some of its odd mistakes and why some languages cost more.
 ---
-## The hook
-
 Ask some chatbots how many times a letter appears in a long word and they may get it wrong, even though they can write a sonnet. Strange? Not once you know how they read.
 
-## The one idea
-
-**Before an LLM sees your text, the text is cut into small pieces called [[term:token|tokens]].** A token can be a whole word, part of a word, a space plus a word, or a punctuation mark. The model only ever works with these pieces, each turned into a number.
+Before an LLM sees your text, the text is cut into small pieces called [[term:token|tokens]]. A token can be a whole word, part of a word, a space plus a word, or a punctuation mark. The model only ever works with these pieces, each turned into a number.
 
 :::figure tokens-split
 How a short greeting might be cut up. The exact split depends on the model.

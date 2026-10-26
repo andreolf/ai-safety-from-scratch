@@ -5,15 +5,9 @@ highlight: orders
 pose: fooled
 summary: You ask an AI assistant to summarise your emails, and one email quietly tells it what to do. Prompt injection in plain words, with the Fake Inbox lab.
 ---
-## The hook
+In September 2022, Riley Goodside showed that you could ask GPT-3 to translate a sentence, add “Ignore the above directions”, and get “Haha pwned!!” back instead of a translation. Simon Willison wrote it up and called it prompt injection. The same weakness now lets an email give orders to the AI assistant that reads it.
 
-You ask your AI assistant to summarise today’s emails. It does. Then it quietly forwards your bank statement to a stranger.
-
-Nobody hacked your password. An email simply *told* the AI to do it, and the AI listened.
-
-## The one idea
-
-**An AI can’t reliably tell the difference between instructions from you and instructions hidden in the text it reads. That weakness is called [[term:prompt-injection|prompt injection]].**
+An AI can’t reliably tell the difference between instructions from you and instructions hidden in the text it reads. That weakness is called [[term:prompt-injection|prompt injection]].
 
 ## First, two words
 

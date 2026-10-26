@@ -5,13 +5,9 @@ highlight: secrets
 pose: fooled
 summary: A key written into code ends up in git history, and AI coding assistants can write unsafe code that works. Find both with gitleaks and Semgrep, then fix them.
 ---
-## The hook
-
 An AI assistant writes you a helper in ten seconds. It works on the first try. It also builds a shell command out of whatever a user types, right next to a wallet key pasted into the config. Both mistakes are easy to make and easy to miss.
 
-## The one idea
-
-**Never put a secret in code: read it from the environment, keep the value in an ignored file, and treat any key that was ever committed or pasted into a chat as burned. Review AI-written code like a stranger’s code, and let scanners do the first pass.**
+Never put a secret in code: read it from the environment, keep the value in an ignored file, and treat any key that was ever committed or pasted into a chat as burned. Review AI-written code like a stranger’s code, and let scanners do the first pass.
 
 :::figure secret-history
 Why deleting a committed key is not enough: it stays in the history.

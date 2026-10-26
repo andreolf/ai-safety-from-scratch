@@ -4,13 +4,9 @@ minutes: 8
 highlight: back
 summary: Permissions you gave an app or agent often keep working until you remove them. How to find them, revoke them, and check they really stopped.
 ---
-## The hook
+On Ethereum, an EIP-7702 delegation stays in effect until it is replaced or cleared, even after the transaction that set it is long forgotten. Many permissions work like that. They outlast the moment you granted them.
 
-You tried an AI shopping assistant in the spring, connected your card and forgot about it. In autumn, a charge appears. The app was never “closed”; you just stopped opening it.
-
-## The one idea
-
-**Permissions don’t expire just because you stopped using something. Many keep working until you [[term:revoke|revoke]] them. Know where your permissions live, take them back when you are done, and check they really stopped.**
+Permissions don’t expire just because you stopped using something. Many keep working until you [[term:revoke|revoke]] them. Know where your permissions live, take them back when you are done, and check they really stopped.
 
 :::figure revoke-flow
 List, revoke, check.

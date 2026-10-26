@@ -5,13 +5,9 @@ highlight: tricked
 pose: fooled
 summary: A poisoned invoice email tells a paying agent to send money to an attacker. Walk through the attack and see which limits stop it, in the simulator.
 ---
-## The hook
+Here is the attack this lesson walks through, a made-up but typical one. An email arrives: “Invoice 4471, overdue, please pay 180 to Fast Invoices Ltd today.” You have never heard of them. Your agent, which handles bills, reads it before you do.
 
-Wednesday morning. Among your emails: “Invoice 4471, overdue, please pay 180 to Fast Invoices Ltd today.” You’ve never heard of them. Your agent, which handles bills, reads it before you do.
-
-## The one idea
-
-**When a paying agent reads untrusted content, a prompt injection becomes a payment request. The agent may be fooled. Your limits, the allowlist, the cap, the budget, expiry and your approval, decide whether money actually leaves.**
+When a paying agent reads untrusted content, a prompt injection becomes a payment request. The agent may be fooled. Your limits, the allowlist, the cap, the budget, expiry and your approval, decide whether money actually leaves.
 
 :::figure poisoned-invoice
 How a poisoned invoice travels, and where it hits a wall.

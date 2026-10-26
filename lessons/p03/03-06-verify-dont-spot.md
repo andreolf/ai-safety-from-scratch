@@ -5,13 +5,9 @@ highlight: Verify
 pose: proud
 summary: Fakes keep getting better, so “spot the fake” is a losing game. Verifying through a channel you trust works every time. Plus, set up a family code word.
 ---
-## The hook
-
 Every lesson in this phase ended the same way. Not “look closer”, but “check another way”. That is not a coincidence. It is the most important idea in this phase.
 
-## The one idea
-
-**Don’t rely on spotting fakes. Verify: hang up, call back on a number you know, use a family [[term:code-word|code word]], and ask someone you trust. Verification works however good the fake is.**
+Don’t rely on spotting fakes. Verify: hang up, call back on a number you know, use a family [[term:code-word|code word]], and ask someone you trust. Verification works however good the fake is.
 
 :::figure verify-not-spot
 Two strategies side by side. One gets weaker as AI improves; the other doesn’t.

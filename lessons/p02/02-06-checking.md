@@ -5,13 +5,9 @@ highlight: check
 pose: proud
 summary: A simple routine for checking AI answers, and why the biggest risk is not the AI’s mistakes but our habit of trusting them.
 ---
-## The hook
-
 You have now seen chatbots invent facts (02.01), describe rules wrongly (02.02), flatter (02.03), fail unevenly (02.04) and forget things backwards (02.05). Does that mean you should never use them? No. It means you need a habit for checking.
 
-## The one idea
-
-**Use AI to draft and explore, then check anything that matters at the source. The real danger is “automation bias”: trusting AI output without enough scrutiny.**
+Use AI to draft and explore, then check anything that matters at the source. The real danger is “automation bias”: trusting AI output without enough scrutiny.
 
 ## Automation bias
 

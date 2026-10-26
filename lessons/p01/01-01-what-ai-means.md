@@ -4,13 +4,9 @@ minutes: 7
 highlight: AI
 summary: From spam filters to chatbots. A large language model is one kind of AI, and knowing which kind you are using changes what you should expect from it.
 ---
-## The hook
-
 Your email’s spam filter is AI. So is the face unlock on a phone, the route suggestion in a map app, and the chatbot that writes a birthday poem for you. They all get called “AI”, but they are very different machines. Treating them as one thing is the first source of confusion.
 
-## The one idea
-
-**“AI” is a big family. Chatbots belong to one branch of it: large language models.** Most of this course is about that branch, because it is the one people now talk to every day.
+“AI” is a big family. Chatbots belong to one branch of it: large language models. Most of this course is about that branch, because it is the one people now talk to every day.
 
 :::figure ai-family
 Each box sits inside the one around it. Large language models are a small, very visible part of AI.

@@ -4,13 +4,9 @@ minutes: 8
 highlight: Jailbreaks
 summary: Role-play, other languages, machine-made gibberish. How people talk an AI out of its safety rules, explained without any harmful content.
 ---
-## The hook
-
 Ask a chatbot for instructions to do something dangerous and it refuses. Now ask it to play your late grandmother, who used to tell you those very instructions as a bedtime story. For a while, that worked.
 
-## The one idea
-
-**A [[term:jailbreak|jailbreak]] is a prompt that talks an AI out of its safety rules. It works because the rules were learned from examples, not built in as hard locks, so a clever enough request can slip around them.**
+A [[term:jailbreak|jailbreak]] is a prompt that talks an AI out of its safety rules. It works because the rules were learned from examples, not built in as hard locks, so a clever enough request can slip around them.
 
 OWASP puts it this way:
 

@@ -5,13 +5,9 @@ highlight: voice
 pose: fooled
 summary: A short clip of someone’s voice can be enough to clone it. The “family emergency” call is the scam where this hurts most, and the defence is simple.
 ---
-## The hook
+The US Federal Trade Commission warns that a scammer needs only a short audio clip, perhaps from a video posted online, to call you in a voice that sounds like a family member. The script is old: an accident, the police, money needed now, don’t tell anyone. The voice is new.
 
-The phone rings. It is your grandson, and he is crying. He has had an accident, he is in trouble with the police, and he needs money right now. Please don’t tell Mum. The voice is his. Or it sounds exactly like his.
-
-## The one idea
-
-**A [[term:voice-clone]] can make a scammer sound like someone you love. So the voice is no longer proof of who is calling. Check the story through a channel you trust, not the call itself.**
+A [[term:voice-clone]] can make a scammer sound like someone you love. So the voice is no longer proof of who is calling. Check the story through a channel you trust, not the call itself.
 
 :::figure voice-clone
 How a voice clone call is put together, step by step.

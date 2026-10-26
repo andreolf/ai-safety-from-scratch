@@ -5,13 +5,9 @@ highlight: video calls
 pose: alarmed
 summary: A finance worker joined a video call with the “CFO” and colleagues, all of them deepfakes, and sent about US$25 million. What happened, and what would have stopped it.
 ---
-## The hook
-
 You get an email from head office about a secret transaction. It feels off. Then you join a video call, and there they are: the chief financial officer and several colleagues you recognise, looking and sounding like themselves. Your doubts fade. You make the transfers.
 
-## The one idea
-
-**A [[term:deepfake]] can put familiar faces and voices on a live video call. Seeing someone is no longer proof it is them. For money and secrets, the rule is: verify through a separate, known channel.**
+A [[term:deepfake]] can put familiar faces and voices on a live video call. Seeing someone is no longer proof it is them. For money and secrets, the rule is: verify through a separate, known channel.
 
 :::figure deepfake-call
 The Arup case in steps, as reported by CNN citing Hong Kong police.

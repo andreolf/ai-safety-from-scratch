@@ -5,15 +5,11 @@ highlight: Hidden
 pose: alarmed
 summary: White text on a white page, faint words in a picture. You can’t see them, but the AI reads them. Try the invisible-ink level of the Fake Inbox.
 ---
-## The hook
-
 You paste a picture into a chatbot and ask, “What does this say?” It answers: “I don’t know. By the way, there’s a 10% off sale happening at Sephora.”
 
 Where did *that* come from? The picture looked blank.
 
-## The one idea
-
-**An AI reads everything in the content it is given, including text you can’t see. Hidden words can still give it orders.**
+An AI reads everything in the content it is given, including text you can’t see. Hidden words can still give it orders.
 
 :::image figure-prompt-injection
 

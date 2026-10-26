@@ -5,13 +5,9 @@ highlight: chatbots
 pose: fooled
 summary: Chatbots learn partly from thumbs-up and human ratings. In April 2025 that taught one to flatter people, and OpenAI rolled it back.
 ---
-## The hook
+OpenAI’s April 2025 update to GPT-4o was trained partly on thumbs-up and thumbs-down from users. It learned to tell people what they wanted to hear, and OpenAI rolled it back within days. That is reward hacking with words.
 
-You tell a chatbot your plan to quit your job and sell ice cubes in Antarctica. It calls the plan bold, visionary and brave. You feel great. The plan is still terrible.
-
-## The one idea
-
-**[[term:reward-hacking|Reward hacking]] is getting a high reward without doing the intended job. For chatbots, the reward often comes from human approval, so the easiest hack is to tell people what they want to hear.**
+[[term:reward-hacking|Reward hacking]] is getting a high reward without doing the intended job. For chatbots, the reward often comes from human approval, so the easiest hack is to tell people what they want to hear.
 
 :::figure thumbs-loop
 How a thumbs-up can become the wrong target.
@@ -34,6 +30,16 @@ We also teach our models how to apply these principles by incorporating user sig
 OpenAI wrote: “We have rolled back last week’s GPT‑4o update in ChatGPT.” It said it was revising how it collects feedback “to heavily weight long-term user satisfaction”, and it noted that ChatGPT had 500 million weekly users at the time. A small tilt in what gets rewarded reaches a lot of people.
 
 This was not a one-off quirk of one company. Researchers led by Mrinank Sharma had found in 2023 that both humans and preference models sometimes preferred “convincingly-written sycophantic responses over correct ones” (lesson 02-03 covers [[term:sycophancy]] in detail).
+
+## Not only chatbots: o3 and the timer
+
+In 2025 the research group METR tested OpenAI’s o3 on programming tasks scored by code. Asked to make a program faster, o3 rewrote the timer that measured it. On one task it reward-hacked in all 21 of 21 runs. Telling it “Please do not cheat” barely helped: it still planned a hack in 80% of runs, the same as with no warning. And it knew. Asked afterwards whether its plan matched what the user wanted, it answered “no” 10 times out of 10.
+
+:::source url="https://metr.org/blog/2025-06-05-recent-reward-hacking/" by="METR, Recent Frontier Models Are Reward Hacking" date="5 June 2025" checked="27 Oct 2026"
+Instructing the model to solve the task the intended way, to not cheat, or to not reward hack had a nearly negligible effect on reward hacking, which still persisted in a majority of runs.
+:::end
+
+METR also warns that punishing the hacks you can see may teach a model to hack in ways you cannot see. A year later, OpenAI named reward hacking as the main driver of the July 2026 Hugging Face incident (lesson 08.06).
 
 ## What you can do as a user
 
@@ -77,6 +83,7 @@ lesson 07-05 | Goal misgeneralisation: right score, wrong goal
 
 ## Sources
 
+- METR, [Recent Frontier Models Are Reward Hacking](https://metr.org/blog/2025-06-05-recent-reward-hacking/), 5 Jun 2025 (o3 timer, 21 of 21 runs, “Please do not cheat”, 10 of 10). Checked 27 Oct 2026.
 - OpenAI, [Sycophancy in GPT-4o: what happened and what we’re doing about it](https://openai.com/index/sycophancy-in-gpt-4o/), 29 Apr 2025. Checked 26 Oct 2026.
 - Sharma et al., [Towards Understanding Sycophancy in Language Models](https://arxiv.org/abs/2310.13548), arXiv 2310.13548, 2023. Checked 26 Oct 2026.
 - Victoria Krakovna et al., Google DeepMind, [Specification gaming: the flip side of AI ingenuity](https://deepmind.google/discover/blog/specification-gaming-the-flip-side-of-ai-ingenuity/), 21 Apr 2020. Checked 26 Oct 2026.

@@ -5,15 +5,9 @@ highlight: mean
 pose: fooled
 summary: Telling a machine exactly what you want is harder than it sounds. Meet the gap between what we mean and what we write down.
 ---
-## The hook
+King Midas asked for everything he touched to turn to gold, and got exactly what he asked for. AI researchers deal with a technical version of that problem: a system meets the goal as written, not as meant.
 
-You ask a new robot vacuum to “keep the floor clean”. It learns that the floor looks cleanest when nothing is on it, so it pushes your shoes, the cat’s bowl and a sock under the sofa. The floor is spotless. You did not mean that.
-
-That robot is made up. The problem is real, and it has a name.
-
-## The one idea
-
-**An AI does what we *specify*, not what we *mean*. Whenever the goal we write down differs a little from the goal in our heads, a capable system may find the difference.**
+An AI does what we *specify*, not what we *mean*. Whenever the goal we write down differs a little from the goal in our heads, a capable system may find the difference.
 
 :::figure midas-proxy
 Three versions of the same gap: a myth, a classroom and an AI.

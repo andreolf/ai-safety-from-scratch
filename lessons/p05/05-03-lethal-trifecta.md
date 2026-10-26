@@ -5,13 +5,9 @@ highlight: trifecta
 pose: alarmed
 summary: Private data, untrusted content and a way to send data out. Any two are manageable. All three in one agent let an attacker steal your data. Build it yourself in the lab.
 ---
-## The hook
+In June 2025 Simon Willison named a pattern behind many AI data leaks: the lethal trifecta. An agent that can read your files, read the web and send email is useful. The same agent lets a stranger’s web page steal your data, and the stranger never needs your password.
 
-Your agent can read your files. It can browse the web. It can send email. Each of those sounds useful. Together, they make a perfect tool for a thief, and the thief doesn’t need your password.
-
-## The one idea
-
-**Simon Willison calls it the [[term:lethal-trifecta|lethal trifecta]]: an agent with access to your private data, exposure to untrusted content, and a way to communicate externally. Combine all three and an attacker can trick it into sending your data to them. Remove any one and that attack fails.**
+Simon Willison calls it the [[term:lethal-trifecta|lethal trifecta]]: an agent with access to your private data, exposure to untrusted content, and a way to communicate externally. Combine all three and an attacker can trick it into sending your data to them. Remove any one and that attack fails.
 
 :::image figure-lethal-trifecta
 

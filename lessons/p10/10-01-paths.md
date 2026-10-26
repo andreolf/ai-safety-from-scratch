@@ -5,13 +5,9 @@ highlight: Paths
 pose: proud
 summary: AI safety needs researchers, but also people in policy, security, communication and operations. A map of the main career paths and where to get free advice.
 ---
-## The hook
-
 You have reached the last foundations phase. Maybe AI safety is now a hobby you want to keep up. Maybe you are wondering whether it could be a job. Either way, the first surprise is how many different kinds of work it takes.
 
-## The one idea
-
-**AI safety is not only for machine-learning researchers. The career advice organisation 80,000 Hours lists AI-focused paths that include technical research, governance and policy, security, field-building and advocacy. You can start from the skills you already have.**
+AI safety is not only for machine-learning researchers. The career advice organisation 80,000 Hours lists AI-focused paths that include technical research, governance and policy, security, field-building and advocacy. You can start from the skills you already have.
 
 :::figure safety-paths
 Five AI-focused career paths listed by 80,000 Hours, and the kind of work in each.

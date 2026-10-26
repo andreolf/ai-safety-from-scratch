@@ -4,13 +4,9 @@ minutes: 8
 highlight: software
 summary: Plug-ins, connectors and MCP servers give an AI new powers. They are also software written by someone else, running with your access. Four questions before you connect.
 ---
-## The hook
-
 “Add this connector and your AI can manage your files, your calendar and your smart home!” One click, and it is installed. But what exactly did you just install, who wrote it, and what can it do while you aren’t looking?
 
-## The one idea
-
-**Every plug-in, connector or tool server you add to an AI app is software written by someone else, running with your permissions. Check it like you would check any app before you install it.**
+Every plug-in, connector or tool server you add to an AI app is software written by someone else, running with your permissions. Check it like you would check any app before you install it.
 
 ## What MCP is
 

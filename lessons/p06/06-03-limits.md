@@ -5,13 +5,9 @@ highlight: Budgets
 pose: proud
 summary: Four limits turn a risky paying agent into a safe one. A total budget, a per-payment cap, a list of who it may pay, and an end date. Set them yourself in the simulator.
 ---
-## The hook
+A draft Ethereum standard, ERC-7715, describes how an app can ask a wallet for a limited permission, with an expiry, instead of full control. Card issuers and banks offer similar controls. Four kinds of limit do most of the work.
 
-A teenager with a prepaid card for the school canteen can’t accidentally buy a motorbike. Not because they are wise, but because the card won’t let them. That is the idea behind agent spending limits.
-
-## The one idea
-
-**Give a paying agent four limits it cannot change: a total budget, a [[term:spending-cap|per-payment cap]], an [[term:allowlist|allowlist]] of who it may pay, and an expiry date. Add your approval for anything unusual. Then even a fooled agent can’t do much damage.**
+Give a paying agent four limits it cannot change: a total budget, a [[term:spending-cap|per-payment cap]], an [[term:allowlist|allowlist]] of who it may pay, and an expiry date. Add your approval for anything unusual. Then even a fooled agent can’t do much damage.
 
 :::image figure-spending-limits
 

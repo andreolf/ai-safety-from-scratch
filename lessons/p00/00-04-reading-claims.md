@@ -5,11 +5,7 @@ highlight: claim
 pose: proud
 summary: Who said it, when, and what is the evidence? Four questions that work on any AI headline.
 ---
-## The hook
-
-A screenshot goes viral: “New study: AI is now smarter than doctors!” It has a chart, a logo and thousands of shares. Should you believe it?
-
-You do not need to be an expert to check. You need four questions and two minutes.
+Claims about AI arrive faster than the evidence for them. The International AI Safety Report says evidence about AI risks “is slow to emerge and difficult to assess”. You do not need to be an expert to check a claim. Four questions and two minutes get you most of the way.
 
 :::intern fooled
 The intern shared the screenshot with the whole office before lunch. By the afternoon someone found the real study: one small test, on one kind of question, with a much more careful conclusion.
@@ -17,9 +13,7 @@ The intern shared the screenshot with the whole office before lunch. By the afte
 Shares are not sources. Open the original before you pass it on.
 :::end
 
-## The one idea
-
-**Judge a claim by its source, its date and its evidence, not by how confident it sounds.** AI writes confidently. So do headlines.
+Judge a claim by its source, its date and its evidence, not by how confident it sounds. AI writes confidently. So do headlines.
 
 :::figure claim-check
 Tap through the four questions. They also work for claims that an AI chatbot makes to you.

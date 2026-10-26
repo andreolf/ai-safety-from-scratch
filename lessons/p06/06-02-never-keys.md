@@ -5,13 +5,9 @@ highlight: keys
 pose: alarmed
 summary: Never give an agent your card number, bank login, recovery phrase or private key. Give it a small, limited float you could afford to lose, and keep the main funds behind your own approval.
 ---
-## The hook
+ethskills, a public guide that teaches AI coding agents to work with Ethereum, starts its wallet advice with one rule: anything that signs without a human should only be able to move what you would accept losing. It applies to cards and bank logins too.
 
-Would you give a new babysitter your bank card and PIN “in case they need to buy milk”? Or would you leave twenty francs on the kitchen table?
-
-## The one idea
-
-**Never give an agent the keys to everything: your full card, bank login, crypto recovery phrase or private key. Give it a small, limited float, an amount you would accept losing, and keep your main money where only you can move it.**
+Never give an agent the keys to everything: your full card, bank login, crypto recovery phrase or private key. Give it a small, limited float, an amount you would accept losing, and keep your main money where only you can move it.
 
 :::figure bounded-float
 Main money stays with you. The agent gets a small float.
@@ -28,6 +24,16 @@ Whatever signs unattended — an agent, a bot, a deploy script — should be abl
 In plain words: anything that can pay without you watching should only be able to reach a small amount. The main money (“the principal”) should need more than that one key to move, for example your own approval, or two keys on two devices.
 
 The same guide says to state plainly which actions always need a human: “moving principal, raising the agent’s own limit, changing who may sign”. Notice the middle one: **the agent must never be able to raise its own limit.**
+
+## Principal behind a threshold
+
+The rest of the money should need more than one key to move. ethskills points out that this does not mean more than one person:
+
+:::source url="https://ethskills.com/wallets/SKILL.md" by="ethskills, “Wallets”" date="" checked="27 Oct 2026"
+A multisig does not require multiple people. One person holding keys on separate devices meets a threshold of two alone, and an attacker then needs several devices rather than one
+:::end
+
+So an onchain agent setup has two layers: a small hot wallet or onchain allowance the agent can use without asking, and the principal in a multisig that the agent’s key alone can never satisfy. ethskills also says to write down which actions need a human signature: moving principal, raising the agent’s own limit, and changing who may sign.
 
 ## A key in a chat is a burned key
 

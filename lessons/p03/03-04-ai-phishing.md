@@ -4,13 +4,9 @@ minutes: 7
 highlight: phishing
 summary: Bad spelling used to give scam emails away. AI now writes them cleanly, in any language, at scale. Here is what still gives them away.
 ---
-## The hook
-
 For years the advice was: “Look for spelling mistakes.” A scam email from your “bank” full of odd grammar was easy to bin. Now the same email can arrive in flawless German, French or Italian, addressed to you by name.
 
-## The one idea
-
-**[[term:phishing|Phishing]] messages written with AI no longer look sloppy. Judge a message by what it asks you to do (click, log in, pay, share a code), not by how well it is written.**
+[[term:phishing|Phishing]] messages written with AI no longer look sloppy. Judge a message by what it asks you to do (click, log in, pay, share a code), not by how well it is written.
 
 :::figure phish-then-now
 The same scam, before and after AI writing tools. The request is identical.

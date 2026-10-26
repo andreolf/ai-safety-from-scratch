@@ -5,13 +5,9 @@ highlight: Evals
 pose: fooled
 summary: An eval is an exam for an AI. What you put in the exam, and how you mark it, decides which model looks best. Build one and see.
 ---
-## The hook
+In 2025 OpenAI argued that one reason models hallucinate is the way they are tested. If a benchmark counts only right answers, a model that guesses scores higher than one that says “I don’t know”. Evals shape what models learn, so how they are built matters.
 
-Two students take the same test. One answers every question, guessing when unsure. The other leaves a few blank. On a test that only counts right answers, the guesser often wins. Would you hire the guesser as a doctor?
-
-## The one idea
-
-**An [[term:eval|eval]] is a test that measures what an AI can do or how it behaves. Every eval makes choices, which questions and how to score them, and those choices decide who “wins”. A model can top a scoreboard and still fail at what you actually care about.**
+An [[term:eval|eval]] is a test that measures what an AI can do or how it behaves. Every eval makes choices, which questions and how to score them, and those choices decide who “wins”. A model can top a scoreboard and still fail at what you actually care about.
 
 :::figure eval-recipe
 Four steps, and a choice at every one.

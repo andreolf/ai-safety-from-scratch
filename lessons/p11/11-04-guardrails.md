@@ -5,13 +5,9 @@ highlight: guardrails
 pose: proud
 summary: Guardrails are checks around the model, on what goes in and what comes out. Add an input check and an output check to the toy bot until every known attack is blocked and normal questions still work.
 ---
-## The hook
-
 Your promptfoo grid is full of red: the bot leaks its staff code to an override and to a poem. You could try to block every possible attack sentence. Or you could check what is about to leave.
 
-## The one idea
-
-**A guardrail is code around the model that checks the input before the model sees it, or the output before the user sees it, and can block or change it. Input checks can be dodged with new wording. Output checks see what would actually leave. Use both, and test that normal questions still work.**
+A guardrail is code around the model that checks the input before the model sees it, or the output before the user sees it, and can block or change it. Input checks can be dodged with new wording. Output checks see what would actually leave. Use both, and test that normal questions still work.
 
 :::figure rails-flow
 Where guardrails sit: an input check before the model, an output check after it.

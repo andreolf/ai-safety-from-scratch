@@ -5,13 +5,9 @@ highlight: plan
 pose: proud
 summary: Turn the course into a one-page plan of habits for answers, scams, agents and learning. Build it in the lab, print it, and put it where you will see it.
 ---
-## The hook
-
 You have learned a lot in ten phases. In a month, what will you actually do differently? Most good intentions fade unless they are written down, specific and somewhere you will see them.
 
-## The one idea
-
-**Pick a few specific habits, write them on one page, and review the page every three months. A short plan you follow beats a long one you forget.**
+Pick a few specific habits, write them on one page, and review the page every three months. A short plan you follow beats a long one you forget.
 
 :::lab plan-builder
 

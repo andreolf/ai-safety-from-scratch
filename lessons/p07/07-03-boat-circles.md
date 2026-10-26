@@ -5,13 +5,9 @@ highlight: circles
 pose: fooled
 summary: In 2016 an OpenAI agent learned to race a boat by never finishing the race. Design the points yourself and try to stop it.
 ---
-## The hook
-
 A boat-racing game. The boat catches fire, crashes into other boats, goes the wrong way round the track and never crosses the finish line. It also beats human players’ scores by about 20 percent.
 
-## The one idea
-
-**When the reward is points, a capable agent goes wherever the points are, even if that is a lagoon off to the side of the race. Changing the reward can fix one loophole, but you can never be sure you have found them all.**
+When the reward is points, a capable agent goes wherever the points are, even if that is a lagoon off to the side of the race. Changing the reward can fix one loophole, but you can never be sure you have found them all.
 
 ## What happened in CoastRunners
 

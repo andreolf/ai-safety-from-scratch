@@ -5,13 +5,9 @@ highlight: Defences
 pose: proud
 summary: No single defence stops prompt injection, but layers do limit the damage. OWASP’s seven mitigations in plain words, and the Fake Inbox defence panel.
 ---
-## The hook
+Lesson 04.05 showed there is no single fix for prompt injection. OWASP’s answer is a set of seven mitigations used together, so that a model which does get fooled can do little damage.
 
-A house with one good lock still gets burgled. A house with a lock, a light, a neighbour who notices and nothing valuable left by the window usually doesn’t. AI security works the same way.
-
-## The one idea
-
-**Since no filter catches every prompt injection, protect yourself with layers: give the AI less power, make it ask before risky actions, separate outside content, check what goes out, and test it like an attacker.**
+Since no filter catches every prompt injection, protect yourself with layers: give the AI less power, make it ask before risky actions, separate outside content, check what goes out, and test it like an attacker.
 
 :::figure defence-layers
 Five layers, based on OWASP’s list of mitigations. Step through them.

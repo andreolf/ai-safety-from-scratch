@@ -4,13 +4,9 @@ minutes: 7
 highlight: Show me
 summary: A good payment gate shows the amount, who gets it and the fees, then waits for your yes. What to look at in those few seconds, and the red flags.
 ---
-## The hook
-
 “Approve payment?” Yes. Done. Wait, to whom? How much? Most bad payments don’t happen because there was no approval step. They happen because the approval step didn’t show enough, or nobody looked.
 
-## The one idea
-
-**Before any agent payment, a gate should show you three things, the amount, the exact destination and the fees, and then stop until you say yes. Your job is to spend five seconds checking them.**
+Before any agent payment, a gate should show you three things, the amount, the exact destination and the fees, and then stop until you say yes. Your job is to spend five seconds checking them.
 
 :::figure approval-card
 What a useful payment approval shows. Example values.

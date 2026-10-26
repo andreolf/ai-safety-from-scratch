@@ -5,13 +5,9 @@ highlight: practice
 pose: neutral
 summary: The Builder track starts on your own computer, with a toy chatbot and a toy agent that are safe to attack. Install it, run the first check, and learn the one rule of testing.
 ---
-## The hook
-
 Phases 04 to 08 showed what can go wrong with AI apps. If you build one, the next question is practical: how do you test it before someone else does? This optional track gives you a safe target and real, free tools.
 
-## The one idea
-
-**Only test what you own or have written permission to test. The course gives you a target you own: Pebble, a toy helpdesk bot and a toy email agent in the course repository, full of deliberate weaknesses and made-up test values. Six practicals each end with a check that prints a completion code.**
+Only test what you own or have written permission to test. The course gives you a target you own: Pebble, a toy helpdesk bot and a toy email agent in the course repository, full of deliberate weaknesses and made-up test values. Six practicals each end with a check that prints a completion code.
 
 :::figure practice-app-map
 What is inside the practice app, and which lesson uses each part.

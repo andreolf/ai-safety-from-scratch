@@ -5,13 +5,9 @@ highlight: timeline
 pose: alarmed
 summary: The AI Act applies in stages from 2024 to 2028, and in July 2026 the Digital Omnibus on AI changed some dates. Here is the current timeline and what changed.
 ---
-## The hook
-
 An article from 2025 tells you the EU’s high-risk AI rules start on 2 August 2026. A website from 2026 says 2 December 2027. Both were right when they were written. Laws change, and AI law has already changed once.
 
-## The one idea
-
-**The EU AI Act applies step by step: it entered into force on 1 August 2024, with milestones until 2 August 2028. In 2026 it was amended by the Digital Omnibus on AI, Regulation (EU) 2026/1744, which moved the high-risk dates later and added new bans. Always check which version of the timeline you are reading.**
+The EU AI Act applies step by step: it entered into force on 1 August 2024, with milestones until 2 August 2028. In 2026 it was amended by the Digital Omnibus on AI, Regulation (EU) 2026/1744, which moved the high-risk dates later and added new bans. Always check which version of the timeline you are reading.
 
 :::figure act-timeline
 The timeline as published by the AI Act Service Desk, including the Omnibus changes.

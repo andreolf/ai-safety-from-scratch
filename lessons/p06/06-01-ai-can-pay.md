@@ -6,13 +6,9 @@ summary: Agents can already buy things with cards, bank connections and crypto, 
 ---
 > **Disclosure.** AI Safety from Scratch is a personal, free project by Francesco Andreoli. Francesco works at MetaMask (Consensys) as Head of Developer Relations and works on agent wallets. **This site is not an official MetaMask or Consensys product** and is not endorsed by them, or by ETH Zurich, OWASP, any AI company or any government body. The agents-and-payments lessons (Phase 06) are written to be wallet-neutral. Where MetaMask is mentioned, it is one example among others, and the page says so.
 
-## The hook
+x402 revives an old web code, HTTP 402 “Payment Required”, so that a website can ask an AI agent for a small payment and the agent can pay and retry with no human involved. Agents can already spend through saved cards, bank connections and crypto wallets. This phase is about the limits that keep that safe.
 
-You ask your agent to “get me the cheapest train ticket to Bern and the weather report for Saturday.” It books the ticket with your saved card and pays a few cents for a premium weather feed. You never typed a card number.
-
-## The one idea
-
-**AI agents can already spend money: through saved cards, bank connections and crypto wallets, and through new open standards built for software to pay software. When an agent can pay, every mistake or trick from Phases 04 and 05 can cost real money, so the rules you set matter more than the agent’s intelligence.**
+AI agents can already spend money: through saved cards, bank connections and crypto wallets, and through new open standards built for software to pay software. When an agent can pay, every mistake or trick from Phases 04 and 05 can cost real money, so the rules you set matter more than the agent’s intelligence.
 
 ## Three ways an agent can pay
 

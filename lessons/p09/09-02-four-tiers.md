@@ -5,13 +5,9 @@ highlight: tiers
 pose: fooled
 summary: The EU AI Act sorts AI uses into four tiers, from banned to no new rules. Learn the tiers, with real articles, then sort a dozen uses yourself.
 ---
-## The hook
-
 Same technology, different rules. An AI that recognises faces to unlock your phone, one that scrapes millions of faces from the internet, and one that reads your boss’s mood from a webcam: under EU law these are treated very differently.
 
-## The one idea
-
-**The [[term:ai-act|EU AI Act]] (Regulation (EU) 2024/1689) has four levels of risk. Some uses are banned. [[term:high-risk-ai|High-risk]] uses must meet strict requirements. Some uses only have to be transparent. Everything else, which the Commission says is “the vast majority”, gets no new rules.**
+The [[term:ai-act|EU AI Act]] (Regulation (EU) 2024/1689) has four levels of risk. Some uses are banned. [[term:high-risk-ai|High-risk]] uses must meet strict requirements. Some uses only have to be transparent. Everything else, which the Commission says is “the vast majority”, gets no new rules.
 
 :::figure risk-pyramid
 Four levels, from the European Commission’s summary.

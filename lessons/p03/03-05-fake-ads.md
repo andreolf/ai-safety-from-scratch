@@ -4,13 +4,9 @@ minutes: 8
 highlight: celebrity
 summary: A famous face recommending an investment or a miracle product is now easy to fake. How these ads work and the questions that expose them.
 ---
-## The hook
+In December 2024 the FBI warned that criminals use AI-generated video of public figures to promote fake investments. Swiss authorities have published similar warnings about fake celebrity ads (sources below). The ads look like news interviews. They are not.
 
-You are scrolling and see a news-style video: a well-known TV presenter explains how they made a fortune with a new trading platform, and you can too, starting with just a few hundred francs. It looks like a real interview. It isn’t.
-
-## The one idea
-
-**Generative AI makes it cheap to put a famous person’s face and voice on an ad they never made. Treat any celebrity endorsement of an investment or miracle product as fake until proven otherwise, and never pay through a link in an ad.**
+Generative AI makes it cheap to put a famous person’s face and voice on an ad they never made. Treat any celebrity endorsement of an investment or miracle product as fake until proven otherwise, and never pay through a link in an ad.
 
 :::figure fake-ad
 A mock-up with the warning signs highlighted. The person and product are invented.

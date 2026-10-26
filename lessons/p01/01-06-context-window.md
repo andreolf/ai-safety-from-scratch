@@ -4,13 +4,9 @@ minutes: 8
 highlight: context window
 summary: The context window is the AI’s short-term memory. Tools like search add fresh text to it, and anything in it can steer the model.
 ---
-## The hook
+GPT-3 was trained to read 2,048 tokens at a time. 3Blue1Brown points out that this limit is why early ChatGPT seemed to lose the thread of long conversations. Today’s limits are far larger, but everything the model uses still has to fit in one window, and inside it everything is just text. That second fact is where prompt injection starts.
 
-You have been chatting with an assistant for an hour. Suddenly it forgets the name of your dog, which you mentioned at the start. Or you paste in a long report and it answers as if it had read only half. Both have the same cause.
-
-## The one idea
-
-**An LLM can only “see” a limited amount of text at once: its [[term:context-window|context window]]. Everything the model uses to answer you has to fit in there: instructions, the conversation, documents and tool results.**
+An LLM can only “see” a limited amount of text at once: its [[term:context-window|context window]]. Everything the model uses to answer you has to fit in there: instructions, the conversation, documents and tool results.
 
 :::figure context-window
 Everything in the window is just text to the model.

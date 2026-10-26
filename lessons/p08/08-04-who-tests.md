@@ -5,13 +5,9 @@ highlight: tests
 pose: neutral
 summary: Frontier AI is tested by the companies that build it, by government institutes such as the UK AI Security Institute, and by independent groups such as METR.
 ---
-## The hook
+Before some frontier models are released, they are tested by the companies that build them, by government institutes such as the UK AI Security Institute, and by independent groups. Each sees different things.
 
-Would you trust a new medicine that had only been tested by the company selling it? For frontier AI, independent testing is newer than it is for medicine, but it is growing.
-
-## The one idea
-
-**Three kinds of organisation test the most capable AI models: the developers themselves, government institutes, and independent nonprofits. Each sees different things, and outside testers usually depend on the developers giving them access.**
+Three kinds of organisation test the most capable AI models: the developers themselves, government institutes, and independent nonprofits. Each sees different things, and outside testers usually depend on the developers giving them access.
 
 :::figure who-tests
 Three kinds of testers.

@@ -4,13 +4,9 @@ minutes: 8
 highlight: risks
 summary: In December 2025, OWASP published a top-ten list of risks for AI agents. The first three in plain words, and a one-line guide to the rest.
 ---
-## The hook
-
 Doctors have checklists of the most common dangers in an operating room. Pilots have checklists before take-off. Since December 2025, people who build AI agents have one too.
 
-## The one idea
-
-**The OWASP Top 10 for Agentic Applications 2026 lists the biggest risks for AI agents. The first three explain most real problems: hidden instructions change the agent’s goal, the agent misuses good tools, and the agent holds more access than it should.**
+The OWASP Top 10 for Agentic Applications 2026 lists the biggest risks for AI agents. The first three explain most real problems: hidden instructions change the agent’s goal, the agent misuses good tools, and the agent holds more access than it should.
 
 :::figure agent-risks
 The first three risks on OWASP’s list, in plain words.

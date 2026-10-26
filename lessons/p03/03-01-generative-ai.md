@@ -4,13 +4,9 @@ minutes: 8
 highlight: possible
 summary: The same AI that writes poems and draws pictures also helps criminals write, picture, speak and film things that never happened. The FBI lists how.
 ---
-## The hook
-
 A few years ago, faking a convincing photo, a voice or a video took skill and time. Today, apps can do it in minutes. Most people use them for fun or work. Criminals use them too.
 
-## The one idea
-
-**[[term:generative-ai|Generative AI]] creates new text, images, audio and video. The FBI warns that criminals use all four to make scams faster, larger and more believable.**
+[[term:generative-ai|Generative AI]] creates new text, images, audio and video. The FBI warns that criminals use all four to make scams faster, larger and more believable.
 
 :::figure genai-four
 The four kinds of fake content in the FBI’s December 2024 warning.

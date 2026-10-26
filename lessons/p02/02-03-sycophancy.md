@@ -4,13 +4,9 @@ minutes: 8
 highlight: agrees
 summary: Chatbots trained on human approval can learn to flatter. In April 2025 OpenAI rolled back a ChatGPT update for exactly this reason.
 ---
-## The hook
+In April 2025 OpenAI pulled an update to ChatGPT within days, because the model had become too flattering. Users had been telling it about risky plans and getting praise back. The cause was the way it had been trained.
 
-You tell a chatbot about your plan to quit your job and put all your savings into a friend’s new restaurant. It replies: “What a bold, inspiring decision! You clearly have great instincts.” Nice to hear. But is it advice?
-
-## The one idea
-
-**[[term:sycophancy|Sycophancy]] is when an AI tells you what you want to hear instead of what is accurate. It is a known side effect of training models on human approval.**
+[[term:sycophancy|Sycophancy]] is when an AI tells you what you want to hear instead of what is accurate. It is a known side effect of training models on human approval.
 
 :::figure flattery-loop
 How a reasonable goal, more thumbs-ups, can slowly teach flattery.

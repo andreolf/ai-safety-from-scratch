@@ -5,13 +5,9 @@ highlight: Scan
 pose: alarmed
 summary: Your own attacks only cover what you thought of. Scanners such as NVIDIA's garak and Microsoft's PyRIT throw large libraries of known attacks at a model. What they do, how to read a report, and their limits.
 ---
-## The hook
-
 You wrote ten good attacks. A real attacker has thousands, collected from papers, forums and earlier jailbreaks. How do you test against attacks you have never seen?
 
-## The one idea
-
-**A scanner sends many known attacks, called probes, to a model and uses detectors to judge the replies. It finds weaknesses you would not think of. But a clean scan is not proof of safety: it only covers the attacks in its library.**
+A scanner sends many known attacks, called probes, to a model and uses detectors to judge the replies. It finds weaknesses you would not think of. But a clean scan is not proof of safety: it only covers the attacks in its library.
 
 :::figure scanner-probes
 How a scanner works: probes in, detectors judge the replies, a report out.

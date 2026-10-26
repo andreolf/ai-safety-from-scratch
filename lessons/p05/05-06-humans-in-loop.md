@@ -4,13 +4,9 @@ minutes: 8
 highlight: loop
 summary: Some actions should wait for your yes. But forty “Allow?” pop-ups a day train you to click without reading. How to keep approvals rare, clear and real.
 ---
-## The hook
-
 The first time your agent asks “Send this email?”, you read it carefully. By the fortieth time that day, you click **Yes** before the box has finished appearing.
 
-## The one idea
-
-**A [[term:human-in-the-loop|human in the loop]] is one of the strongest defences against fooled agents, but only if the human actually looks. Ask for approval rarely, for high-impact actions, and show exactly what will happen.**
+A [[term:human-in-the-loop|human in the loop]] is one of the strongest defences against fooled agents, but only if the human actually looks. Ask for approval rarely, for high-impact actions, and show exactly what will happen.
 
 ## The experts agree on the gate
 

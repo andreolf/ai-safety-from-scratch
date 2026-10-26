@@ -5,13 +5,9 @@ highlight: Beyond
 pose: proud
 summary: Outside Europe, much AI governance is voluntary. Meet the US NIST AI Risk Management Framework and its four functions, plus the international efforts that connect countries.
 ---
-## The hook
-
 You run a small company in the United States and want to use AI responsibly. You look for a rulebook like the EU AI Act. What you find first is guidance you can choose to follow. Where do you start?
 
-## The one idea
-
-**Not every country regulates AI with a binding law. A common alternative is a voluntary framework: guidance that organisations choose to follow. One example, the NIST AI Risk Management Framework from the US government, organises the work into four functions: govern, map, measure and manage. International efforts such as the Council of Europe Convention and the International AI Safety Report connect countries across these different approaches.**
+Not every country regulates AI with a binding law. A common alternative is a voluntary framework: guidance that organisations choose to follow. One example, the NIST AI Risk Management Framework from the US government, organises the work into four functions: govern, map, measure and manage. International efforts such as the Council of Europe Convention and the International AI Safety Report connect countries across these different approaches.
 
 :::figure nist-functions
 NIST’s four functions, with “govern” running through all of them.

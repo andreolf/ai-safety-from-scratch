@@ -5,13 +5,9 @@ highlight: Convention
 pose: neutral
 summary: The Council of Europe’s AI Convention is the first international legally binding treaty on AI. It sets principles for human rights, democracy and the rule of law, and countries outside Europe have signed it too.
 ---
-## The hook
-
 The EU AI Act is law across the European Union. But AI doesn’t stop at borders, and many countries, including Switzerland, the UK and the US, are not in the EU. Is there anything they all agreed to?
 
-## The one idea
-
-**The Council of Europe Framework Convention on Artificial Intelligence and Human Rights, Democracy and the Rule of Law (CETS No. 225) is a treaty: countries sign it and then commit to make their own laws meet its principles. It does not have the EU’s risk tiers. It sets shared principles and rights, and leaves the details to each country.**
+The Council of Europe Framework Convention on Artificial Intelligence and Human Rights, Democracy and the Rule of Law (CETS No. 225) is a treaty: countries sign it and then commit to make their own laws meet its principles. It does not have the EU’s risk tiers. It sets shared principles and rights, and leaves the details to each country.
 
 :::figure coe-vs-act
 Two different tools: a treaty and a regulation.

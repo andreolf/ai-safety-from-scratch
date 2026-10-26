@@ -5,13 +5,9 @@ highlight: evidence
 pose: alarmed
 summary: Headlines about AI swing between hype and doom. Four free, regularly updated sources help you check what is actually known, and a simple routine to keep up.
 ---
-## The hook
+You cannot read every paper about AI. A few free sources collect the evidence for you, and checking a headline against one of them takes minutes.
 
-One headline says AI will cure every disease by 2030. The next says it will end the world. A third says it is all hype. You cannot read every paper. Where do careful people look?
-
-## The one idea
-
-**Go to sources that collect evidence rather than opinions. Four free ones cover most of this course: the International AI Safety Report for the science, the AI Incident Database for real failures, OWASP for security risks in AI apps, and MITRE ATLAS for attacker techniques. Read a headline, then check it against one of them.**
+Go to sources that collect evidence rather than opinions. Four free ones cover most of this course: the International AI Safety Report for the science, the AI Incident Database for real failures, OWASP for security risks in AI apps, and MITRE ATLAS for attacker techniques. Read a headline, then check it against one of them.
 
 :::figure evidence-shelf
 Four evidence sources and the question each one answers.

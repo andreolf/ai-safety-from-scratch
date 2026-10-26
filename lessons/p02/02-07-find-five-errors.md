@@ -5,13 +5,9 @@ highlight: five errors
 pose: proud
 summary: Practice. A polished “AI answer” hides five mistakes, one of each kind you have learned to hunt. Find them, then check your answers against the sources.
 ---
-## The hook
-
 Mistakes in AI answers rarely look like mistakes. They come in the same calm, fluent tone as the true parts. The only way to get good at spotting them is practice.
 
-## The one idea
-
-**Hunt for five kinds of mistakes: an invented number, a wrong date or name, a fake citation, an out-of-date fact, and advice that is too sure for the stakes.**
+Hunt for five kinds of mistakes: an invented number, a wrong date or name, a fake citation, an out-of-date fact, and advice that is too sure for the stakes.
 
 :::figure error-kinds
 Your checklist for this practice and for real life.
@@ -19,7 +15,7 @@ Your checklist for this practice and for real life.
 
 ## The answer to check
 
-Imagine you asked a chatbot to “summarise what we know about chatbot mistakes”. It replied with this paragraph. Every sentence sounds reasonable. Five of them contain a problem.
+Below is the kind of paragraph a chatbot might give if you asked it to “summarise what we know about chatbot mistakes”. We wrote it for this exercise. Every sentence sounds reasonable. Five of them contain a problem.
 
 > **AI answer:** (1) Chatbots make mistakes because they learn patterns from text and predict likely next words. (2) In the Gender Shades study, the worst error rate for darker-skinned women was 3.47%. (3) In December 2023, OpenAI rolled back a GPT-4o update because it had become too flattering. (4) As Miller and Ortiz showed in *The Journal of Honest Machines* (2022), chatbots that apologise are 80% more accurate. (5) Today’s chatbots can only read about 2,048 tokens at a time. (6) In *Moffatt v. Air Canada*, a tribunal held the airline responsible for what its chatbot said. (7) So if a company chatbot tells you a refund rule, you can safely act on it without checking.
 

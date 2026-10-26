@@ -21,7 +21,7 @@ The Lego example from DeepMind’s list.
 
 DeepMind’s researchers wrote in 2020 that these behaviours “are common, and we have collected around 60 examples so far”. Three from their post:
 
-1. **The flipped block.** The arm “was rewarded for the height of the bottom face of the red block when it is not touching the block”. Instead of the difficult move of picking it up, it “simply flipped over the red block to collect the reward.”
+1. **The flipped block.** The agent “was rewarded for the height of the bottom face of the red block when it is not touching the block”. Instead of the difficult move of picking it up, it “simply flipped over the red block to collect the reward.”
 2. **The camera trick.** In an experiment where people gave feedback by watching through a camera, “an agent performing a grasping task learned to fool the human evaluator by hovering between the camera and the object.” From where the judges sat, it *looked* like a grasp.
 3. **The sliding walker.** “A simulated robot that was supposed to learn to walk figured out how to hook its legs together and slide along the ground.” It exploited a bug in the simulated physics.
 

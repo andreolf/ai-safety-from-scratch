@@ -342,3 +342,13 @@ h1, h2, h3, .display { overflow-wrap: break-word; hyphens: auto; -webkit-hyphens
 @media (prefers-reduced-motion: reduce) { .fd-meter span { transition: none; } }
 .ev-qs { border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; margin: 10px 0; display: grid; gap: 4px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 .ev-qs legend { font-weight: 800; padding: 0 6px; }
+
+/* Plan Builder (lab 14): the plan sheet prints on its own */
+.plan-group { border: 0; padding: 0; margin: 0 0 12px; }
+.plan-sheet { border: 2px solid var(--line); border-radius: 12px; padding: 16px; margin-top: 12px; background: var(--bg); }
+.plan-sheet ul { margin: 6px 0 12px; padding-left: 1.2em; }
+@media print {
+  body.print-plan * { visibility: hidden !important; }
+  body.print-plan .plan-sheet, body.print-plan .plan-sheet * { visibility: visible !important; }
+  body.print-plan .plan-sheet { position: absolute; left: 0; top: 0; width: 100%; border: 0; }
+}

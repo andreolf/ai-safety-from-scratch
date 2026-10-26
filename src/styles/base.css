@@ -262,3 +262,4 @@ code, kbd, pre, .mono { font-family: var(--font-mono); font-size: .9em; }
 /* Draft preview banner: on every page until launch */
 .draft-banner { background: var(--accent); color: var(--on-accent); font-size: var(--text-sm); line-height: 1.35; text-align: center; padding: 6px var(--space-4); }
 .draft-banner b { font-weight: var(--weight-black); text-transform: uppercase; letter-spacing: .04em; }
+summary { cursor: pointer; min-height: var(--tap-min); display: flex; align-items: center; }

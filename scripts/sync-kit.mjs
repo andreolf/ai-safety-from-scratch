@@ -11,7 +11,7 @@ const ROOT = path.resolve(import.meta.dirname, '..');
 const cp = (a, b) => { fs.mkdirSync(path.dirname(b), { recursive: true }); fs.copyFileSync(path.join(KIT, a), path.join(ROOT, b)); };
 // tokens.css = a short font-file header + the kit file verbatim. The whole theme (colours, type, font files)
 // lives in this one file, so another brand direction can be swapped in by replacing it.
-const FONT_HEADER = `/* Theme font files (bundled locally). Part of the theme: replace together with the tokens below. */
+const FONT_HEADER = `/* Theme font files (bundled locally). Kept with the tokens so the whole theme lives in one file. */
 @import '@fontsource-variable/archivo/wdth.css';
 @import '@fontsource-variable/jetbrains-mono/index.css';
 

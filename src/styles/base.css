@@ -333,5 +333,12 @@ h1, h2, h3, .display { overflow-wrap: break-word; hyphens: auto; -webkit-hyphens
 .rd-path.on { stroke: var(--accent-ink); stroke-dasharray: 14 10; animation: rd-move 1.6s linear infinite; }
 @keyframes rd-move { to { stroke-dashoffset: -48; } }
 @media (prefers-reduced-motion: reduce) { .rd-path.on { animation: none; } }
+.rd-table { font-size: .9rem; } .rd-table th, .rd-table td { padding-left: 6px; padding-right: 6px; }
 .rd-controls { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin: 10px 0; }
 .perm-table tr.pick th, .perm-table tr.pick td { font-weight: 800; border-bottom: 2px solid var(--accent-ink); }
+/* Feature Dial and Build-an-Eval labs */
+.fd-meter { height: 12px; border-radius: 6px; border: 1px solid var(--line-strong); overflow: hidden; margin: 4px 0 8px; }
+.fd-meter span { display: block; height: 100%; width: 0; background: var(--accent); transition: width .2s; }
+@media (prefers-reduced-motion: reduce) { .fd-meter span { transition: none; } }
+.ev-qs { border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; margin: 10px 0; display: grid; gap: 4px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.ev-qs legend { font-weight: 800; padding: 0 6px; }

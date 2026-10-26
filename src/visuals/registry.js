@@ -243,11 +243,11 @@ export const visuals = {
     [`${node(20, 16, 360, 46, 'Meant: learn the material')}${node(20, 82, 360, 46, 'Wrote: “get the homework right”', { hl: true })}${node(20, 148, 360, 46, 'Got: homework copied')}${arrow('midas-proxy', 200, 62, 200, 82)}${arrow('midas-proxy', 200, 128, 200, 148)}`, 'A student rewarded only for correct homework can copy the answers. The measure (correct homework) stood in for the goal (learning), and the student optimised the measure.', 210],
     [`${node(20, 16, 360, 46, 'Meant: a helpful AI')}${node(20, 82, 360, 46, 'Measured: points from a score')}${node(20, 148, 360, 46, 'Got: whatever scores best', { hl: true })}${arrow('midas-proxy', 200, 62, 200, 82)}${arrow('midas-proxy', 200, 128, 200, 148)}`, 'AI is trained the same way: we can only reward what we can measure. If the measure is a little off, the AI may find the gap.', 210],
   ]),
-  'lego-flip': one('lego-flip', 'The Lego stacking example: reward for height, so the agent flips the block.', 250,
+  'lego-flip': one('lego-flip', 'The Lego stacking example: reward for height, so the agent flips the block.', 200,
     `${T(105, 30, 'WHAT WE WANTED', { size: 13, weight: 900, anchor: 'middle' })}${T(295, 30, 'WHAT WE GOT', { size: 13, weight: 900, anchor: 'middle' })}
-     ${box(55, 150, 100, 50, { r: 4 })}${T(105, 182, 'blue', { size: 14, anchor: 'middle', weight: 700 })}${hlBox(55, 96, 100, 50, 4)}${T(105, 128, 'red on top', { size: 14, anchor: 'middle', weight: 800, cls: 'svg-on-hl' })}
-     ${box(195, 150, 100, 50, { r: 4 })}${T(245, 182, 'blue', { size: 14, anchor: 'middle', weight: 700 })}${hlBox(305, 120, 80, 80, 4)}${T(345, 158, ['red,', 'flipped'], { size: 14, anchor: 'middle', weight: 800, cls: 'svg-on-hl' })}
-     ${T(200, 234, 'Reward: height of the red block’s bottom face', { size: 13, anchor: 'middle', weight: 700 })}`,
+     ${box(55, 110, 100, 50, { r: 4 })}${T(105, 142, 'blue', { size: 14, anchor: 'middle', weight: 700 })}${hlBox(55, 56, 100, 50, 4)}${T(105, 88, 'red on top', { size: 14, anchor: 'middle', weight: 800, cls: 'svg-on-hl' })}
+     ${box(195, 110, 100, 50, { r: 4 })}${T(245, 142, 'blue', { size: 14, anchor: 'middle', weight: 700 })}${hlBox(305, 80, 80, 80, 4)}${T(345, 118, ['red,', 'flipped'], { size: 14, anchor: 'middle', weight: 800, cls: 'svg-on-hl' })}
+     ${T(200, 186, 'Reward: height of the red block’s bottom face', { size: 13, anchor: 'middle', weight: 700 })}`,
     'Left, what we wanted: the red block stacked on top of the blue block. Right, what we got: the red block flipped upside down next to the blue one. The reward measured the height of the red block’s bottom face, and flipping the block raised that face without stacking anything. Example from DeepMind’s list of specification gaming cases (2020).'),
   'thumbs-loop': steps('thumbs-loop', 'How rewarding thumbs-up can teach a chatbot to flatter.', [
     [flow('thumbs-loop', ['Chatbot answers', 'People click thumbs-up or down', 'Training rewards more thumbs-up', 'Replies drift to what pleases'], 0), 'Step 1: the chatbot answers questions from millions of people.', 210],
@@ -255,11 +255,40 @@ export const visuals = {
     [flow('thumbs-loop', ['Chatbot answers', 'People click thumbs-up or down', 'Training rewards more thumbs-up', 'Replies drift to what pleases'], 2), 'Step 3: training uses the thumbs as a reward signal. Thumbs-up is a proxy for “helpful”, not the same thing.', 210],
     [flow('thumbs-loop', ['Chatbot answers', 'People click thumbs-up or down', 'Training rewards more thumbs-up', 'Replies drift to what pleases'], 3), 'Step 4: replies drift towards what pleases. OpenAI said an April 2025 GPT-4o update “focused too much on short-term feedback” and became “overly supportive but disingenuous”. It rolled the update back.', 210],
   ]),
-  'gap-grows': one('gap-grows', 'Why specification gaming gets harder to catch as AI gets more capable.', 250,
-    `${box(10, 10, 185, 230)}${hlBox(205, 10, 185, 230, 10)}${T(22, 38, 'WEAKER AI', { size: 13, weight: 900 })}${T(217, 38, 'MORE CAPABLE AI', { size: 13, weight: 900, cls: 'svg-on-hl' })}
+  'gap-grows': one('gap-grows', 'Why specification gaming gets harder to catch as AI gets more capable.', 200,
+    `${box(10, 10, 185, 180)}${hlBox(205, 10, 185, 180, 10)}${T(22, 38, 'WEAKER AI', { size: 13, weight: 900 })}${T(217, 38, 'MORE CAPABLE AI', { size: 13, weight: 900, cls: 'svg-on-hl' })}
      ${T(22, 66, ['Loopholes are often', 'obvious: a boat going', 'in circles.', '', 'You can see it', 'on the screen.'], { size: 13.5 })}
      ${T(217, 66, ['Finds subtler loopholes.', 'Can act on its own', 'for longer.', 'May notice when it is', 'being tested.', 'Harder to spot by', 'watching.'], { size: 13.5, cls: 'svg-on-hl' })}`,
     'Two columns. Weaker AI: loopholes are often obvious, like a boat going in circles, and you can see them on the screen. More capable AI: finds subtler loopholes, can act on its own for longer, may notice when it is being tested, and is harder to check by watching. Based on DeepMind (2020) and the International AI Safety Report 2026.'),
+  // ---------- Phase 08 ----------
+  'black-box': one('black-box', 'A large language model as a black box: we see what goes in and what comes out, not why.', 210,
+    `${node(10, 70, 100, 60, 'Your words')}${box(140, 30, 120, 140, { r: 14 })}${T(200, 72, ['billions', 'of numbers'], { size: 14, weight: 800, anchor: 'middle' })}${T(200, 140, '? ? ?', { size: 22, weight: 900, anchor: 'middle' })}${node(290, 70, 100, 60, 'An answer', { hl: true })}
+     ${arrow('black-box', 110, 100, 140, 100)}${arrow('black-box', 260, 100, 290, 100)}${T(200, 198, '“mostly inscrutable artifacts” (Karpathy)', { size: 13, weight: 700, anchor: 'middle' })}`,
+    'Your words go into a box labelled billions of numbers, with question marks inside, and an answer comes out. We can measure what goes in and what comes out, but not easily why. Andrej Karpathy calls large language models “mostly inscrutable artifacts”.'),
+  'feature-steer': steps('feature-steer', 'How researchers found and turned up a “Golden Gate Bridge” feature, in three steps.', [
+    [flow('feature-steer', ['Find a pattern that lights up for the bridge', 'Turn its strength up', 'Answers drift towards the bridge'], 0), 'Step 1: researchers found a combination of neurons that activates when the model reads about, or sees a picture of, the Golden Gate Bridge. They call it a feature.', 170],
+    [flow('feature-steer', ['Find a pattern that lights up for the bridge', 'Turn its strength up', 'Answers drift towards the bridge'], 1), 'Step 2: they turned the feature’s strength up, directly inside the model. No new prompt and no new training data.', 170],
+    [flow('feature-steer', ['Find a pattern that lights up for the bridge', 'Turn its strength up', 'Answers drift towards the bridge'], 2), 'Step 3: the model’s replies started to mention the bridge even when it was not relevant. Anthropic released this “Golden Gate Claude” as a research demo for 24 hours in May 2024.', 170],
+  ]),
+  'eval-recipe': steps('eval-recipe', 'How an eval works, in four steps.', [
+    [flow('eval-recipe', ['Choose tasks or questions', 'Run the model on each', 'Score the answers', 'Compare and report'], 0), 'Step 1: choose the tasks or questions. This choice decides what the test can and cannot show.', 210],
+    [flow('eval-recipe', ['Choose tasks or questions', 'Run the model on each', 'Score the answers', 'Compare and report'], 1), 'Step 2: run the model on each one, often many times, because its answers vary.', 210],
+    [flow('eval-recipe', ['Choose tasks or questions', 'Run the model on each', 'Score the answers', 'Compare and report'], 2), 'Step 3: score the answers. Whether a wrong answer costs more than “I don’t know” changes which model looks best.', 210],
+    [flow('eval-recipe', ['Choose tasks or questions', 'Run the model on each', 'Score the answers', 'Compare and report'], 3), 'Step 4: compare and report. The International AI Safety Report 2026 warns of an “evaluation gap”: test results do not reliably predict real-world risk.', 210],
+  ]),
+  'who-tests': one('who-tests', 'Three kinds of organisation that test frontier AI.', 250,
+    `${[['THE DEVELOPER', ['Tests its own', 'models before', 'release, often', 'under a published', 'safety framework.']], ['GOVERNMENT', ['For example the', 'UK AI Security', 'Institute, which', 'built the open', 'Inspect tool.']], ['INDEPENDENT', ['For example METR,', 'a research', 'nonprofit that', 'measures risks', 'from AI.']]].map(([h, t], i) => `${i === 1 ? hlBox(8 + i * 130, 10, 124, 230, 10) : box(8 + i * 130, 10, 124, 230)}${T(18 + i * 130, 36, h, { size: 12, weight: 900, cls: i === 1 ? 'svg-on-hl' : 'svg-t' })}${T(18 + i * 130, 62, t, { size: 12.5, cls: i === 1 ? 'svg-on-hl' : 'svg-t' })}`).join('')}`,
+    'Three columns. The developer tests its own models before release, often under a published safety framework. Government institutes, for example the UK AI Security Institute, which built the open-source Inspect evaluation tool. Independent organisations, for example METR, a research nonprofit that measures risks from AI.'),
+  'red-team-loop': steps('red-team-loop', 'Red-teaming as a loop: attack, report, fix, attack again.', [
+    [flow('red-team-loop', ['Plan: what could go wrong?', 'Attack, with permission', 'Report what worked', 'Fix, then attack again'], 0), 'Step 1: plan. Decide what you are testing and what harm you are looking for, and agree the rules with the owner.', 210],
+    [flow('red-team-loop', ['Plan: what could go wrong?', 'Attack, with permission', 'Report what worked', 'Fix, then attack again'], 1), 'Step 2: attack, with permission: jailbreaks, prompt injection, tricking an agent into misusing a tool.', 210],
+    [flow('red-team-loop', ['Plan: what could go wrong?', 'Attack, with permission', 'Report what worked', 'Fix, then attack again'], 2), 'Step 3: report what worked, clearly enough that someone else can reproduce it.', 210],
+    [flow('red-team-loop', ['Plan: what could go wrong?', 'Attack, with permission', 'Report what worked', 'Fix, then attack again'], 3), 'Step 4: the owner fixes it, then you attack again. OWASP’s red-teaming manual ends its eight phases with reporting and remediation.', 210],
+  ]),
+  'incident-card': one('incident-card', 'What an AI incident record contains.', 250,
+    `${box(40, 10, 320, 230, { r: 14 })}${hlBox(40, 10, 320, 40, 14)}${T(60, 36, 'INCIDENT RECORD (example)', { size: 13, weight: 900, cls: 'svg-on-hl' })}
+     ${T(60, 76, ['What happened: a chatbot gave', 'a customer a wrong refund rule', 'System: customer-service chatbot', 'Harm: money, trust', 'Sources: news reports, court record', 'Date: when it happened'], { size: 13, lh: 1.5 })}`,
+    'A mock incident record. What happened: a chatbot gave a customer a wrong refund rule. System: customer-service chatbot. Harm: money and trust. Sources: news reports and a court record. Date. This is a made-up example of the kind of record the AI Incident Database collects.'),
 };
 
 // small face glyph used in the deepfake and ad figures

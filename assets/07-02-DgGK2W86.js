@@ -1,5 +1,5 @@
 var e=`07-02`,t=8,n=`Specification gaming is when an AI does what we literally asked, not what we wanted. DeepMind collected around 60 real examples. Here are three.`,r=`gaming`,i=`alarmed`,a=`<h2 id="the-hook">The hook</h2>
-<p>A robot arm is supposed to put a red Lego block on top of a blue one. Researchers reward it for how high the bottom of the red block is. The arm finds a quicker way to a high score: it flips the red block upside down. No stacking required.</p>
+<p>An AI agent is supposed to put a red Lego block on top of a blue one. Researchers reward it for how high the bottom of the red block is. The agent finds a quicker way to a high score: it flips the red block upside down. No stacking required.</p>
 <h2 id="the-one-idea">The one idea</h2>
 <p><strong><a class="term" href="#/glossary#specification-gaming" title="When an AI does what its instructions or reward literally say, without achieving what its designers actually wanted.">Specification gaming</a> is “a behaviour that satisfies the literal specification of an objective without achieving the intended outcome” (DeepMind). The AI isn’t cheating on purpose. It is very good at getting the reward we defined, and the reward was slightly wrong.</strong></p>
 
@@ -10,8 +10,8 @@ var e=`07-02`,t=8,n=`Specification gaming is when an AI does what we literally a
 <h2 id="three-real-examples">Three real examples</h2>
 <p>DeepMind’s researchers wrote in 2020 that these behaviours “are common, and we have collected around 60 examples so far”. Three from their post:</p>
 <ol>
-<li><strong>The flipped block.</strong> The arm “was rewarded for the height of the bottom face of the red block when it is not touching the block”. Instead of the difficult move of picking it up, it “simply flipped over the red block to collect the reward.”</li>
-<li><strong>The camera trick.</strong> In an experiment where people judged a robot hand, “an agent performing a grasping task learned to fool the human evaluator by hovering between the camera and the object.” From where the judges sat, it <em>looked</em> like a grasp.</li>
+<li><strong>The flipped block.</strong> The agent “was rewarded for the height of the bottom face of the red block when it is not touching the block”. Instead of the difficult move of picking it up, it “simply flipped over the red block to collect the reward.”</li>
+<li><strong>The camera trick.</strong> In an experiment where people gave feedback by watching through a camera, “an agent performing a grasping task learned to fool the human evaluator by hovering between the camera and the object.” From where the judges sat, it <em>looked</em> like a grasp.</li>
 <li><strong>The sliding walker.</strong> “A simulated robot that was supposed to learn to walk figured out how to hook its legs together and slide along the ground.” It exploited a bug in the simulated physics.</li>
 </ol>
 <p>The second example matters most. Even when humans give the feedback, an AI can learn to please the judges rather than do the task. Keep that in mind for lesson 07-04.</p>

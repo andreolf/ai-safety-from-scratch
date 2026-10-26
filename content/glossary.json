@@ -281,6 +281,150 @@
     "ai-safety",
     "security"
    ]
+  },
+  {
+   "id": "scam",
+   "term": "Scam",
+   "short": "A trick to get your money, your details or control of your accounts, usually by pretending to be someone you trust.",
+   "sites": [
+    "security"
+   ]
+  },
+  {
+   "id": "spoofing",
+   "term": "Spoofing",
+   "short": "Faking the number or name that appears on your phone, or the sender of a message, so it looks like someone trusted.",
+   "sites": [
+    "security"
+   ]
+  },
+  {
+   "id": "smishing",
+   "term": "Smishing",
+   "short": "Phishing by text message (SMS): a fake text that tries to make you tap a link, call a number or share details.",
+   "sites": [
+    "security"
+   ]
+  },
+  {
+   "id": "vishing",
+   "term": "Vishing",
+   "short": "Phishing by phone call: a caller pretends to be your bank, the police or support to trick you.",
+   "sites": [
+    "security"
+   ]
+  },
+  {
+   "id": "robocall",
+   "term": "Robot call",
+   "short": "A call that plays a recorded message instead of a real person talking, often asking you to press a key.",
+   "sites": [
+    "security"
+   ]
+  },
+  {
+   "id": "remote-access",
+   "term": "Remote access",
+   "short": "Letting another person control your phone or computer from far away through an app. Never allow it for someone who called you.",
+   "sites": [
+    "security"
+   ]
+  },
+  {
+   "id": "password-manager",
+   "term": "Password manager",
+   "short": "A safe app that creates, stores and fills in your passwords, so each account can have a different one.",
+   "sites": [
+    "security"
+   ]
+  },
+  {
+   "id": "passphrase",
+   "term": "Passphrase",
+   "short": "A password made of several random words, which makes it long but easy to type.",
+   "sites": [
+    "security"
+   ]
+  },
+  {
+   "id": "data-breach",
+   "term": "Data breach (leak)",
+   "short": "When a company’s customer data, such as emails or passwords, is stolen or exposed.",
+   "sites": [
+    "security"
+   ]
+  },
+  {
+   "id": "two-factor",
+   "term": "Two-step sign-in (2FA)",
+   "short": "Signing in with your password plus a second proof, such as a code or a tap on your phone.",
+   "sites": [
+    "security"
+   ]
+  },
+  {
+   "id": "passkey",
+   "term": "Passkey",
+   "short": "A way to sign in with your phone’s fingerprint, face or screen lock instead of a password.",
+   "sites": [
+    "security"
+   ]
+  },
+  {
+   "id": "link",
+   "term": "Link",
+   "short": "Words or a button in a message or web page that open a website when you tap them.",
+   "sites": [
+    "security"
+   ]
+  },
+  {
+   "id": "domain",
+   "term": "Website name (domain)",
+   "short": "The real name of a website, such as twint.ch. It is the part just before the first single slash.",
+   "sites": [
+    "security"
+   ]
+  },
+  {
+   "id": "padlock",
+   "term": "Padlock symbol",
+   "short": "The small lock next to a web address. It means the connection is private, not that the website is honest.",
+   "sites": [
+    "security"
+   ]
+  },
+  {
+   "id": "bookmark",
+   "term": "Bookmark",
+   "short": "A saved shortcut to a website you trust, so you can open it without searching or tapping links.",
+   "sites": [
+    "security"
+   ]
+  },
+  {
+   "id": "qr-code",
+   "term": "QR code",
+   "short": "A square pattern you scan with your phone’s camera to open a link. A fake one can lead to a fake website.",
+   "sites": [
+    "security"
+   ]
+  },
+  {
+   "id": "attachment",
+   "term": "Attachment",
+   "short": "A file sent with an email or message, such as a document or a picture.",
+   "sites": [
+    "security"
+   ]
+  },
+  {
+   "id": "caller-id",
+   "term": "Caller ID",
+   "short": "The number or name your phone shows for an incoming call. It can be faked.",
+   "sites": [
+    "security"
+   ]
   }
  ]
 }

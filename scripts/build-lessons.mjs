@@ -23,6 +23,7 @@ const curriculum = JSON.parse(fs.readFileSync(path.join(ROOT, 'content/curriculu
 const glossary = JSON.parse(fs.readFileSync(path.join(ROOT, 'content/glossary.json'), 'utf8'));
 const gl = new Map(glossary.terms.map((t) => [t.id, t]));
 const kit = JSON.parse(fs.readFileSync(path.join(ROOT, 'content/kit-images.json'), 'utf8'));
+const secLessons = new Map(JSON.parse(fs.readFileSync(path.join(ROOT, 'content/security-lessons.json'), 'utf8')).lessons.map((l) => [l.id, l]));
 const titles = new Map(curriculum.phases.flatMap((p) => p.lessons.map((l) => [l.id, { ...l, phase: p.id }])));
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const attrs = (s) => Object.fromEntries([...String(s || '').matchAll(/(\w+)=("([^"]*)"|\S+)/g)].map((m) => [m[1], m[3] ?? m[2]]));
@@ -85,7 +86,14 @@ export function compile(src, file) {
       html.push('<div class="quiz-mount" data-quiz></div>');
     } else if (kind === 'xlink') {
       const items = block.filter((x) => x.trim()).map((x) => { const [ref, title] = x.split('|').map((s) => s.trim()); const [site, id] = ref.split(/\s+/);
-        if (site === 'security') return `<a href="${esc(securityLesson(id))}" rel="noopener" target="_blank" data-xlink="security">Security from Scratch ${esc(id)} · ${esc(title)}</a>`;
+        if (site === 'security') {
+          const s = secLessons.get(id.replace('.', '-'));
+          if (!s) { errors.push(`${file}: xlink to unknown Security lesson ${id}`); return ''; }
+          const nq = (x) => x.replace(/[“”"]/g, '"').replace(/[‘’']/g, "'");
+          if (title && nq(title) !== nq(s.title)) errors.push(`${file}: Security ${id} title should be "${s.title}"`);
+          if (!s.written) return `<span class="xlink-soon" data-xlink="security-soon">Security from Scratch ${esc(id)} · ${esc(title || s.title)} <small>Coming soon</small></span>`;
+          return `<a href="${esc(securityLesson(id))}" rel="noopener" target="_blank" data-xlink="security">Security from Scratch ${esc(id)} · ${esc(title || s.title)}</a>`;
+        }
         if (!titles.has(id)) errors.push(`${file}: xlink to unknown lesson ${id}`);
         return `<a href="#/learn/${esc(id)}" data-xlink="lesson">${esc(id.replace('-', '.'))} · ${esc(title || titles.get(id)?.title)}</a>`; });
       html.push(`<nav class="xlink" aria-label="Related lessons">${items.join('')}</nav>`);

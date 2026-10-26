@@ -81,6 +81,8 @@ security 01.01 | The grandchild-in-trouble phone call
 security 09.01 | Voices can be copied
 security 06.06 | Fake ads with famous faces
 security 08.03 | “Guaranteed” returns
+security 01.03 | “This is your bank calling.”
+security 02.04 | The safe way in: bookmarks and the official app
 :::end
 
 ## Sources

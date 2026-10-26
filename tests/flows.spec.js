@@ -169,3 +169,14 @@ for (const p of ['p04', 'p05', 'p06']) test(`phase test ${p}: 10 questions drawn
   await page.getByTestId('submit-test').click();
   await expect(page.getByTestId('test-result')).toHaveAttribute('data-pass', 'true');
 });
+
+test('Security cross-links: written lessons link out, unwritten ones say Coming soon', async ({ page }) => {
+  await page.goto('./#/learn/03-02');
+  const nav = page.locator('nav.xlink');
+  await expect(nav.locator('a[data-xlink="security"][href*="#/learn/01-07"]')).toBeVisible();
+  await expect(nav.locator('a[data-xlink="security"][href*="#/learn/01-01"]')).toBeVisible();
+  const soon = nav.locator('[data-xlink="security-soon"]');
+  await expect(soon).toContainText('09.01');
+  await expect(soon).toContainText('Coming soon');
+  await expect(nav.locator('a[href*="#/learn/09-01"]')).toHaveCount(0);
+});

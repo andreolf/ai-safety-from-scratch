@@ -127,6 +127,8 @@ code, kbd, pre, .mono { font-family: var(--font-mono); font-size: .9em; }
 .source cite { display: block; margin-top: 8px; font-style: normal; font-size: .88rem; color: var(--muted-strong); }
 .sources-list { font-size: .95rem; }
 .xlink { display: flex; flex-wrap: wrap; gap: 8px; margin: 1em 0; }
+.xlink-soon { display: inline-flex; align-items: center; gap: 8px; min-height: var(--tap-min); padding: 0 14px; border-radius: 999px; border: 1px dashed var(--line-strong); color: var(--muted-strong); font-weight: 700; font-size: .92rem; }
+.xlink-soon small { font-weight: 800; }
 .xlink a { display: inline-flex; align-items: center; min-height: var(--tap-min); padding: 0 14px; border-radius: 999px; border: 1px solid var(--line-strong); text-decoration: none; font-weight: 700; font-size: .92rem; }
 .exercise { border: 1px dashed var(--line-strong); border-radius: var(--radius); padding: 16px 18px; margin: 1.4em 0; }
 .exercise summary { cursor: pointer; font-weight: 800; min-height: var(--tap-min); display: flex; align-items: center; }

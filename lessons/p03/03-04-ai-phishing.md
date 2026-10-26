@@ -71,6 +71,7 @@ Warning signs: urgency (24 hours), a threat (suspension), and a request to log i
 :::xlink
 security 02.01 | What “phishing” means
 security 02.02 | Reading the sender and the link without clicking
+security 02.06 | Practice: spot the fake
 :::end
 
 ## Sources

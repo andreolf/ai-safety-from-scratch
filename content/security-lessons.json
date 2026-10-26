@@ -1,0 +1,362 @@
+{
+ "note": "Snapshot of the Security from Scratch curriculum (read only from the sibling repo). 'written' lessons were opened live on the checked date; the others render as 'Coming soon' instead of a link.",
+ "url": "https://andreolf.github.io/security-from-scratch/",
+ "checked": "2026-10-26",
+ "lessons": [
+  {
+   "id": "00-01",
+   "title": "Welcome, and how this site works",
+   "written": true
+  },
+  {
+   "id": "00-02",
+   "title": "Why scams work on clever people",
+   "written": true
+  },
+  {
+   "id": "00-03",
+   "title": "The three golden rules: Stop, Hang up, Check",
+   "written": true
+  },
+  {
+   "id": "00-04",
+   "title": "Your \"trusted numbers\" card",
+   "written": true
+  },
+  {
+   "id": "01-01",
+   "title": "The grandchild-in-trouble phone call",
+   "written": true
+  },
+  {
+   "id": "01-02",
+   "title": "The fake police officer (Swiss \"falsche Polizisten\")",
+   "written": true
+  },
+  {
+   "id": "01-03",
+   "title": "\"This is your bank calling.\"",
+   "written": true
+  },
+  {
+   "id": "01-04",
+   "title": "Robot calls: \"Press 1 to speak to an officer.\"",
+   "written": true
+  },
+  {
+   "id": "01-05",
+   "title": "Why the screen can show a false number",
+   "written": true
+  },
+  {
+   "id": "01-06",
+   "title": "Fake text messages (SMS)",
+   "written": true
+  },
+  {
+   "id": "01-07",
+   "title": "Practice: saying no on the phone",
+   "written": true
+  },
+  {
+   "id": "02-01",
+   "title": "What \"phishing\" means",
+   "written": true
+  },
+  {
+   "id": "02-02",
+   "title": "Reading the sender and the link without clicking",
+   "written": true
+  },
+  {
+   "id": "02-03",
+   "title": "Fake websites that look real",
+   "written": true
+  },
+  {
+   "id": "02-04",
+   "title": "The safe way in: bookmarks and the official app",
+   "written": true
+  },
+  {
+   "id": "02-05",
+   "title": "Attachments and \"invoices\" you did not expect",
+   "written": true
+  },
+  {
+   "id": "02-06",
+   "title": "Practice: spot the fake",
+   "written": true
+  },
+  {
+   "id": "03-01",
+   "title": "Why one password everywhere is risky",
+   "written": true
+  },
+  {
+   "id": "03-02",
+   "title": "Has my email been in a leak?",
+   "written": true
+  },
+  {
+   "id": "03-03",
+   "title": "A password manager: one safe notebook for all your passwords",
+   "written": true
+  },
+  {
+   "id": "03-04",
+   "title": "Try it: set up your password manager",
+   "written": true
+  },
+  {
+   "id": "03-05",
+   "title": "Your email is your master key",
+   "written": true
+  },
+  {
+   "id": "04-01",
+   "title": "What \"two-step login\" (2FA) means",
+   "written": false
+  },
+  {
+   "id": "04-02",
+   "title": "The golden rule: never read a code to anyone",
+   "written": false
+  },
+  {
+   "id": "04-03",
+   "title": "Try it: turn on 2FA for your email",
+   "written": false
+  },
+  {
+   "id": "04-04",
+   "title": "Passkeys: signing in with your face or fingerprint",
+   "written": false
+  },
+  {
+   "id": "04-05",
+   "title": "Backup codes and a \"spare key\"",
+   "written": false
+  },
+  {
+   "id": "05-01",
+   "title": "Why updates matter",
+   "written": false
+  },
+  {
+   "id": "05-02",
+   "title": "Try it: turn on automatic updates",
+   "written": false
+  },
+  {
+   "id": "05-03",
+   "title": "Fake \"virus\" warnings and tech-support calls",
+   "written": false
+  },
+  {
+   "id": "05-04",
+   "title": "Never let a stranger control your screen",
+   "written": false
+  },
+  {
+   "id": "05-05",
+   "title": "Apps only from the official store",
+   "written": false
+  },
+  {
+   "id": "06-01",
+   "title": "\"Hi Mum, this is my new number.\"",
+   "written": false
+  },
+  {
+   "id": "06-02",
+   "title": "Try it: lock your WhatsApp with two-step verification",
+   "written": false
+  },
+  {
+   "id": "06-03",
+   "title": "Never forward a WhatsApp code",
+   "written": false
+  },
+  {
+   "id": "06-04",
+   "title": "Share less, stay safe",
+   "written": false
+  },
+  {
+   "id": "06-05",
+   "title": "Fake friend requests and hacked friends",
+   "written": false
+  },
+  {
+   "id": "06-06",
+   "title": "Fake ads with famous faces",
+   "written": false
+  },
+  {
+   "id": "07-01",
+   "title": "Is this shop real?",
+   "written": false
+  },
+  {
+   "id": "07-02",
+   "title": "Paying by card online, safely",
+   "written": false
+  },
+  {
+   "id": "07-03",
+   "title": "TWINT, the safe way",
+   "written": false
+  },
+  {
+   "id": "07-04",
+   "title": "Selling on marketplaces: the \"buyer\" with a payment link",
+   "written": false
+  },
+  {
+   "id": "07-05",
+   "title": "Parcel and delivery tricks",
+   "written": false
+  },
+  {
+   "id": "07-06",
+   "title": "Cross-border shopping problems",
+   "written": false
+  },
+  {
+   "id": "08-01",
+   "title": "When a new online friend needs money",
+   "written": false
+  },
+  {
+   "id": "08-02",
+   "title": "Why it is not your fault",
+   "written": false
+  },
+  {
+   "id": "08-03",
+   "title": "\"Guaranteed\" returns",
+   "written": false
+  },
+  {
+   "id": "08-04",
+   "title": "The friendly investment \"advisor\" and the fake trading app",
+   "written": false
+  },
+  {
+   "id": "08-05",
+   "title": "\"Pay a fee to get your money out.\"",
+   "written": false
+  },
+  {
+   "id": "08-06",
+   "title": "Practice: the trusted-person test",
+   "written": false
+  },
+  {
+   "id": "09-01",
+   "title": "Voices can be copied",
+   "written": false
+  },
+  {
+   "id": "09-02",
+   "title": "Video calls can be faked too",
+   "written": false
+  },
+  {
+   "id": "09-03",
+   "title": "Try it: set up a family code word",
+   "written": false
+  },
+  {
+   "id": "09-04",
+   "title": "Keep your voice and photos private",
+   "written": false
+  },
+  {
+   "id": "10-01",
+   "title": "First: it is not your fault, and time matters",
+   "written": false
+  },
+  {
+   "id": "10-02",
+   "title": "Step 1: call your bank",
+   "written": false
+  },
+  {
+   "id": "10-03",
+   "title": "Step 2: report it",
+   "written": false
+  },
+  {
+   "id": "10-04",
+   "title": "Step 3: change passwords and secure your email",
+   "written": false
+  },
+  {
+   "id": "10-05",
+   "title": "The second scam: \"We can get your money back.\"",
+   "written": false
+  },
+  {
+   "id": "10-06",
+   "title": "Getting support and talking about it",
+   "written": false
+  },
+  {
+   "id": "11-01",
+   "title": "How to help without taking over",
+   "written": false
+  },
+  {
+   "id": "11-02",
+   "title": "The 30-minute safety afternoon",
+   "written": false
+  },
+  {
+   "id": "11-03",
+   "title": "Setting up a new phone together",
+   "written": false
+  },
+  {
+   "id": "11-04",
+   "title": "Be the \"call me first\" person",
+   "written": false
+  },
+  {
+   "id": "11-05",
+   "title": "Signs someone may be in a scam",
+   "written": false
+  },
+  {
+   "id": "12-01",
+   "title": "What a crypto wallet is, in plain words",
+   "written": false
+  },
+  {
+   "id": "12-02",
+   "title": "The secret phrase: 12 or 24 words that are the whole safe",
+   "written": false
+  },
+  {
+   "id": "12-03",
+   "title": "Nobody real will ever ask for your phrase",
+   "written": false
+  },
+  {
+   "id": "12-04",
+   "title": "Crypto ATMs and \"move your money into crypto to protect it\"",
+   "written": false
+  },
+  {
+   "id": "12-05",
+   "title": "Hardware wallets, and the pre-filled phrase trap",
+   "written": false
+  },
+  {
+   "id": "12-06",
+   "title": "Clicked something bad? What to do",
+   "written": false
+  }
+ ]
+}

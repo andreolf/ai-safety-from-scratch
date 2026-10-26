@@ -28,14 +28,14 @@ var e=`00-01`,t=6,n=`What this course covers, how a lesson works, and why everyt
 <ul>
 <li><strong>A short story</strong> with one idea. Six to ten minutes.</li>
 <li><strong>A lab</strong> in many lessons: a small, playful simulation that runs in your browser. Labs never send anything anywhere, and they never ask you to attack a real service.</li>
-<li><strong>Three quick questions</strong> with instant explanations. Get one right on the first try for +10 XP.</li>
+<li><strong>Three quick questions</strong> with instant explanations. Get one right on the first try for +10 points.</li>
 <li><strong>A phase test</strong> of 10 questions at the end of each phase. 8 out of 10 passes.</li>
 <li><strong>A free certificate</strong> when you pass phases 00 to 10. It is a certificate of completion, not an accredited qualification.</li>
 </ul>
 <p>There is also an optional <strong>Builder track</strong> (Phase 11) for people who build software, with real open-source tools.</p>
 <h2 id="your-progress-stays-with-you">Your progress stays with you</h2>
-<p>There are no accounts. Your progress, XP and streak are saved only in this browser, on this device. Nothing is sent to a server. If you clear your browser data, progress resets, so the progress page has an <strong>Export</strong> button for a backup file.</p>
-<p>Two buttons at the top help: <strong>Light/Dark</strong> switches the colour theme, and the <strong>XP bar</strong> opens your progress page with the phase map. Lessons also have a <strong>Read aloud</strong> button that uses your device’s own speech, so nothing leaves your device.</p>
+<p>There are no accounts. Your progress, points and streak are saved only in this browser, on this device. Nothing is sent to a server. If you clear your browser data, progress resets, so the progress page has an <strong>Export</strong> button for a backup file.</p>
+<p>Two buttons at the top help: <strong>Light/Dark</strong> switches the colour theme, and the <strong>points bar</strong> opens your progress page with the phase map. Lessons also have a <strong>Read aloud</strong> button that uses your device’s own speech, so nothing leaves your device.</p>
 <h2 id="why-every-fact-has-a-link">Why every fact has a link</h2>
 <p>AI is surrounded by hype and by fear. This course tries to avoid both. Every fact and number links to where it comes from: a court decision, a government warning, a research paper, a company’s own report. You can open each link and check. If something could not be confirmed, the page says so with a <span class="flag">NEEDS SOURCED DATA</span> label instead of guessing. Lesson 00.04 shows you how to apply the same habit to any claim about AI.</p>
 

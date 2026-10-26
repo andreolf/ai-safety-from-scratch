@@ -285,10 +285,10 @@ export const visuals = {
     [flow('red-team-loop', ['Plan: what could go wrong?', 'Attack, with permission', 'Report what worked', 'Fix, then attack again'], 2), 'Step 3: report what worked, clearly enough that someone else can reproduce it.', 210],
     [flow('red-team-loop', ['Plan: what could go wrong?', 'Attack, with permission', 'Report what worked', 'Fix, then attack again'], 3), 'Step 4: the owner fixes it, then you attack again. OWASP’s red-teaming manual ends its eight phases with reporting and remediation.', 210],
   ]),
-  'incident-card': one('incident-card', 'What an AI incident record contains.', 250,
-    `${box(40, 10, 320, 230, { r: 14 })}${hlBox(40, 10, 320, 40, 14)}${T(60, 36, 'INCIDENT RECORD (example)', { size: 13, weight: 900, cls: 'svg-on-hl' })}
-     ${T(60, 76, ['What happened: a chatbot gave', 'a customer a wrong refund rule', 'System: customer-service chatbot', 'Harm: money, trust', 'Sources: news reports, court record', 'Date: when it happened'], { size: 13, lh: 1.5 })}`,
-    'A mock incident record. What happened: a chatbot gave a customer a wrong refund rule. System: customer-service chatbot. Harm: money and trust. Sources: news reports and a court record. Date. This is a made-up example of the kind of record the AI Incident Database collects.'),
+  'incident-card': one('incident-card', 'What an AI incident record contains, using the Air Canada chatbot case.', 250,
+    `${box(30, 10, 340, 230, { r: 14 })}${hlBox(30, 10, 340, 40, 14)}${T(50, 36, 'INCIDENT RECORD', { size: 13, weight: 900, cls: 'svg-on-hl' })}
+     ${T(50, 76, ['What: airline chatbot gave a wrong', 'bereavement refund rule', 'System: website support chatbot', 'Harm: money; the customer had to', 'go to a tribunal', 'Source: 2024 BCCRT 149'], { size: 13, lh: 1.5 })}`,
+    'A sample incident record based on lesson 02.02. What happened: an airline’s website chatbot gave a customer a wrong bereavement refund rule. System: website support chatbot. Harm: money; the customer had to go to a tribunal to get it back. Source: Moffatt v. Air Canada, 2024 BCCRT 149, 14 February 2024.'),
 };
 
 // small face glyph used in the deepfake and ad figures

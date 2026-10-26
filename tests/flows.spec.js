@@ -7,7 +7,7 @@ test('home shows phase map, points bar, mascot and counts', async ({ page }) => 
   await expect(page.getByTestId('phase-map')).toBeVisible();
   await expect(page.getByTestId('xp-bar').getByRole('progressbar')).toBeVisible();
   await expect(page.locator('.intern-tile svg').first()).toBeVisible();
-  await expect(page.getByTestId('written-count')).toContainText('48');
+  await expect(page.getByTestId('written-count')).toContainText('54');
   expect(errs).toEqual([]);
 });
 
@@ -162,7 +162,7 @@ test('Agent Permission Simulator in lesson 06-05: poisoned invoice paid without 
   expect(errs).toEqual([]);
 });
 
-for (const p of ['p04', 'p05', 'p06', 'p07']) test(`phase test ${p}: 10 questions drawn and passable`, async ({ page }) => {
+for (const p of ['p04', 'p05', 'p06', 'p07', 'p08']) test(`phase test ${p}: 10 questions drawn and passable`, async ({ page }) => {
   await go(page, `#/test/${p}`);
   const qs = page.getByTestId('question'); await expect(qs).toHaveCount(10);
   for (let i = 0; i < 10; i++) await qs.nth(i).locator('[data-correct=true]').first().click();
@@ -194,5 +194,34 @@ test('Reward Designer in lesson 07-03: boat circles with default points, finishe
   await lab.getByTestId('rd-target').fill('0'); await lab.getByTestId('rd-finish').fill('0');
   await expect(out).toHaveAttribute('data-pick', 'idle');
   await expect(lab.getByTestId('lab-reward-designer-score')).toHaveText('3/3 behaviours seen');
+  expect(errs).toEqual([]);
+});
+
+test('Feature Dial in lesson 08-02: replies drift to the bridge as the feature is turned up', async ({ page }) => {
+  const errs = watchErrors(page); await go(page, '#/learn/08-02');
+  const lab = page.getByTestId('lab-feature-dial');
+  await expect(lab).toHaveAttribute('data-lab-ready', '1');
+  await expect(lab.getByTestId('fd-reply')).toHaveAttribute('data-tier', '0');
+  await expect(lab.getByTestId('fd-reply')).not.toContainText('Golden Gate');
+  for (const k of ['spend', 'story', 'look']) {
+    await lab.getByTestId(`fd-prompt-${k}`).click();
+    await lab.getByTestId('fd-dial').fill('10');
+    await expect(lab.getByTestId('fd-reply')).toHaveAttribute('data-tier', '3');
+  }
+  await expect(lab.getByTestId('lab-feature-dial-score')).toHaveText('3/3 prompts taken over');
+  expect(errs).toEqual([]);
+});
+
+test('Build-an-Eval in lesson 08-03: the test design decides the winner', async ({ page }) => {
+  const errs = watchErrors(page); await go(page, '#/learn/08-03');
+  const lab = page.getByTestId('lab-build-an-eval');
+  await expect(lab).toHaveAttribute('data-lab-ready', '1');
+  const out = lab.getByTestId('ev-out');
+  await expect(out).toHaveAttribute('data-winner', 'crammer');
+  for (const id of ['f1', 'f2', 'f3', 'f4']) await lab.getByTestId(`ev-q-${id}`).check();
+  await expect(out).toHaveAttribute('data-winner', 'tie');
+  await lab.getByTestId('ev-wrong').selectOption('-1');
+  await expect(out).toHaveAttribute('data-winner', 'careful');
+  await expect(lab.getByTestId('ev-row-careful')).toContainText('5');
   expect(errs).toEqual([]);
 });

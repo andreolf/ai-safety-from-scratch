@@ -26,7 +26,8 @@ async function route() {
       try { const title = await fn(m[1]); document.title = title ? `${title} · ${SITE_NAME}` : SITE_NAME; }
       catch (e) { console.warn(e); main.innerHTML = `<div class="page"><h1>Something went wrong</h1><p>Please reload the page.</p></div>`; }
       if (!hash.includes('#', 1)) window.scrollTo(0, 0);
-      main.focus({ preventScroll: true });
+      // Don't steal focus from a field the reader is already typing in (the page may still be finishing its first draw).
+      const ae = document.activeElement; if (!(ae && ae !== main && main.contains(ae))) main.focus({ preventScroll: true });
       return;
     }
   }

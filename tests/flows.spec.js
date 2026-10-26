@@ -280,6 +280,7 @@ test('Foundations certificate end to end: pass the Phase 10 test for real, get t
   await expect(page).toHaveURL(/#\/certificate\/foundations$/);
   await page.getByTestId('cert-name').fill('Grace Hopper');
   await expect(page.getByTestId('cert-canvas')).toHaveAttribute('data-ready', '1');
+  await expect(page.getByTestId('cert-canvas')).toHaveAttribute('aria-label', /Grace Hopper/);
   const code = (await page.getByTestId('cert-code').textContent()).trim();
   const today = await page.evaluate(() => { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; });
   await go(page, '#/verify');
@@ -287,6 +288,7 @@ test('Foundations certificate end to end: pass the Phase 10 test for real, get t
   await page.getByTestId('v-key').selectOption('foundations');
   await page.getByTestId('v-date').fill(today);
   await page.getByTestId('v-code').fill(code);
+  await expect(page.getByTestId('v-date')).toHaveValue(today);
   await page.getByTestId('v-submit').click();
   await expect(page.getByTestId('v-out')).toHaveAttribute('data-ok', 'true');
   await page.getByTestId('v-key').selectOption('builder'); await page.getByTestId('v-submit').click();

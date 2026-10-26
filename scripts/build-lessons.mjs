@@ -79,7 +79,8 @@ export function compile(src, file) {
       if (!sol.trim()) errors.push(`${file}: exercise without solution`);
       html.push(`<div class="exercise"><h3>Try it: ${esc(rest)}</h3>${md(task)}<details><summary>Show a worked answer</summary>${md(sol)}</details></div>`);
     } else if (kind === 'quiz') {
-      const qs = yaml.load(text) || [];
+      const safe = text.replace(/^(\s*-?\s*(?:q|explain):\s)(?!["'])(.*)$/gm, (_, k, v) => k + JSON.stringify(v));
+      const qs = yaml.load(safe) || [];
       qs.forEach((q, n) => quiz.push({ id: `${meta.id}-q${n + 1}`, type: 'mc', q: q.q, options: q.options.map(String), answer: q.answer, explain: q.explain, why: q.why || null }));
       html.push('<div class="quiz-mount" data-quiz></div>');
     } else if (kind === 'xlink') {
